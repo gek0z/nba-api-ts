@@ -9,6 +9,21 @@
 
 TypeScript NBA API client. Zero dependencies. Wraps **138 stats endpoints** and **4 live data endpoints** from NBA.com.
 
+## Features
+
+- **138 stats endpoints** — player, team, game, draft, and league data from `stats.nba.com`
+- **4 live endpoints** — real-time scoreboard, box scores, play-by-play, and odds from `cdn.nba.com`
+- **Fully typed** — every endpoint has typed params, responses, and row interfaces
+- **Built-in retry, rate limiting, and timeout** — exponential backoff, token-bucket rate limiter, configurable timeouts
+- **Custom fetch injection** — plug in TLS impersonation libraries to bypass Akamai bot protection
+- **Zero dependencies** — nothing to audit, nothing to break
+
+## Requirements
+
+- Node.js >= 18, Bun, or any runtime with `fetch` support
+- Stats endpoints require a residential IP + TLS impersonation (see [Akamai / TLS Fingerprinting](#akamai--tls-fingerprinting))
+- Live endpoints work from anywhere
+
 ## Install
 
 ```bash
@@ -24,28 +39,20 @@ import { NBAClient } from 'nba-api-ts';
 
 const nba = new NBAClient();
 
-// Stats (stats.nba.com) — 138 endpoints
+// Stats — player career totals
 const career = await nba.stats.playerCareerStats({ playerID: 203999 });
-console.log(career.careerTotalsRegularSeason[0].pts); // 25.0
+console.log(career.careerTotalsRegularSeason[0].pts);
 
+// Stats — league-wide player dashboard
 const dashboard = await nba.stats.leagueDashPlayerStats({
   season: '2024-25',
   perMode: 'PerGame',
 });
 console.log(dashboard.leagueDashPlayerStats[0].playerName);
 
-// Live data (cdn.nba.com) — no Akamai protection
+// Live — today's scoreboard (no Akamai, works anywhere)
 const scoreboard = await nba.live.scoreboard();
 console.log(scoreboard.scoreboard.games.length, 'games today');
-
-const boxscore = await nba.live.boxscore('0022400123');
-console.log(boxscore.game.homeTeam.teamName);
-
-const pbp = await nba.live.playByPlay('0022400123');
-console.log(pbp.game.actions.length, 'plays');
-
-const odds = await nba.live.odds();
-console.log(odds.games.length, 'games with odds');
 ```
 
 ## API Reference
@@ -123,7 +130,31 @@ try {
 }
 ```
 
-## Akamai / TLS Fingerprinting
+## Documentation
+
+- [Full endpoint list](ENDPOINTS.md) — all 138 stats + 4 live endpoints with NBA API paths
+- [API docs](https://nba-api-ts.riccardo.lol) — auto-generated TypeDoc reference
+
+## Development
+
+```bash
+bun install
+bun test            # unit tests (offline, fast)
+bun run build
+
+# Integration tests — hits real NBA API, requires residential IP
+NBA_INTEGRATION_TESTS=1 bun test tests/integration
+
+# Integration tests with TLS fingerprint impersonation
+NBA_INTEGRATION_TESTS=1 NBA_USE_TLS=1 bun test tests/integration
+```
+
+## Contributing
+
+PRs welcome. Run `bun run lint` and `bun test` before submitting.
+
+<details>
+<summary><h2>Akamai / TLS Fingerprinting</h2></summary>
 
 All `stats.nba.com` endpoints are behind Akamai bot protection that blocks requests based on TLS fingerprinting. This means Node.js and Bun's built-in `fetch` will be blocked. Live endpoints (`cdn.nba.com`) work fine from any environment.
 
@@ -171,24 +202,7 @@ Beyond TLS fingerprinting, `stats.nba.com` drops connections from known cloud/da
 
 You'll need to make requests from a residential IP, either directly (local machine, home server) or via a residential proxy.
 
-## Development
-
-```bash
-bun install
-bun test            # unit tests (offline, fast)
-bun run build
-
-# Integration tests — hits real NBA API, requires residential IP
-NBA_INTEGRATION_TESTS=1 bun test tests/integration
-
-# Integration tests with TLS fingerprint impersonation
-NBA_INTEGRATION_TESTS=1 NBA_USE_TLS=1 bun test tests/integration
-```
-
-## Documentation
-
-- [Full endpoint list](ENDPOINTS.md) — all 138 stats + 4 live endpoints with NBA API paths
-- [API docs](https://nba-api-ts.riccardo.lol) — auto-generated TypeDoc reference
+</details>
 
 ## License
 
