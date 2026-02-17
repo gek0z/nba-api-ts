@@ -1,0 +1,9 @@
+{
+	"entryPoints": ["src"],
+	"entryPointStrategy": "expand",
+	"out": "docs",
+	"name": "nba-api-ts",
+	"readme": "README.md",
+	"githubPages": true,
+	"customFooterHtml": "<a href=\"https://github.com/gek0z/nba-api-ts\">GitHub</a>"
+}

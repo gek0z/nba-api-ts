@@ -24,7 +24,8 @@
 		"test": "bun test",
 		"test:unit": "bun test tests/unit",
 		"test:integration": "NBA_INTEGRATION_TESTS=1 bun test tests/integration",
-		"test:integration:tls": "NBA_INTEGRATION_TESTS=1 NBA_USE_TLS=1 bun test tests/integration"
+		"test:integration:tls": "NBA_INTEGRATION_TESTS=1 NBA_USE_TLS=1 bun test tests/integration",
+		"docs": "typedoc"
 	},
 	"repository": {
 		"type": "git",
@@ -50,6 +51,7 @@
 		"@biomejs/biome": "^2.4.2",
 		"@types/bun": "^1.3.9",
 		"tlsclientwrapper": "^4.1.2",
+		"typedoc": "^0.28.17",
 		"typescript": "^5.7.0"
 	},
 	"trustedDependencies": [
