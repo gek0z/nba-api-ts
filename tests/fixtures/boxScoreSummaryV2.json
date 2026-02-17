@@ -1,1 +1,366 @@
-{"resource":"boxscoresummary","parameters":{"GameID":"0022400561"},"resultSets":[{"name":"GameSummary","headers":["GAME_DATE_EST","GAME_SEQUENCE","GAME_ID","GAME_STATUS_ID","GAME_STATUS_TEXT","GAMECODE","HOME_TEAM_ID","VISITOR_TEAM_ID","SEASON","LIVE_PERIOD","LIVE_PC_TIME","NATL_TV_BROADCASTER_ABBREVIATION","LIVE_PERIOD_TIME_BCAST","WH_STATUS"],"rowSet":[["2025-01-15T00:00:00",1,"0022400561",3,"Final/OT","20250115/NYKPHI",1610612755,1610612752,"2024",5,"     ","ESPN","Q5       - ESPN",1]]},{"name":"OtherStats","headers":["LEAGUE_ID","TEAM_ID","TEAM_ABBREVIATION","TEAM_CITY","PTS_PAINT","PTS_2ND_CHANCE","PTS_FB","LARGEST_LEAD","LEAD_CHANGES","TIMES_TIED","TEAM_TURNOVERS","TOTAL_TURNOVERS","TEAM_REBOUNDS","PTS_OFF_TO"],"rowSet":[["00",1610612752,"NYK","New York",54,17,18,16,0,5,3,16,9,25],["00",1610612755,"PHI","Philadelphia",56,18,13,0,0,5,0,12,4,20]]},{"name":"Officials","headers":["OFFICIAL_ID","FIRST_NAME","LAST_NAME","JERSEY_NUM"],"rowSet":[[2003,"Pat","Fraher","26  "],[1626300,"Ray","Acosta","54  "],[1627526,"Matt","Kallio","53  "]]},{"name":"InactivePlayers","headers":["PLAYER_ID","FIRST_NAME","LAST_NAME","JERSEY_NUM","TEAM_ID","TEAM_CITY","TEAM_NAME","TEAM_ABBREVIATION"],"rowSet":[[200768,"Kyle","Lowry","7   ",1610612755,"Philadelphia","76ers","PHI"],[203954,"Joel","Embiid","21  ",1610612755,"Philadelphia","76ers","PHI"],[1628997,"Caleb","Martin","16  ",1610612755,"Philadelphia","76ers","PHI"],[1630231,"KJ","Martin","1   ",1610612755,"Philadelphia","76ers","PHI"],[1642272,"Jared","McCain","20  ",1610612755,"Philadelphia","76ers","PHI"],[1642359,"Pacome","Dadiet","4   ",1610612752,"New York","Knicks","NYK"],[1641755,"Kevin","McCullar Jr.","9   ",1610612752,"New York","Knicks","NYK"],[1629011,"Mitchell","Robinson","23  ",1610612752,"New York","Knicks","NYK"],[1626157,"Karl-Anthony","Towns","32  ",1610612752,"New York","Knicks","NYK"]]},{"name":"GameInfo","headers":["GAME_DATE","ATTENDANCE","GAME_TIME"],"rowSet":[["Wednesday, January 15, 2025",20088,"2:34"]]},{"name":"LineScore","headers":["GAME_DATE_EST","GAME_SEQUENCE","GAME_ID","TEAM_ID","TEAM_ABBREVIATION","TEAM_CITY_NAME","TEAM_NICKNAME","TEAM_WINS_LOSSES","PTS_QTR1","PTS_QTR2","PTS_QTR3","PTS_QTR4","PTS_OT1","PTS_OT2","PTS_OT3","PTS_OT4","PTS_OT5","PTS_OT6","PTS_OT7","PTS_OT8","PTS_OT9","PTS_OT10","PTS"],"rowSet":[["2025-01-15T00:00:00",1,"0022400561",1610612752,"NYK","New York","Knicks","27-15",30,30,25,24,16,0,0,0,0,0,0,0,0,0,125],["2025-01-15T00:00:00",1,"0022400561",1610612755,"PHI","Philadelphia","76ers","15-24",21,26,38,24,10,0,0,0,0,0,0,0,0,0,119]]},{"name":"LastMeeting","headers":["GAME_ID","LAST_GAME_ID","LAST_GAME_DATE_EST","LAST_GAME_HOME_TEAM_ID","LAST_GAME_HOME_TEAM_CITY","LAST_GAME_HOME_TEAM_NAME","LAST_GAME_HOME_TEAM_ABBREVIATION","LAST_GAME_HOME_TEAM_POINTS","LAST_GAME_VISITOR_TEAM_ID","LAST_GAME_VISITOR_TEAM_CITY","LAST_GAME_VISITOR_TEAM_NAME","LAST_GAME_VISITOR_TEAM_CITY1","LAST_GAME_VISITOR_TEAM_POINTS"],"rowSet":[["0022400561","0022400004","2024-11-12T00:00:00",1610612755,"Philadelphia","76ers","PHI",99,1610612752,"New York","Knicks","NYK",111]]},{"name":"SeasonSeries","headers":["GAME_ID","HOME_TEAM_ID","VISITOR_TEAM_ID","GAME_DATE_EST","HOME_TEAM_WINS","HOME_TEAM_LOSSES","SERIES_LEADER"],"rowSet":[["0022400561",1610612755,1610612752,"2025-01-15T00:00:00",0,4,"New York"]]},{"name":"AvailableVideo","headers":["GAME_ID","VIDEO_AVAILABLE_FLAG","PT_AVAILABLE","PT_XYZ_AVAILABLE","WH_STATUS","HUSTLE_STATUS","HISTORICAL_STATUS"],"rowSet":[["0022400561",1,0,0,1,1,0]]}]}
+{
+	"resource": "boxscoresummary",
+	"parameters": { "GameID": "0022400561" },
+	"resultSets": [
+		{
+			"name": "GameSummary",
+			"headers": [
+				"GAME_DATE_EST",
+				"GAME_SEQUENCE",
+				"GAME_ID",
+				"GAME_STATUS_ID",
+				"GAME_STATUS_TEXT",
+				"GAMECODE",
+				"HOME_TEAM_ID",
+				"VISITOR_TEAM_ID",
+				"SEASON",
+				"LIVE_PERIOD",
+				"LIVE_PC_TIME",
+				"NATL_TV_BROADCASTER_ABBREVIATION",
+				"LIVE_PERIOD_TIME_BCAST",
+				"WH_STATUS"
+			],
+			"rowSet": [
+				[
+					"2025-01-15T00:00:00",
+					1,
+					"0022400561",
+					3,
+					"Final/OT",
+					"20250115/NYKPHI",
+					1610612755,
+					1610612752,
+					"2024",
+					5,
+					"     ",
+					"ESPN",
+					"Q5       - ESPN",
+					1
+				]
+			]
+		},
+		{
+			"name": "OtherStats",
+			"headers": [
+				"LEAGUE_ID",
+				"TEAM_ID",
+				"TEAM_ABBREVIATION",
+				"TEAM_CITY",
+				"PTS_PAINT",
+				"PTS_2ND_CHANCE",
+				"PTS_FB",
+				"LARGEST_LEAD",
+				"LEAD_CHANGES",
+				"TIMES_TIED",
+				"TEAM_TURNOVERS",
+				"TOTAL_TURNOVERS",
+				"TEAM_REBOUNDS",
+				"PTS_OFF_TO"
+			],
+			"rowSet": [
+				[
+					"00",
+					1610612752,
+					"NYK",
+					"New York",
+					54,
+					17,
+					18,
+					16,
+					0,
+					5,
+					3,
+					16,
+					9,
+					25
+				],
+				[
+					"00",
+					1610612755,
+					"PHI",
+					"Philadelphia",
+					56,
+					18,
+					13,
+					0,
+					0,
+					5,
+					0,
+					12,
+					4,
+					20
+				]
+			]
+		},
+		{
+			"name": "Officials",
+			"headers": ["OFFICIAL_ID", "FIRST_NAME", "LAST_NAME", "JERSEY_NUM"],
+			"rowSet": [
+				[2003, "Pat", "Fraher", "26  "],
+				[1626300, "Ray", "Acosta", "54  "],
+				[1627526, "Matt", "Kallio", "53  "]
+			]
+		},
+		{
+			"name": "InactivePlayers",
+			"headers": [
+				"PLAYER_ID",
+				"FIRST_NAME",
+				"LAST_NAME",
+				"JERSEY_NUM",
+				"TEAM_ID",
+				"TEAM_CITY",
+				"TEAM_NAME",
+				"TEAM_ABBREVIATION"
+			],
+			"rowSet": [
+				[
+					200768,
+					"Kyle",
+					"Lowry",
+					"7   ",
+					1610612755,
+					"Philadelphia",
+					"76ers",
+					"PHI"
+				],
+				[
+					203954,
+					"Joel",
+					"Embiid",
+					"21  ",
+					1610612755,
+					"Philadelphia",
+					"76ers",
+					"PHI"
+				],
+				[
+					1628997,
+					"Caleb",
+					"Martin",
+					"16  ",
+					1610612755,
+					"Philadelphia",
+					"76ers",
+					"PHI"
+				],
+				[
+					1630231,
+					"KJ",
+					"Martin",
+					"1   ",
+					1610612755,
+					"Philadelphia",
+					"76ers",
+					"PHI"
+				],
+				[
+					1642272,
+					"Jared",
+					"McCain",
+					"20  ",
+					1610612755,
+					"Philadelphia",
+					"76ers",
+					"PHI"
+				],
+				[
+					1642359,
+					"Pacome",
+					"Dadiet",
+					"4   ",
+					1610612752,
+					"New York",
+					"Knicks",
+					"NYK"
+				],
+				[
+					1641755,
+					"Kevin",
+					"McCullar Jr.",
+					"9   ",
+					1610612752,
+					"New York",
+					"Knicks",
+					"NYK"
+				],
+				[
+					1629011,
+					"Mitchell",
+					"Robinson",
+					"23  ",
+					1610612752,
+					"New York",
+					"Knicks",
+					"NYK"
+				],
+				[
+					1626157,
+					"Karl-Anthony",
+					"Towns",
+					"32  ",
+					1610612752,
+					"New York",
+					"Knicks",
+					"NYK"
+				]
+			]
+		},
+		{
+			"name": "GameInfo",
+			"headers": ["GAME_DATE", "ATTENDANCE", "GAME_TIME"],
+			"rowSet": [["Wednesday, January 15, 2025", 20088, "2:34"]]
+		},
+		{
+			"name": "LineScore",
+			"headers": [
+				"GAME_DATE_EST",
+				"GAME_SEQUENCE",
+				"GAME_ID",
+				"TEAM_ID",
+				"TEAM_ABBREVIATION",
+				"TEAM_CITY_NAME",
+				"TEAM_NICKNAME",
+				"TEAM_WINS_LOSSES",
+				"PTS_QTR1",
+				"PTS_QTR2",
+				"PTS_QTR3",
+				"PTS_QTR4",
+				"PTS_OT1",
+				"PTS_OT2",
+				"PTS_OT3",
+				"PTS_OT4",
+				"PTS_OT5",
+				"PTS_OT6",
+				"PTS_OT7",
+				"PTS_OT8",
+				"PTS_OT9",
+				"PTS_OT10",
+				"PTS"
+			],
+			"rowSet": [
+				[
+					"2025-01-15T00:00:00",
+					1,
+					"0022400561",
+					1610612752,
+					"NYK",
+					"New York",
+					"Knicks",
+					"27-15",
+					30,
+					30,
+					25,
+					24,
+					16,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					125
+				],
+				[
+					"2025-01-15T00:00:00",
+					1,
+					"0022400561",
+					1610612755,
+					"PHI",
+					"Philadelphia",
+					"76ers",
+					"15-24",
+					21,
+					26,
+					38,
+					24,
+					10,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					119
+				]
+			]
+		},
+		{
+			"name": "LastMeeting",
+			"headers": [
+				"GAME_ID",
+				"LAST_GAME_ID",
+				"LAST_GAME_DATE_EST",
+				"LAST_GAME_HOME_TEAM_ID",
+				"LAST_GAME_HOME_TEAM_CITY",
+				"LAST_GAME_HOME_TEAM_NAME",
+				"LAST_GAME_HOME_TEAM_ABBREVIATION",
+				"LAST_GAME_HOME_TEAM_POINTS",
+				"LAST_GAME_VISITOR_TEAM_ID",
+				"LAST_GAME_VISITOR_TEAM_CITY",
+				"LAST_GAME_VISITOR_TEAM_NAME",
+				"LAST_GAME_VISITOR_TEAM_CITY1",
+				"LAST_GAME_VISITOR_TEAM_POINTS"
+			],
+			"rowSet": [
+				[
+					"0022400561",
+					"0022400004",
+					"2024-11-12T00:00:00",
+					1610612755,
+					"Philadelphia",
+					"76ers",
+					"PHI",
+					99,
+					1610612752,
+					"New York",
+					"Knicks",
+					"NYK",
+					111
+				]
+			]
+		},
+		{
+			"name": "SeasonSeries",
+			"headers": [
+				"GAME_ID",
+				"HOME_TEAM_ID",
+				"VISITOR_TEAM_ID",
+				"GAME_DATE_EST",
+				"HOME_TEAM_WINS",
+				"HOME_TEAM_LOSSES",
+				"SERIES_LEADER"
+			],
+			"rowSet": [
+				[
+					"0022400561",
+					1610612755,
+					1610612752,
+					"2025-01-15T00:00:00",
+					0,
+					4,
+					"New York"
+				]
+			]
+		},
+		{
+			"name": "AvailableVideo",
+			"headers": [
+				"GAME_ID",
+				"VIDEO_AVAILABLE_FLAG",
+				"PT_AVAILABLE",
+				"PT_XYZ_AVAILABLE",
+				"WH_STATUS",
+				"HUSTLE_STATUS",
+				"HISTORICAL_STATUS"
+			],
+			"rowSet": [["0022400561", 1, 0, 0, 1, 1, 0]]
+		}
+	]
+}

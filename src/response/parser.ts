@@ -1,28 +1,28 @@
-import type { RawNBAStatsResponse, RawResultSet } from './types.js';
+import type { RawNBAStatsResponse, RawResultSet } from "./types.js";
 
 /**
  * Converts SCREAMING_SNAKE_CASE to camelCase.
  * e.g. "PLAYER_ID" → "playerId", "PTS" → "pts"
  */
 export function snakeToCamel(s: string): string {
-  return s
-    .toLowerCase()
-    .replace(/_([a-z0-9])/g, (_, c) => c.toUpperCase());
+	return s.toLowerCase().replace(/_([a-z0-9])/g, (_, c) => c.toUpperCase());
 }
 
 /**
  * Parses a single result set's headers + rowSet into an array of objects.
  * Headers are converted from SCREAMING_SNAKE to camelCase.
  */
-export function parseResultSet(resultSet: RawResultSet): Record<string, unknown>[] {
-  const keys = resultSet.headers.map(snakeToCamel);
-  return resultSet.rowSet.map((row) => {
-    const obj: Record<string, unknown> = {};
-    for (let i = 0; i < keys.length; i++) {
-      obj[keys[i]] = row[i];
-    }
-    return obj;
-  });
+export function parseResultSet(
+	resultSet: RawResultSet,
+): Record<string, unknown>[] {
+	const keys = resultSet.headers.map(snakeToCamel);
+	return resultSet.rowSet.map((row) => {
+		const obj: Record<string, unknown> = {};
+		for (let i = 0; i < keys.length; i++) {
+			obj[keys[i]] = row[i];
+		}
+		return obj;
+	});
 }
 
 /**
@@ -30,7 +30,7 @@ export function parseResultSet(resultSet: RawResultSet): Record<string, unknown>
  * e.g. "CareerTotalsRegularSeason" → "careerTotalsRegularSeason"
  */
 function resultSetNameToCamel(name: string): string {
-  return name.charAt(0).toLowerCase() + name.slice(1);
+	return name.charAt(0).toLowerCase() + name.slice(1);
 }
 
 /**
@@ -38,18 +38,18 @@ function resultSetNameToCamel(name: string): string {
  * Handles both `resultSets` (plural, array) and `resultSet` (singular, object).
  */
 function getResultSets(raw: unknown): RawResultSet[] {
-  const obj = raw as Record<string, unknown>;
-  if (Array.isArray(obj.resultSets)) {
-    return obj.resultSets as RawResultSet[];
-  }
-  const singular = obj.resultSet;
-  if (Array.isArray(singular)) {
-    return singular as RawResultSet[];
-  }
-  if (singular && typeof singular === 'object') {
-    return [singular as RawResultSet];
-  }
-  return [];
+	const obj = raw as Record<string, unknown>;
+	if (Array.isArray(obj.resultSets)) {
+		return obj.resultSets as RawResultSet[];
+	}
+	const singular = obj.resultSet;
+	if (Array.isArray(singular)) {
+		return singular as RawResultSet[];
+	}
+	if (singular && typeof singular === "object") {
+		return [singular as RawResultSet];
+	}
+	return [];
 }
 
 /**
@@ -63,25 +63,25 @@ function getResultSets(raw: unknown): RawResultSet[] {
  * included using their original names converted to camelCase.
  */
 export function parseStatsResponse(
-  raw: RawNBAStatsResponse,
-  resultSetMap?: Record<string, string>,
+	raw: RawNBAStatsResponse,
+	resultSetMap?: Record<string, string>,
 ): Record<string, Record<string, unknown>[]> {
-  const result: Record<string, Record<string, unknown>[]> = {};
-  const resultSets = getResultSets(raw);
+	const result: Record<string, Record<string, unknown>[]> = {};
+	const resultSets = getResultSets(raw);
 
-  for (const rs of resultSets) {
-    let key: string;
-    if (resultSetMap) {
-      const mapped = resultSetMap[rs.name];
-      if (!mapped) continue;
-      key = mapped;
-    } else {
-      key = resultSetNameToCamel(rs.name);
-    }
-    result[key] = parseResultSet(rs);
-  }
+	for (const rs of resultSets) {
+		let key: string;
+		if (resultSetMap) {
+			const mapped = resultSetMap[rs.name];
+			if (!mapped) continue;
+			key = mapped;
+		} else {
+			key = resultSetNameToCamel(rs.name);
+		}
+		result[key] = parseResultSet(rs);
+	}
 
-  return result;
+	return result;
 }
 
 /**
@@ -90,8 +90,8 @@ export function parseStatsResponse(
  * Returns the value of the first non-meta key.
  */
 export function parseV3Response<T = unknown>(raw: Record<string, unknown>): T {
-  for (const [key, value] of Object.entries(raw)) {
-    if (key !== 'meta') return value as T;
-  }
-  return raw as T;
+	for (const [key, value] of Object.entries(raw)) {
+		if (key !== "meta") return value as T;
+	}
+	return raw as T;
 }

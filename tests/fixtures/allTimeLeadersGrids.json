@@ -1,1 +1,429 @@
-{"resource":"alltimeleadersgrids","parameters":{"LeagueID":"00","SeasonType":"Regular Season","PerMode":"Totals","TopX":"10"},"resultSets":[{"name":"GPLeaders","headers":["PLAYER_ID","PLAYER_NAME","GP","GP_RANK","IS_ACTIVE_FLAG"],"rowSet":[[305,"Robert Parish",1611,1,"N"],[2544,"LeBron James",1598,2,"Y"],[76003,"Kareem Abdul-Jabbar",1560,3,"N"],[1713,"Vince Carter",1541,4,"N"],[1717,"Dirk Nowitzki",1522,5,"N"],[304,"John Stockton",1504,6,"N"],[252,"Karl Malone",1476,7,"N"],[708,"Kevin Garnett",1462,8,"N"],[788,"Kevin Willis",1424,9,"N"],[1891,"Jason Terry",1410,10,"N"]]},{"name":"PTSLeaders","headers":["PLAYER_ID","PLAYER_NAME","PTS","PTS_RANK","IS_ACTIVE_FLAG"],"rowSet":[[2544,"LeBron James",42975,1,"Y"],[76003,"Kareem Abdul-Jabbar",38387,2,"N"],[252,"Karl Malone",36928,3,"N"],[977,"Kobe Bryant",33643,4,"N"],[893,"Michael Jordan",32292,5,"N"],[201142,"Kevin Durant",31862,6,"Y"],[1717,"Dirk Nowitzki",31560,7,"N"],[76375,"Wilt Chamberlain",31419,8,"N"],[201935,"James Harden",28863,9,"Y"],[406,"Shaquille O'Neal",28596,10,"N"]]},{"name":"ASTLeaders","headers":["PLAYER_ID","PLAYER_NAME","AST","AST_RANK","IS_ACTIVE_FLAG"],"rowSet":[[304,"John Stockton",15806,1,"N"],[101108,"Chris Paul",12552,2,"Y"],[467,"Jason Kidd",12091,3,"N"],[2544,"LeBron James",11838,4,"Y"],[959,"Steve Nash",10335,5,"N"],[349,"Mark Jackson",10334,6,"N"],[201566,"Russell Westbrook",10267,7,"Y"],[77142,"Magic Johnson",10141,8,"N"],[600015,"Oscar Robertson",9887,9,"N"],[78318,"Isiah Thomas",9061,10,"N"]]},{"name":"STLLeaders","headers":["PLAYER_ID","PLAYER_NAME","STL","STL_RANK","IS_ACTIVE_FLAG"],"rowSet":[[304,"John Stockton",3265,1,"N"],[101108,"Chris Paul",2728,2,"Y"],[467,"Jason Kidd",2684,3,"N"],[893,"Michael Jordan",2514,4,"N"],[56,"Gary Payton",2445,5,"N"],[2544,"LeBron James",2384,6,"Y"],[76385,"Maurice Cheeks",2310,7,"N"],[937,"Scottie Pippen",2307,8,"N"],[17,"Clyde Drexler",2207,9,"N"],[165,"Hakeem Olajuwon",2162,10,"N"]]},{"name":"OREBLeaders","headers":["PLAYER_ID","PLAYER_NAME","OREB","OREB_RANK","IS_ACTIVE_FLAG"],"rowSet":[[77449,"Moses Malone",6731,1,"N"],[305,"Robert Parish",4598,2,"N"],[433,"Buck Williams",4526,3,"N"],[23,"Dennis Rodman",4329,4,"N"],[787,"Charles Barkley",4260,5,"N"],[406,"Shaquille O'Neal",4209,6,"N"],[2730,"Dwight Howard",4151,7,"N"],[788,"Kevin Willis",4132,8,"N"],[165,"Hakeem Olajuwon",4034,9,"N"],[891,"Charles Oakley",3924,10,"N"]]},{"name":"DREBLeaders","headers":["PLAYER_ID","PLAYER_NAME","DREB","DREB_RANK","IS_ACTIVE_FLAG"],"rowSet":[[708,"Kevin Garnett",11453,1,"N"],[252,"Karl Malone",11406,2,"N"],[1495,"Tim Duncan",11232,3,"N"],[2730,"Dwight Howard",10476,4,"N"],[305,"Robert Parish",10117,5,"N"],[2544,"LeBron James",10117,5,"Y"],[1717,"Dirk Nowitzki",10021,7,"N"],[165,"Hakeem Olajuwon",9714,8,"N"],[77449,"Moses Malone",9481,9,"N"],[76003,"Kareem Abdul-Jabbar",9394,10,"N"]]},{"name":"REBLeaders","headers":["PLAYER_ID","PLAYER_NAME","REB","REB_RANK","IS_ACTIVE_FLAG"],"rowSet":[[76375,"Wilt Chamberlain",23924,1,"N"],[78049,"Bill Russell",21620,2,"N"],[76003,"Kareem Abdul-Jabbar",17440,3,"N"],[76979,"Elvin Hayes",16279,4,"N"],[77449,"Moses Malone",16212,5,"N"],[1495,"Tim Duncan",15091,6,"N"],[252,"Karl Malone",14968,7,"N"],[305,"Robert Parish",14715,8,"N"],[708,"Kevin Garnett",14662,9,"N"],[2730,"Dwight Howard",14627,10,"N"]]},{"name":"BLKLeaders","headers":["PLAYER_ID","PLAYER_NAME","BLK","BLK_RANK","IS_ACTIVE_FLAG"],"rowSet":[[165,"Hakeem Olajuwon",3830,1,"N"],[87,"Dikembe Mutombo",3289,2,"N"],[76003,"Kareem Abdul-Jabbar",3189,3,"N"],[76631,"Mark Eaton",3064,4,"N"],[1495,"Tim Duncan",3020,5,"N"],[764,"David Robinson",2954,6,"N"],[121,"Patrick Ewing",2894,7,"N"],[406,"Shaquille O'Neal",2732,8,"N"],[78014,"Tree Rollins",2542,9,"N"],[305,"Robert Parish",2361,10,"N"]]},{"name":"FGMLeaders","headers":["PLAYER_ID","PLAYER_NAME","FGM","FGM_RANK","IS_ACTIVE_FLAG"],"rowSet":[[76003,"Kareem Abdul-Jabbar",15837,1,"N"],[2544,"LeBron James",15783,2,"Y"],[252,"Karl Malone",13528,3,"N"],[76375,"Wilt Chamberlain",12681,4,"N"],[893,"Michael Jordan",12192,5,"N"],[977,"Kobe Bryant",11719,6,"N"],[406,"Shaquille O'Neal",11330,7,"N"],[1717,"Dirk Nowitzki",11169,8,"N"],[201142,"Kevin Durant",10994,9,"Y"],[76979,"Elvin Hayes",10976,10,"N"]]},{"name":"FGALeaders","headers":["PLAYER_ID","PLAYER_NAME","FGA","FGA_RANK","IS_ACTIVE_FLAG"],"rowSet":[[2544,"LeBron James",31171,1,"Y"],[76003,"Kareem Abdul-Jabbar",28307,2,"N"],[252,"Karl Malone",26210,3,"N"],[977,"Kobe Bryant",26200,4,"N"],[893,"Michael Jordan",24537,5,"N"],[76979,"Elvin Hayes",24272,6,"N"],[76970,"John Havlicek",23930,7,"N"],[1717,"Dirk Nowitzki",23734,8,"N"],[76375,"Wilt Chamberlain",23497,9,"N"],[2546,"Carmelo Anthony",22643,10,"N"]]},{"name":"FG_PCTLeaders","headers":["PLAYER_ID","PLAYER_NAME","FG_PCT","FG_PCT_RANK","IS_ACTIVE_FLAG"],"rowSet":[[1629655,"Daniel Gafford",0.703,1,"Y"],[201599,"DeAndre Jordan",0.674,2,"Y"],[203497,"Rudy Gobert",0.659,3,"Y"],[1628386,"Jarrett Allen",0.64,4,"Y"],[1627751,"Jakob Poeltl",0.633,5,"Y"],[1629651,"Nic Claxton",0.628,6,"Y"],[1626149,"Montrezl Harrell",0.619,7,"N"],[1627826,"Ivica Zubac",0.616,8,"Y"],[203991,"Clint Capela",0.614,9,"Y"],[201148,"Brandan Wright",0.607,10,"N"]]},{"name":"TOVLeaders","headers":["PLAYER_ID","PLAYER_NAME","TOV","TOV_RANK","IS_ACTIVE_FLAG"],"rowSet":[[2544,"LeBron James",5582,1,"Y"],[201566,"Russell Westbrook",5006,2,"Y"],[252,"Karl Malone",4524,3,"N"],[201935,"James Harden",4433,4,"Y"],[304,"John Stockton",4244,5,"N"],[977,"Kobe Bryant",4010,6,"N"],[467,"Jason Kidd",4003,7,"N"],[77449,"Moses Malone",3804,8,"N"],[201142,"Kevin Durant",3715,9,"Y"],[78318,"Isiah Thomas",3682,10,"N"]]},{"name":"FG3MLeaders","headers":["PLAYER_ID","PLAYER_NAME","FG3M","FG3M_RANK","IS_ACTIVE_FLAG"],"rowSet":[[201939,"Stephen Curry",4233,1,"Y"],[201935,"James Harden",3318,2,"Y"],[951,"Ray Allen",2973,3,"N"],[202691,"Klay Thompson",2837,4,"Y"],[203081,"Damian Lillard",2804,5,"Y"],[2544,"LeBron James",2610,6,"Y"],[397,"Reggie Miller",2560,7,"N"],[2594,"Kyle Korver",2450,8,"N"],[202331,"Paul George",2415,9,"Y"],[201142,"Kevin Durant",2307,10,"Y"]]},{"name":"FG3ALeaders","headers":["PLAYER_ID","PLAYER_NAME","FG3A","FG3A_RANK","IS_ACTIVE_FLAG"],"rowSet":[[201939,"Stephen Curry",10037,1,"Y"],[201935,"James Harden",9158,2,"Y"],[203081,"Damian Lillard",7556,3,"Y"],[2544,"LeBron James",7489,4,"Y"],[951,"Ray Allen",7429,5,"N"],[202691,"Klay Thompson",6935,6,"Y"],[397,"Reggie Miller",6486,7,"N"],[2037,"Jamal Crawford",6379,8,"N"],[202331,"Paul George",6300,9,"Y"],[1713,"Vince Carter",6168,10,"N"]]},{"name":"FG3_PCTLeaders","headers":["PLAYER_ID","PLAYER_NAME","FG3_PCT","FG3_PCT_RANK","IS_ACTIVE_FLAG"],"rowSet":[[70,"Steve Kerr",0.454,1,"N"],[1642281,"Jaylon Tyson",0.448,2,"Y"],[1628379,"Luke Kennard",0.442,3,"Y"],[93,"Hubert Davis",0.441,4,"N"],[77845,"Drazen Petrovic",0.437,5,"N"],[203925,"Joe Harris",0.436,6,"N"],[2574,"Jason Kapono",0.434,7,"N"],[1642285,"Cam Spencer",0.433,8,"Y"],[203552,"Seth Curry",0.433,8,"Y"],[100,"Tim Legler",0.431,10,"N"]]},{"name":"PFLeaders","headers":["PLAYER_ID","PLAYER_NAME","PF","PF_RANK","IS_ACTIVE_FLAG"],"rowSet":[[76003,"Kareem Abdul-Jabbar",4657,1,"N"],[252,"Karl Malone",4578,2,"N"],[305,"Robert Parish",4443,3,"N"],[891,"Charles Oakley",4421,4,"N"],[165,"Hakeem Olajuwon",4383,5,"N"],[433,"Buck Williams",4267,6,"N"],[76979,"Elvin Hayes",4193,7,"N"],[361,"Clifford Robinson",4175,8,"N"],[788,"Kevin Willis",4172,9,"N"],[901,"Otis Thorpe",4146,10,"N"]]},{"name":"FTMLeaders","headers":["PLAYER_ID","PLAYER_NAME","FTM","FTM_RANK","IS_ACTIVE_FLAG"],"rowSet":[[252,"Karl Malone",9787,1,"N"],[2544,"LeBron James",8799,2,"Y"],[77449,"Moses Malone",8531,3,"N"],[201935,"James Harden",8521,4,"Y"],[977,"Kobe Bryant",8378,5,"N"],[600015,"Oscar Robertson",7694,6,"N"],[201142,"Kevin Durant",7567,7,"Y"],[893,"Michael Jordan",7327,8,"N"],[1717,"Dirk Nowitzki",7240,9,"N"],[78497,"Jerry West",7160,10,"N"]]},{"name":"FTALeaders","headers":["PLAYER_ID","PLAYER_NAME","FTA","FTA_RANK","IS_ACTIVE_FLAG"],"rowSet":[[252,"Karl Malone",13188,1,"N"],[2544,"LeBron James",11936,2,"Y"],[76375,"Wilt Chamberlain",11862,3,"N"],[406,"Shaquille O'Neal",11252,4,"N"],[77449,"Moses Malone",11090,5,"N"],[977,"Kobe Bryant",10011,6,"N"],[201935,"James Harden",9874,7,"Y"],[2730,"Dwight Howard",9455,8,"N"],[76003,"Kareem Abdul-Jabbar",9304,9,"N"],[600015,"Oscar Robertson",9185,10,"N"]]},{"name":"FT_PCTLeaders","headers":["PLAYER_ID","PLAYER_NAME","FT_PCT","FT_PCT_RANK","IS_ACTIVE_FLAG"],"rowSet":[[201939,"Stephen Curry",0.912,1,"Y"],[959,"Steve Nash",0.904,2,"N"],[899,"Mark Price",0.904,2,"N"],[600013,"Rick Barry",0.9,4,"N"],[203081,"Damian Lillard",0.899,5,"Y"],[978,"Peja Stojakovic",0.895,6,"N"],[1497,"Chauncey Billups",0.894,7,"N"],[951,"Ray Allen",0.894,7,"N"],[77669,"Calvin Murphy",0.892,9,"N"],[200755,"JJ Redick",0.892,9,"N"]]}]}
+{
+	"resource": "alltimeleadersgrids",
+	"parameters": {
+		"LeagueID": "00",
+		"SeasonType": "Regular Season",
+		"PerMode": "Totals",
+		"TopX": "10"
+	},
+	"resultSets": [
+		{
+			"name": "GPLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"GP",
+				"GP_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[305, "Robert Parish", 1611, 1, "N"],
+				[2544, "LeBron James", 1598, 2, "Y"],
+				[76003, "Kareem Abdul-Jabbar", 1560, 3, "N"],
+				[1713, "Vince Carter", 1541, 4, "N"],
+				[1717, "Dirk Nowitzki", 1522, 5, "N"],
+				[304, "John Stockton", 1504, 6, "N"],
+				[252, "Karl Malone", 1476, 7, "N"],
+				[708, "Kevin Garnett", 1462, 8, "N"],
+				[788, "Kevin Willis", 1424, 9, "N"],
+				[1891, "Jason Terry", 1410, 10, "N"]
+			]
+		},
+		{
+			"name": "PTSLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"PTS",
+				"PTS_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[2544, "LeBron James", 42975, 1, "Y"],
+				[76003, "Kareem Abdul-Jabbar", 38387, 2, "N"],
+				[252, "Karl Malone", 36928, 3, "N"],
+				[977, "Kobe Bryant", 33643, 4, "N"],
+				[893, "Michael Jordan", 32292, 5, "N"],
+				[201142, "Kevin Durant", 31862, 6, "Y"],
+				[1717, "Dirk Nowitzki", 31560, 7, "N"],
+				[76375, "Wilt Chamberlain", 31419, 8, "N"],
+				[201935, "James Harden", 28863, 9, "Y"],
+				[406, "Shaquille O'Neal", 28596, 10, "N"]
+			]
+		},
+		{
+			"name": "ASTLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"AST",
+				"AST_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[304, "John Stockton", 15806, 1, "N"],
+				[101108, "Chris Paul", 12552, 2, "Y"],
+				[467, "Jason Kidd", 12091, 3, "N"],
+				[2544, "LeBron James", 11838, 4, "Y"],
+				[959, "Steve Nash", 10335, 5, "N"],
+				[349, "Mark Jackson", 10334, 6, "N"],
+				[201566, "Russell Westbrook", 10267, 7, "Y"],
+				[77142, "Magic Johnson", 10141, 8, "N"],
+				[600015, "Oscar Robertson", 9887, 9, "N"],
+				[78318, "Isiah Thomas", 9061, 10, "N"]
+			]
+		},
+		{
+			"name": "STLLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"STL",
+				"STL_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[304, "John Stockton", 3265, 1, "N"],
+				[101108, "Chris Paul", 2728, 2, "Y"],
+				[467, "Jason Kidd", 2684, 3, "N"],
+				[893, "Michael Jordan", 2514, 4, "N"],
+				[56, "Gary Payton", 2445, 5, "N"],
+				[2544, "LeBron James", 2384, 6, "Y"],
+				[76385, "Maurice Cheeks", 2310, 7, "N"],
+				[937, "Scottie Pippen", 2307, 8, "N"],
+				[17, "Clyde Drexler", 2207, 9, "N"],
+				[165, "Hakeem Olajuwon", 2162, 10, "N"]
+			]
+		},
+		{
+			"name": "OREBLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"OREB",
+				"OREB_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[77449, "Moses Malone", 6731, 1, "N"],
+				[305, "Robert Parish", 4598, 2, "N"],
+				[433, "Buck Williams", 4526, 3, "N"],
+				[23, "Dennis Rodman", 4329, 4, "N"],
+				[787, "Charles Barkley", 4260, 5, "N"],
+				[406, "Shaquille O'Neal", 4209, 6, "N"],
+				[2730, "Dwight Howard", 4151, 7, "N"],
+				[788, "Kevin Willis", 4132, 8, "N"],
+				[165, "Hakeem Olajuwon", 4034, 9, "N"],
+				[891, "Charles Oakley", 3924, 10, "N"]
+			]
+		},
+		{
+			"name": "DREBLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"DREB",
+				"DREB_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[708, "Kevin Garnett", 11453, 1, "N"],
+				[252, "Karl Malone", 11406, 2, "N"],
+				[1495, "Tim Duncan", 11232, 3, "N"],
+				[2730, "Dwight Howard", 10476, 4, "N"],
+				[305, "Robert Parish", 10117, 5, "N"],
+				[2544, "LeBron James", 10117, 5, "Y"],
+				[1717, "Dirk Nowitzki", 10021, 7, "N"],
+				[165, "Hakeem Olajuwon", 9714, 8, "N"],
+				[77449, "Moses Malone", 9481, 9, "N"],
+				[76003, "Kareem Abdul-Jabbar", 9394, 10, "N"]
+			]
+		},
+		{
+			"name": "REBLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"REB",
+				"REB_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[76375, "Wilt Chamberlain", 23924, 1, "N"],
+				[78049, "Bill Russell", 21620, 2, "N"],
+				[76003, "Kareem Abdul-Jabbar", 17440, 3, "N"],
+				[76979, "Elvin Hayes", 16279, 4, "N"],
+				[77449, "Moses Malone", 16212, 5, "N"],
+				[1495, "Tim Duncan", 15091, 6, "N"],
+				[252, "Karl Malone", 14968, 7, "N"],
+				[305, "Robert Parish", 14715, 8, "N"],
+				[708, "Kevin Garnett", 14662, 9, "N"],
+				[2730, "Dwight Howard", 14627, 10, "N"]
+			]
+		},
+		{
+			"name": "BLKLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"BLK",
+				"BLK_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[165, "Hakeem Olajuwon", 3830, 1, "N"],
+				[87, "Dikembe Mutombo", 3289, 2, "N"],
+				[76003, "Kareem Abdul-Jabbar", 3189, 3, "N"],
+				[76631, "Mark Eaton", 3064, 4, "N"],
+				[1495, "Tim Duncan", 3020, 5, "N"],
+				[764, "David Robinson", 2954, 6, "N"],
+				[121, "Patrick Ewing", 2894, 7, "N"],
+				[406, "Shaquille O'Neal", 2732, 8, "N"],
+				[78014, "Tree Rollins", 2542, 9, "N"],
+				[305, "Robert Parish", 2361, 10, "N"]
+			]
+		},
+		{
+			"name": "FGMLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"FGM",
+				"FGM_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[76003, "Kareem Abdul-Jabbar", 15837, 1, "N"],
+				[2544, "LeBron James", 15783, 2, "Y"],
+				[252, "Karl Malone", 13528, 3, "N"],
+				[76375, "Wilt Chamberlain", 12681, 4, "N"],
+				[893, "Michael Jordan", 12192, 5, "N"],
+				[977, "Kobe Bryant", 11719, 6, "N"],
+				[406, "Shaquille O'Neal", 11330, 7, "N"],
+				[1717, "Dirk Nowitzki", 11169, 8, "N"],
+				[201142, "Kevin Durant", 10994, 9, "Y"],
+				[76979, "Elvin Hayes", 10976, 10, "N"]
+			]
+		},
+		{
+			"name": "FGALeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"FGA",
+				"FGA_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[2544, "LeBron James", 31171, 1, "Y"],
+				[76003, "Kareem Abdul-Jabbar", 28307, 2, "N"],
+				[252, "Karl Malone", 26210, 3, "N"],
+				[977, "Kobe Bryant", 26200, 4, "N"],
+				[893, "Michael Jordan", 24537, 5, "N"],
+				[76979, "Elvin Hayes", 24272, 6, "N"],
+				[76970, "John Havlicek", 23930, 7, "N"],
+				[1717, "Dirk Nowitzki", 23734, 8, "N"],
+				[76375, "Wilt Chamberlain", 23497, 9, "N"],
+				[2546, "Carmelo Anthony", 22643, 10, "N"]
+			]
+		},
+		{
+			"name": "FG_PCTLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"FG_PCT",
+				"FG_PCT_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[1629655, "Daniel Gafford", 0.703, 1, "Y"],
+				[201599, "DeAndre Jordan", 0.674, 2, "Y"],
+				[203497, "Rudy Gobert", 0.659, 3, "Y"],
+				[1628386, "Jarrett Allen", 0.64, 4, "Y"],
+				[1627751, "Jakob Poeltl", 0.633, 5, "Y"],
+				[1629651, "Nic Claxton", 0.628, 6, "Y"],
+				[1626149, "Montrezl Harrell", 0.619, 7, "N"],
+				[1627826, "Ivica Zubac", 0.616, 8, "Y"],
+				[203991, "Clint Capela", 0.614, 9, "Y"],
+				[201148, "Brandan Wright", 0.607, 10, "N"]
+			]
+		},
+		{
+			"name": "TOVLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"TOV",
+				"TOV_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[2544, "LeBron James", 5582, 1, "Y"],
+				[201566, "Russell Westbrook", 5006, 2, "Y"],
+				[252, "Karl Malone", 4524, 3, "N"],
+				[201935, "James Harden", 4433, 4, "Y"],
+				[304, "John Stockton", 4244, 5, "N"],
+				[977, "Kobe Bryant", 4010, 6, "N"],
+				[467, "Jason Kidd", 4003, 7, "N"],
+				[77449, "Moses Malone", 3804, 8, "N"],
+				[201142, "Kevin Durant", 3715, 9, "Y"],
+				[78318, "Isiah Thomas", 3682, 10, "N"]
+			]
+		},
+		{
+			"name": "FG3MLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"FG3M",
+				"FG3M_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[201939, "Stephen Curry", 4233, 1, "Y"],
+				[201935, "James Harden", 3318, 2, "Y"],
+				[951, "Ray Allen", 2973, 3, "N"],
+				[202691, "Klay Thompson", 2837, 4, "Y"],
+				[203081, "Damian Lillard", 2804, 5, "Y"],
+				[2544, "LeBron James", 2610, 6, "Y"],
+				[397, "Reggie Miller", 2560, 7, "N"],
+				[2594, "Kyle Korver", 2450, 8, "N"],
+				[202331, "Paul George", 2415, 9, "Y"],
+				[201142, "Kevin Durant", 2307, 10, "Y"]
+			]
+		},
+		{
+			"name": "FG3ALeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"FG3A",
+				"FG3A_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[201939, "Stephen Curry", 10037, 1, "Y"],
+				[201935, "James Harden", 9158, 2, "Y"],
+				[203081, "Damian Lillard", 7556, 3, "Y"],
+				[2544, "LeBron James", 7489, 4, "Y"],
+				[951, "Ray Allen", 7429, 5, "N"],
+				[202691, "Klay Thompson", 6935, 6, "Y"],
+				[397, "Reggie Miller", 6486, 7, "N"],
+				[2037, "Jamal Crawford", 6379, 8, "N"],
+				[202331, "Paul George", 6300, 9, "Y"],
+				[1713, "Vince Carter", 6168, 10, "N"]
+			]
+		},
+		{
+			"name": "FG3_PCTLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"FG3_PCT",
+				"FG3_PCT_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[70, "Steve Kerr", 0.454, 1, "N"],
+				[1642281, "Jaylon Tyson", 0.448, 2, "Y"],
+				[1628379, "Luke Kennard", 0.442, 3, "Y"],
+				[93, "Hubert Davis", 0.441, 4, "N"],
+				[77845, "Drazen Petrovic", 0.437, 5, "N"],
+				[203925, "Joe Harris", 0.436, 6, "N"],
+				[2574, "Jason Kapono", 0.434, 7, "N"],
+				[1642285, "Cam Spencer", 0.433, 8, "Y"],
+				[203552, "Seth Curry", 0.433, 8, "Y"],
+				[100, "Tim Legler", 0.431, 10, "N"]
+			]
+		},
+		{
+			"name": "PFLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"PF",
+				"PF_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[76003, "Kareem Abdul-Jabbar", 4657, 1, "N"],
+				[252, "Karl Malone", 4578, 2, "N"],
+				[305, "Robert Parish", 4443, 3, "N"],
+				[891, "Charles Oakley", 4421, 4, "N"],
+				[165, "Hakeem Olajuwon", 4383, 5, "N"],
+				[433, "Buck Williams", 4267, 6, "N"],
+				[76979, "Elvin Hayes", 4193, 7, "N"],
+				[361, "Clifford Robinson", 4175, 8, "N"],
+				[788, "Kevin Willis", 4172, 9, "N"],
+				[901, "Otis Thorpe", 4146, 10, "N"]
+			]
+		},
+		{
+			"name": "FTMLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"FTM",
+				"FTM_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[252, "Karl Malone", 9787, 1, "N"],
+				[2544, "LeBron James", 8799, 2, "Y"],
+				[77449, "Moses Malone", 8531, 3, "N"],
+				[201935, "James Harden", 8521, 4, "Y"],
+				[977, "Kobe Bryant", 8378, 5, "N"],
+				[600015, "Oscar Robertson", 7694, 6, "N"],
+				[201142, "Kevin Durant", 7567, 7, "Y"],
+				[893, "Michael Jordan", 7327, 8, "N"],
+				[1717, "Dirk Nowitzki", 7240, 9, "N"],
+				[78497, "Jerry West", 7160, 10, "N"]
+			]
+		},
+		{
+			"name": "FTALeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"FTA",
+				"FTA_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[252, "Karl Malone", 13188, 1, "N"],
+				[2544, "LeBron James", 11936, 2, "Y"],
+				[76375, "Wilt Chamberlain", 11862, 3, "N"],
+				[406, "Shaquille O'Neal", 11252, 4, "N"],
+				[77449, "Moses Malone", 11090, 5, "N"],
+				[977, "Kobe Bryant", 10011, 6, "N"],
+				[201935, "James Harden", 9874, 7, "Y"],
+				[2730, "Dwight Howard", 9455, 8, "N"],
+				[76003, "Kareem Abdul-Jabbar", 9304, 9, "N"],
+				[600015, "Oscar Robertson", 9185, 10, "N"]
+			]
+		},
+		{
+			"name": "FT_PCTLeaders",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"FT_PCT",
+				"FT_PCT_RANK",
+				"IS_ACTIVE_FLAG"
+			],
+			"rowSet": [
+				[201939, "Stephen Curry", 0.912, 1, "Y"],
+				[959, "Steve Nash", 0.904, 2, "N"],
+				[899, "Mark Price", 0.904, 2, "N"],
+				[600013, "Rick Barry", 0.9, 4, "N"],
+				[203081, "Damian Lillard", 0.899, 5, "Y"],
+				[978, "Peja Stojakovic", 0.895, 6, "N"],
+				[1497, "Chauncey Billups", 0.894, 7, "N"],
+				[951, "Ray Allen", 0.894, 7, "N"],
+				[77669, "Calvin Murphy", 0.892, 9, "N"],
+				[200755, "JJ Redick", 0.892, 9, "N"]
+			]
+		}
+	]
+}

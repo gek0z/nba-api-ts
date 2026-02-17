@@ -1,8 +1,6 @@
-
 export interface ScoreboardV3Params {
-  gameDate: string;
-  leagueID?: string;
+	gameDate: string;
+	leagueID?: string;
 }
 
-export interface ScoreboardV3Response {
-}
+export type ScoreboardV3Response = {};

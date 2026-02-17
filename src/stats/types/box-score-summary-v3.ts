@@ -1,6 +1,3 @@
+export type BoxScoreSummaryV3Params = {};
 
-export interface BoxScoreSummaryV3Params {
-}
-
-export interface BoxScoreSummaryV3Response {
-}
+export type BoxScoreSummaryV3Response = {};

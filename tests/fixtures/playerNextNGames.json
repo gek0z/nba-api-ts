@@ -1,1 +1,31 @@
-{"resource":"playernextngames","parameters":{"LeagueID":"00","Season":"2025-26","SeasonType":"Regular Season","PlayerID":203999,"NumberOfGames":2147483647},"resultSets":[{"name":"NextNGames","headers":["GAME_ID","GAME_DATE","HOME_TEAM_ID","VISITOR_TEAM_ID","HOME_TEAM_NAME","VISITOR_TEAM_NAME","HOME_TEAM_ABBREVIATION","VISITOR_TEAM_ABBREVIATION","HOME_TEAM_NICKNAME","VISITOR_TEAM_NICKNAME","GAME_TIME","HOME_WL","VISITOR_WL"],"rowSet":[]}]}
+{
+	"resource": "playernextngames",
+	"parameters": {
+		"LeagueID": "00",
+		"Season": "2025-26",
+		"SeasonType": "Regular Season",
+		"PlayerID": 203999,
+		"NumberOfGames": 2147483647
+	},
+	"resultSets": [
+		{
+			"name": "NextNGames",
+			"headers": [
+				"GAME_ID",
+				"GAME_DATE",
+				"HOME_TEAM_ID",
+				"VISITOR_TEAM_ID",
+				"HOME_TEAM_NAME",
+				"VISITOR_TEAM_NAME",
+				"HOME_TEAM_ABBREVIATION",
+				"VISITOR_TEAM_ABBREVIATION",
+				"HOME_TEAM_NICKNAME",
+				"VISITOR_TEAM_NICKNAME",
+				"GAME_TIME",
+				"HOME_WL",
+				"VISITOR_WL"
+			],
+			"rowSet": []
+		}
+	]
+}

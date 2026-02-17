@@ -1,1 +1,200 @@
-{"resource":"shotchartleaguewide","parameters":{"LeagueID":"00","Season":"2024-25"},"resultSets":[{"name":"League_Wide","headers":["GRID_TYPE","SHOT_ZONE_BASIC","SHOT_ZONE_AREA","SHOT_ZONE_RANGE","FGA","FGM","FG_PCT"],"rowSet":[["League Averages","Above the Break 3","Back Court(BC)","Back Court Shot",42,3,0.071],["League Averages","Above the Break 3","Center(C)","24+ ft.",18214,6390,0.351],["League Averages","Above the Break 3","Left Side Center(LC)","24+ ft.",28322,10109,0.357],["League Averages","Above the Break 3","Right Side Center(RC)","24+ ft.",26052,9158,0.352],["League Averages","Backcourt","Back Court(BC)","Back Court Shot",585,13,0.022],["League Averages","In The Paint (Non-RA)","Center(C)","8-16 ft.",13890,6314,0.455],["League Averages","In The Paint (Non-RA)","Center(C)","Less Than 8 ft.",28433,12474,0.439],["League Averages","In The Paint (Non-RA)","Left Side(L)","8-16 ft.",2469,1081,0.438],["League Averages","In The Paint (Non-RA)","Right Side(R)","8-16 ft.",2685,1184,0.441],["League Averages","Left Corner 3","Left Side(L)","24+ ft.",12997,4989,0.384],["League Averages","Mid-Range","Center(C)","8-16 ft.",2002,899,0.449],["League Averages","Mid-Range","Center(C)","16-24 ft.",3005,1221,0.406],["League Averages","Mid-Range","Left Side Center(LC)","16-24 ft.",2975,1186,0.399],["League Averages","Mid-Range","Left Side(L)","16-24 ft.",1292,527,0.408],["League Averages","Mid-Range","Left Side(L)","8-16 ft.",4816,2042,0.424],["League Averages","Mid-Range","Right Side Center(RC)","16-24 ft.",2964,1156,0.39],["League Averages","Mid-Range","Right Side(R)","8-16 ft.",4970,2165,0.436],["League Averages","Mid-Range","Right Side(R)","16-24 ft.",1119,430,0.384],["League Averages","Restricted Area","Center(C)","Less Than 8 ft.",64916,43036,0.663],["League Averages","Right Corner 3","Right Side(R)","24+ ft.",12156,4732,0.389]]}]}
+{
+	"resource": "shotchartleaguewide",
+	"parameters": { "LeagueID": "00", "Season": "2024-25" },
+	"resultSets": [
+		{
+			"name": "League_Wide",
+			"headers": [
+				"GRID_TYPE",
+				"SHOT_ZONE_BASIC",
+				"SHOT_ZONE_AREA",
+				"SHOT_ZONE_RANGE",
+				"FGA",
+				"FGM",
+				"FG_PCT"
+			],
+			"rowSet": [
+				[
+					"League Averages",
+					"Above the Break 3",
+					"Back Court(BC)",
+					"Back Court Shot",
+					42,
+					3,
+					0.071
+				],
+				[
+					"League Averages",
+					"Above the Break 3",
+					"Center(C)",
+					"24+ ft.",
+					18214,
+					6390,
+					0.351
+				],
+				[
+					"League Averages",
+					"Above the Break 3",
+					"Left Side Center(LC)",
+					"24+ ft.",
+					28322,
+					10109,
+					0.357
+				],
+				[
+					"League Averages",
+					"Above the Break 3",
+					"Right Side Center(RC)",
+					"24+ ft.",
+					26052,
+					9158,
+					0.352
+				],
+				[
+					"League Averages",
+					"Backcourt",
+					"Back Court(BC)",
+					"Back Court Shot",
+					585,
+					13,
+					0.022
+				],
+				[
+					"League Averages",
+					"In The Paint (Non-RA)",
+					"Center(C)",
+					"8-16 ft.",
+					13890,
+					6314,
+					0.455
+				],
+				[
+					"League Averages",
+					"In The Paint (Non-RA)",
+					"Center(C)",
+					"Less Than 8 ft.",
+					28433,
+					12474,
+					0.439
+				],
+				[
+					"League Averages",
+					"In The Paint (Non-RA)",
+					"Left Side(L)",
+					"8-16 ft.",
+					2469,
+					1081,
+					0.438
+				],
+				[
+					"League Averages",
+					"In The Paint (Non-RA)",
+					"Right Side(R)",
+					"8-16 ft.",
+					2685,
+					1184,
+					0.441
+				],
+				[
+					"League Averages",
+					"Left Corner 3",
+					"Left Side(L)",
+					"24+ ft.",
+					12997,
+					4989,
+					0.384
+				],
+				[
+					"League Averages",
+					"Mid-Range",
+					"Center(C)",
+					"8-16 ft.",
+					2002,
+					899,
+					0.449
+				],
+				[
+					"League Averages",
+					"Mid-Range",
+					"Center(C)",
+					"16-24 ft.",
+					3005,
+					1221,
+					0.406
+				],
+				[
+					"League Averages",
+					"Mid-Range",
+					"Left Side Center(LC)",
+					"16-24 ft.",
+					2975,
+					1186,
+					0.399
+				],
+				[
+					"League Averages",
+					"Mid-Range",
+					"Left Side(L)",
+					"16-24 ft.",
+					1292,
+					527,
+					0.408
+				],
+				[
+					"League Averages",
+					"Mid-Range",
+					"Left Side(L)",
+					"8-16 ft.",
+					4816,
+					2042,
+					0.424
+				],
+				[
+					"League Averages",
+					"Mid-Range",
+					"Right Side Center(RC)",
+					"16-24 ft.",
+					2964,
+					1156,
+					0.39
+				],
+				[
+					"League Averages",
+					"Mid-Range",
+					"Right Side(R)",
+					"8-16 ft.",
+					4970,
+					2165,
+					0.436
+				],
+				[
+					"League Averages",
+					"Mid-Range",
+					"Right Side(R)",
+					"16-24 ft.",
+					1119,
+					430,
+					0.384
+				],
+				[
+					"League Averages",
+					"Restricted Area",
+					"Center(C)",
+					"Less Than 8 ft.",
+					64916,
+					43036,
+					0.663
+				],
+				[
+					"League Averages",
+					"Right Corner 3",
+					"Right Side(R)",
+					"24+ ft.",
+					12156,
+					4732,
+					0.389
+				]
+			]
+		}
+	]
+}

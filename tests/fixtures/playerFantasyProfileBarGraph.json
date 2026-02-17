@@ -1,1 +1,53 @@
-{"resource":"playerfantasyprofilebargraph","parameters":{"LeagueID":"00","Season":"2024-25","SeasonType":null,"PlayerID":203999},"resultSets":[{"name":"SeasonAvg","headers":["PLAYER_ID","PLAYER_NAME","TEAM_ID","TEAM_ABBREVIATION","FAN_DUEL_PTS","NBA_FANTASY_PTS","PTS","REB","AST","FG3M","FT_PCT","STL","BLK","TOV","FG_PCT"],"rowSet":[]},{"name":"LastFiveGamesAvg","headers":["PLAYER_ID","PLAYER_NAME","TEAM_ID","TEAM_ABBREVIATION","FAN_DUEL_PTS","NBA_FANTASY_PTS","PTS","REB","AST","FG3M","FT_PCT","STL","BLK","TOV","FG_PCT"],"rowSet":[]}]}
+{
+	"resource": "playerfantasyprofilebargraph",
+	"parameters": {
+		"LeagueID": "00",
+		"Season": "2024-25",
+		"SeasonType": null,
+		"PlayerID": 203999
+	},
+	"resultSets": [
+		{
+			"name": "SeasonAvg",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"TEAM_ID",
+				"TEAM_ABBREVIATION",
+				"FAN_DUEL_PTS",
+				"NBA_FANTASY_PTS",
+				"PTS",
+				"REB",
+				"AST",
+				"FG3M",
+				"FT_PCT",
+				"STL",
+				"BLK",
+				"TOV",
+				"FG_PCT"
+			],
+			"rowSet": []
+		},
+		{
+			"name": "LastFiveGamesAvg",
+			"headers": [
+				"PLAYER_ID",
+				"PLAYER_NAME",
+				"TEAM_ID",
+				"TEAM_ABBREVIATION",
+				"FAN_DUEL_PTS",
+				"NBA_FANTASY_PTS",
+				"PTS",
+				"REB",
+				"AST",
+				"FG3M",
+				"FT_PCT",
+				"STL",
+				"BLK",
+				"TOV",
+				"FG_PCT"
+			],
+			"rowSet": []
+		}
+	]
+}

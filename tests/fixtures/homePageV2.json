@@ -1,1 +1,120 @@
-{"resource":"homepagev2","parameters":{"LeagueID":"00","Season":"2024-25","SeasonType":"Regular Season","GameScope":"Season","PlayerScope":"All Players","PlayerOrTeam":"Team","StatType":"Traditional"},"resultSets":[{"name":"HomePageStat1","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","PTS"],"rowSet":[[1,1610612739,"CLE","Cleveland Cavaliers",121.9],[2,1610612763,"MEM","Memphis Grizzlies",121.7],[3,1610612743,"DEN","Denver Nuggets",120.8],[4,1610612760,"OKC","Oklahoma City Thunder",120.5],[5,1610612737,"ATL","Atlanta Hawks",118.2]]},{"name":"HomePageStat2","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","REB"],"rowSet":[[1,1610612745,"HOU","Houston Rockets",48.5],[2,1610612763,"MEM","Memphis Grizzlies",47.3],[3,1610612741,"CHI","Chicago Bulls",45.9],[4,1610612743,"DEN","Denver Nuggets",45.7],[5,1610612739,"CLE","Cleveland Cavaliers",45.4]]},{"name":"HomePageStat3","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","AST"],"rowSet":[[1,1610612743,"DEN","Denver Nuggets",31.0],[2,1610612737,"ATL","Atlanta Hawks",29.6],[3,1610612754,"IND","Indiana Pacers",29.2],[4,1610612741,"CHI","Chicago Bulls",29.1],[4,1610612744,"GSW","Golden State Warriors",29.1]]},{"name":"HomePageStat4","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","STL"],"rowSet":[[1,1610612760,"OKC","Oklahoma City Thunder",10.33],[2,1610612737,"ATL","Atlanta Hawks",9.73],[3,1610612744,"GSW","Golden State Warriors",9.4],[3,1610612746,"LAC","LA Clippers",9.43],[5,1610612755,"PHI","Philadelphia 76ers",9.17]]},{"name":"HomePageStat5","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","FG_PCT"],"rowSet":[[1,1610612743,"DEN","Denver Nuggets",0.506],[2,1610612739,"CLE","Cleveland Cavaliers",0.491],[3,1610612754,"IND","Indiana Pacers",0.488],[4,1610612749,"MIL","Milwaukee Bucks",0.486],[4,1610612752,"NYK","New York Knicks",0.486]]},{"name":"HomePageStat6","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","FT_PCT"],"rowSet":[[1,1610612760,"OKC","Oklahoma City Thunder",0.819],[2,1610612756,"PHX","Phoenix Suns",0.81],[3,1610612741,"CHI","Chicago Bulls",0.809],[4,1610612758,"SAC","Sacramento Kings",0.806],[5,1610612752,"NYK","New York Knicks",0.8]]},{"name":"HomePageStat7","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","FG3_PCT"],"rowSet":[[1,1610612749,"MIL","Milwaukee Bucks",0.387],[2,1610612739,"CLE","Cleveland Cavaliers",0.383],[3,1610612756,"PHX","Phoenix Suns",0.378],[4,1610612750,"MIN","Minnesota Timberwolves",0.377],[5,1610612743,"DEN","Denver Nuggets",0.376]]},{"name":"HomePageStat8","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","BLK"],"rowSet":[[1,1610612753,"ORL","Orlando Magic",5.95],[2,1610612760,"OKC","Oklahoma City Thunder",5.67],[3,1610612763,"MEM","Memphis Grizzlies",5.63],[4,1610612759,"SAS","San Antonio Spurs",5.55],[5,1610612738,"BOS","Boston Celtics",5.51]]}]}
+{
+	"resource": "homepagev2",
+	"parameters": {
+		"LeagueID": "00",
+		"Season": "2024-25",
+		"SeasonType": "Regular Season",
+		"GameScope": "Season",
+		"PlayerScope": "All Players",
+		"PlayerOrTeam": "Team",
+		"StatType": "Traditional"
+	},
+	"resultSets": [
+		{
+			"name": "HomePageStat1",
+			"headers": ["RANK", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "PTS"],
+			"rowSet": [
+				[1, 1610612739, "CLE", "Cleveland Cavaliers", 121.9],
+				[2, 1610612763, "MEM", "Memphis Grizzlies", 121.7],
+				[3, 1610612743, "DEN", "Denver Nuggets", 120.8],
+				[4, 1610612760, "OKC", "Oklahoma City Thunder", 120.5],
+				[5, 1610612737, "ATL", "Atlanta Hawks", 118.2]
+			]
+		},
+		{
+			"name": "HomePageStat2",
+			"headers": ["RANK", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "REB"],
+			"rowSet": [
+				[1, 1610612745, "HOU", "Houston Rockets", 48.5],
+				[2, 1610612763, "MEM", "Memphis Grizzlies", 47.3],
+				[3, 1610612741, "CHI", "Chicago Bulls", 45.9],
+				[4, 1610612743, "DEN", "Denver Nuggets", 45.7],
+				[5, 1610612739, "CLE", "Cleveland Cavaliers", 45.4]
+			]
+		},
+		{
+			"name": "HomePageStat3",
+			"headers": ["RANK", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "AST"],
+			"rowSet": [
+				[1, 1610612743, "DEN", "Denver Nuggets", 31.0],
+				[2, 1610612737, "ATL", "Atlanta Hawks", 29.6],
+				[3, 1610612754, "IND", "Indiana Pacers", 29.2],
+				[4, 1610612741, "CHI", "Chicago Bulls", 29.1],
+				[4, 1610612744, "GSW", "Golden State Warriors", 29.1]
+			]
+		},
+		{
+			"name": "HomePageStat4",
+			"headers": ["RANK", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "STL"],
+			"rowSet": [
+				[1, 1610612760, "OKC", "Oklahoma City Thunder", 10.33],
+				[2, 1610612737, "ATL", "Atlanta Hawks", 9.73],
+				[3, 1610612744, "GSW", "Golden State Warriors", 9.4],
+				[3, 1610612746, "LAC", "LA Clippers", 9.43],
+				[5, 1610612755, "PHI", "Philadelphia 76ers", 9.17]
+			]
+		},
+		{
+			"name": "HomePageStat5",
+			"headers": [
+				"RANK",
+				"TEAM_ID",
+				"TEAM_ABBREVIATION",
+				"TEAM_NAME",
+				"FG_PCT"
+			],
+			"rowSet": [
+				[1, 1610612743, "DEN", "Denver Nuggets", 0.506],
+				[2, 1610612739, "CLE", "Cleveland Cavaliers", 0.491],
+				[3, 1610612754, "IND", "Indiana Pacers", 0.488],
+				[4, 1610612749, "MIL", "Milwaukee Bucks", 0.486],
+				[4, 1610612752, "NYK", "New York Knicks", 0.486]
+			]
+		},
+		{
+			"name": "HomePageStat6",
+			"headers": [
+				"RANK",
+				"TEAM_ID",
+				"TEAM_ABBREVIATION",
+				"TEAM_NAME",
+				"FT_PCT"
+			],
+			"rowSet": [
+				[1, 1610612760, "OKC", "Oklahoma City Thunder", 0.819],
+				[2, 1610612756, "PHX", "Phoenix Suns", 0.81],
+				[3, 1610612741, "CHI", "Chicago Bulls", 0.809],
+				[4, 1610612758, "SAC", "Sacramento Kings", 0.806],
+				[5, 1610612752, "NYK", "New York Knicks", 0.8]
+			]
+		},
+		{
+			"name": "HomePageStat7",
+			"headers": [
+				"RANK",
+				"TEAM_ID",
+				"TEAM_ABBREVIATION",
+				"TEAM_NAME",
+				"FG3_PCT"
+			],
+			"rowSet": [
+				[1, 1610612749, "MIL", "Milwaukee Bucks", 0.387],
+				[2, 1610612739, "CLE", "Cleveland Cavaliers", 0.383],
+				[3, 1610612756, "PHX", "Phoenix Suns", 0.378],
+				[4, 1610612750, "MIN", "Minnesota Timberwolves", 0.377],
+				[5, 1610612743, "DEN", "Denver Nuggets", 0.376]
+			]
+		},
+		{
+			"name": "HomePageStat8",
+			"headers": ["RANK", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "BLK"],
+			"rowSet": [
+				[1, 1610612753, "ORL", "Orlando Magic", 5.95],
+				[2, 1610612760, "OKC", "Oklahoma City Thunder", 5.67],
+				[3, 1610612763, "MEM", "Memphis Grizzlies", 5.63],
+				[4, 1610612759, "SAS", "San Antonio Spurs", 5.55],
+				[5, 1610612738, "BOS", "Boston Celtics", 5.51]
+			]
+		}
+	]
+}

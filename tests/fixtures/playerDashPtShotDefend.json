@@ -1,1 +1,42 @@
-{"resource":"playerdashptshotdefend","parameters":{"PerMode":"Totals","LeagueID":"00","Season":"2024-25","SeasonType":"Regular Season","PlayerID":203999,"TeamID":1610612743,"Outcome":null,"Location":null,"Month":0,"SeasonSegment":null,"DateFrom":null,"DateTo":null,"OpponentTeamID":0,"VsConference":null,"VsDivision":null,"GameSegment":null,"Period":0,"LastNGames":0,"ISTRound":null},"resultSets":[{"name":"DefendingShots","headers":["MATCHUPID","GP","G","DEFENSE_CATEGORY","FREQ","D_FGM","D_FGA","D_FG_PCT","NORMAL_FG_PCT","PCT_PLUSMINUS"],"rowSet":[]}]}
+{
+	"resource": "playerdashptshotdefend",
+	"parameters": {
+		"PerMode": "Totals",
+		"LeagueID": "00",
+		"Season": "2024-25",
+		"SeasonType": "Regular Season",
+		"PlayerID": 203999,
+		"TeamID": 1610612743,
+		"Outcome": null,
+		"Location": null,
+		"Month": 0,
+		"SeasonSegment": null,
+		"DateFrom": null,
+		"DateTo": null,
+		"OpponentTeamID": 0,
+		"VsConference": null,
+		"VsDivision": null,
+		"GameSegment": null,
+		"Period": 0,
+		"LastNGames": 0,
+		"ISTRound": null
+	},
+	"resultSets": [
+		{
+			"name": "DefendingShots",
+			"headers": [
+				"MATCHUPID",
+				"GP",
+				"G",
+				"DEFENSE_CATEGORY",
+				"FREQ",
+				"D_FGM",
+				"D_FGA",
+				"D_FG_PCT",
+				"NORMAL_FG_PCT",
+				"PCT_PLUSMINUS"
+			],
+			"rowSet": []
+		}
+	]
+}

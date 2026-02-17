@@ -1,10 +1,10 @@
-export * from './enums.js';
-export { defaults } from './defaults.js';
+export { defaults } from "./defaults.js";
+export * from "./enums.js";
 export {
-  currentSeason,
-  previousSeason,
-  currentSeasonYear,
-  formatSeason,
-  formatSeasonId,
-  currentSeasonId,
-} from './season.js';
+	currentSeason,
+	currentSeasonId,
+	currentSeasonYear,
+	formatSeason,
+	formatSeasonId,
+	previousSeason,
+} from "./season.js";

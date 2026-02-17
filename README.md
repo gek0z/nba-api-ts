@@ -123,33 +123,59 @@ All `stats.nba.com` endpoints are behind Akamai bot protection that blocks reque
 To use stats endpoints from a server, provide a custom `fetch` backed by a library that can impersonate a browser's TLS fingerprint:
 
 ```typescript
-// Using tls-client (recommended)
 import { NBAClient } from 'nba-api-ts';
-import tlsClient from 'tls-client';
+import { ModuleClient, SessionClient } from 'tlsclientwrapper';
 
-const session = new tlsClient.Session({ clientIdentifier: 'chrome_131' });
+const moduleClient = new ModuleClient();
+await moduleClient.open();
 
-const nba = new NBAClient({
-  stats: {
-    fetch: (url, init) => session.get(url, { headers: init?.headers }),
+const session = new SessionClient(moduleClient, {
+  tlsClientIdentifier: 'chrome_131',
+  timeoutSeconds: 30,
+  defaultHeaders: {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+    'Accept': 'application/json, text/plain, */*',
+    'Referer': 'https://www.nba.com/',
+    'Origin': 'https://www.nba.com',
   },
 });
 
-// Now stats endpoints work from Node/Bun
+const nba = new NBAClient({
+  stats: {
+    fetch: async (url) => {
+      const res = await session.get(url);
+      if (res.status === 0) throw new Error(res.body);
+      const headers: Record<string, string> = {};
+      for (const [k, v] of Object.entries(res.headers))
+        headers[k] = Array.isArray(v) ? v.join(', ') : String(v);
+      return new Response(res.body, { status: res.status, headers });
+    },
+  },
+});
+
 const career = await nba.stats.playerCareerStats({ playerID: 203999 });
 ```
 
-Any fetch-compatible function works — `tls-client`, `curl-impersonate`, Puppeteer, or a proxy that adds the right TLS fingerprint.
+Any fetch-compatible function works — `tlsclientwrapper`, `curl-impersonate`, Puppeteer, or a proxy that adds the right TLS fingerprint.
+
+### IP Blocking
+
+Beyond TLS fingerprinting, `stats.nba.com` drops connections from known cloud/datacenter IP ranges. If your requests hang without any response, this is likely the cause — it affects all major providers (AWS, GCP, Azure, etc.) and CI environments like GitHub Actions.
+
+You'll need to make requests from a residential IP, either directly (local machine, home server) or via a residential proxy.
 
 ## Development
 
 ```bash
 bun install
-bun test
+bun test            # unit tests (offline, fast)
 bun run build
 
-# Run integration tests against real NBA API
+# Integration tests — hits real NBA API, requires residential IP
 NBA_INTEGRATION_TESTS=1 bun test tests/integration
+
+# Integration tests with TLS fingerprint impersonation
+NBA_INTEGRATION_TESTS=1 NBA_USE_TLS=1 bun test tests/integration
 ```
 
 ## License

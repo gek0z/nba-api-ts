@@ -1,8 +1,6 @@
-
 export interface VideoEventsParams {
-  gameID: number;
-  gameEventID?: number;
+	gameID: number;
+	gameEventID?: number;
 }
 
-export interface VideoEventsResponse {
-}
+export type VideoEventsResponse = {};

@@ -1,1 +1,935 @@
-{"meta":{"version":1,"request":"http://nba.cloud/games/0022400561/boxscoresummary?Format=json","time":"2025-08-11T11:44:21.4421Z"},"boxScoreSummary":{"gameId":"0022400561","gameCode":"20250115/NYKPHI","gameStatus":3,"gameStatusText":"Final/OT","period":5,"gameClock":"PT00M00.00S","gameTimeUTC":"2025-01-16T00:00:00Z","gameEt":"2025-01-15T19:00:00Z","awayTeamId":1610612752,"homeTeamId":1610612755,"duration":"2:34","attendance":20088,"sellout":1,"seriesGameNumber":"","gameLabel":"","gameSubLabel":"","seriesText":"","ifNecessary":false,"isNeutral":false,"arena":{"arenaId":419,"arenaName":"Wells Fargo Center","arenaCity":"Philadelphia","arenaState":"PA","arenaCountry":"US","arenaTimezone":"Eastern","arenaStreetAddress":"","arenaPostalCode":""},"officials":[{"personId":2003,"name":"Pat Fraher","nameI":"P. Fraher","firstName":"Pat","familyName":"Fraher","jerseyNum":"26  ","assignment":""},{"personId":1626300,"name":"Ray Acosta","nameI":"R. Acosta","firstName":"Ray","familyName":"Acosta","jerseyNum":"54  ","assignment":""},{"personId":1627526,"name":"Matt Kallio","nameI":"M. Kallio","firstName":"Matt","familyName":"Kallio","jerseyNum":"53  ","assignment":""}],"broadcasters":{"internationalBroadcasters":[{"broadcasterId":11,"broadcastDisplay":"TSN","broadcasterDisplay":"TSN","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":1610612761,"regionId":2},{"broadcasterId":1203,"broadcastDisplay":"ESPN_I_Ven","broadcasterDisplay":"ESPN","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":35},{"broadcasterId":1220,"broadcastDisplay":"SportTVPor","broadcasterDisplay":"Sport TV 1","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":28},{"broadcasterId":1228,"broadcastDisplay":"beIN_MENA","broadcasterDisplay":"beIN Sports","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":25},{"broadcasterId":1231,"broadcastDisplay":"ESPN_I_Afr","broadcasterDisplay":"ESPN","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":24},{"broadcasterId":1235,"broadcastDisplay":"ESPN_I_Mex","broadcasterDisplay":"ESPN","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":22},{"broadcasterId":1273,"broadcastDisplay":"ESPN_I_DR","broadcasterDisplay":"ESPN","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":12},{"broadcasterId":1276,"broadcastDisplay":"ESPN_Brazi","broadcasterDisplay":"ESPN","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":11},{"broadcasterId":1283,"broadcastDisplay":"ESPN_Aus","broadcasterDisplay":"ESPN","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":9},{"broadcasterId":1288,"broadcastDisplay":"ESPN_I_Arg","broadcasterDisplay":"ESPN","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":6},{"broadcasterId":1306,"broadcastDisplay":"QQ","broadcasterDisplay":"Tencent","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":8},{"broadcasterId":1367,"broadcastDisplay":"ESPN_CAR","broadcasterDisplay":"ESPN","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":38},{"broadcasterId":1386,"broadcastDisplay":"ESPN_I_SA","broadcasterDisplay":"ESPN","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":40},{"broadcasterId":1410,"broadcastDisplay":"ESPN_I_NZ","broadcasterDisplay":"ESPN","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":41},{"broadcasterId":1440,"broadcastDisplay":"beIN_FRA","broadcasterDisplay":"beIN Sports","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":13},{"broadcasterId":1683,"broadcastDisplay":"TV2","broadcasterDisplay":"TV2","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":51},{"broadcasterId":1000158,"broadcastDisplay":"Arena Sport","broadcasterDisplay":"Arena Sport","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":36},{"broadcasterId":1001082,"broadcastDisplay":"TNT Sports 2 UK","broadcasterDisplay":"TNT Sports 2","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":34}],"internationalRadioBroadcasters":[],"internationalOttBroadcasters":[],"nationalBroadcasters":[{"broadcasterId":2,"broadcastDisplay":"ESPN","broadcasterDisplay":"ESPN","broadcasterVideoLink":"https://www.espn.com/espnplus/player/_/id/c1b055ed-b3d7-44d1-a4a0-aecc329dbb1f?ex_cid=nba","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":1}],"nationalRadioBroadcasters":[{"broadcasterId":1001098,"broadcastDisplay":"SiriusXM","broadcasterDisplay":"SiriusXM","broadcasterVideoLink":"https://www.siriusxm.com/sports/nba","broadcasterDescription":"","broadcasterTeamId":-1,"regionId":1}],"nationalOttBroadcasters":[],"homeTvBroadcasters":[{"broadcasterId":133,"broadcastDisplay":"NBCSP","broadcasterDisplay":"NBC Sports Philadelphia","broadcasterVideoLink":"http://stream.nbcsports.com/rsn/nba-76ers-live-stream","broadcasterDescription":"","broadcasterTeamId":1610612755,"regionId":1}],"homeRadioBroadcasters":[{"broadcasterId":1434,"broadcastDisplay":"WPEN","broadcasterDisplay":"97.5 The Fanatic","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":1610612755,"regionId":1}],"homeOttBroadcasters":[],"awayTvBroadcasters":[{"broadcasterId":100,"broadcastDisplay":"MSG","broadcasterDisplay":"MSG","broadcasterVideoLink":"https://msgplus.onelink.me/sNip/BroadcastNBA","broadcasterDescription":"","broadcasterTeamId":1610612752,"regionId":1}],"awayRadioBroadcasters":[{"broadcasterId":1001199,"broadcastDisplay":"WHSQ","broadcasterDisplay":"880 ESPN New York","broadcasterVideoLink":"","broadcasterDescription":"","broadcasterTeamId":1610612752,"regionId":1}],"awayOttBroadcasters":[]},"homeTeam":{"teamId":1610612755,"teamName":"76ers","teamCity":"Philadelphia","teamTricode":"PHI","teamSlug":"sixers","teamWins":15,"teamLosses":24,"score":119,"inBonus":"","timeoutsRemaining":0,"seed":0,"statistics":{"dummyKey":"dummyValue"},"periods":[{"period":1,"periodType":"REGULAR","score":21},{"period":2,"periodType":"REGULAR","score":26},{"period":3,"periodType":"REGULAR","score":38},{"period":4,"periodType":"REGULAR","score":24},{"period":5,"periodType":"OVERTIME","score":10}],"players":[{"personId":201569,"name":"Eric Gordon","nameI":"E. Gordon","firstName":"Eric","familyName":"Gordon","jerseyNum":"23"},{"personId":202331,"name":"Paul George","nameI":"P. George","firstName":"Paul","familyName":"George","jerseyNum":"8"},{"personId":202704,"name":"Reggie Jackson","nameI":"R. Jackson","firstName":"Reggie","familyName":"Jackson","jerseyNum":"00"},{"personId":203083,"name":"Andre Drummond","nameI":"A. Drummond","firstName":"Andre","familyName":"Drummond","jerseyNum":"1"},{"personId":1626162,"name":"Kelly Oubre Jr.","nameI":"K. Oubre Jr.","firstName":"Kelly","familyName":"Oubre Jr.","jerseyNum":"9"},{"personId":1627824,"name":"Guerschon Yabusele","nameI":"G. Yabusele","firstName":"Guerschon","familyName":"Yabusele","jerseyNum":"28"},{"personId":1630178,"name":"Tyrese Maxey","nameI":"T. Maxey","firstName":"Tyrese","familyName":"Maxey","jerseyNum":"0"},{"personId":1630288,"name":"Jeff Dowtin Jr.","nameI":"J. Dowtin Jr.","firstName":"Jeff","familyName":"Dowtin Jr.","jerseyNum":"11"},{"personId":1631250,"name":"Pete Nance","nameI":"P. Nance","firstName":"Pete","familyName":"Nance","jerseyNum":"22"},{"personId":1641737,"name":"Adem Bona","nameI":"A. Bona","firstName":"Adem","familyName":"Bona","jerseyNum":"30"},{"personId":1641741,"name":"Ricky Council IV","nameI":"R. Council IV","firstName":"Ricky","familyName":"Council IV","jerseyNum":"14"},{"personId":1642348,"name":"Justin Edwards","nameI":"J. Edwards","firstName":"Justin","familyName":"Edwards","jerseyNum":"19"}],"inactives":[{"personId":200768,"firstName":"Kyle","familyName":"Lowry","jerseyNum":"7   "},{"personId":203954,"firstName":"Joel","familyName":"Embiid","jerseyNum":"21  "},{"personId":1628997,"firstName":"Caleb","familyName":"Martin","jerseyNum":"16  "},{"personId":1630231,"firstName":"KJ","familyName":"Martin","jerseyNum":"1   "},{"personId":1642272,"firstName":"Jared","familyName":"McCain","jerseyNum":"20  "}]},"awayTeam":{"teamId":1610612752,"teamName":"Knicks","teamCity":"New York","teamTricode":"NYK","teamSlug":"knicks","teamWins":27,"teamLosses":15,"score":125,"inBonus":"","timeoutsRemaining":1,"seed":0,"statistics":{"dummyKey":"dummyValue"},"periods":[{"period":1,"periodType":"REGULAR","score":30},{"period":2,"periodType":"REGULAR","score":30},{"period":3,"periodType":"REGULAR","score":25},{"period":4,"periodType":"REGULAR","score":24},{"period":5,"periodType":"OVERTIME","score":16}],"players":[{"personId":1626166,"name":"Cameron Payne","nameI":"C. Payne","firstName":"Cameron","familyName":"Payne","jerseyNum":"1"},{"personId":1628384,"name":"OG Anunoby","nameI":"O. Anunoby","firstName":"OG","familyName":"Anunoby","jerseyNum":"8"},{"personId":1628404,"name":"Josh Hart","nameI":"J. Hart","firstName":"Josh","familyName":"Hart","jerseyNum":"3"},{"personId":1628969,"name":"Mikal Bridges","nameI":"M. Bridges","firstName":"Mikal","familyName":"Bridges","jerseyNum":"25"},{"personId":1628973,"name":"Jalen Brunson","nameI":"J. Brunson","firstName":"Jalen","familyName":"Brunson","jerseyNum":"11"},{"personId":1629013,"name":"Landry Shamet","nameI":"L. Shamet","firstName":"Landry","familyName":"Shamet","jerseyNum":"44"},{"personId":1630173,"name":"Precious Achiuwa","nameI":"P. Achiuwa","firstName":"Precious","familyName":"Achiuwa","jerseyNum":"5"},{"personId":1630346,"name":"Matt Ryan","nameI":"M. Ryan","firstName":"Matt","familyName":"Ryan","jerseyNum":"37"},{"personId":1630540,"name":"Miles McBride","nameI":"M. McBride","firstName":"Miles","familyName":"McBride","jerseyNum":"2"},{"personId":1630574,"name":"Ariel Hukporti","nameI":"A. Hukporti","firstName":"Ariel","familyName":"Hukporti","jerseyNum":"55"},{"personId":1630579,"name":"Jericho Sims","nameI":"J. Sims","firstName":"Jericho","familyName":"Sims","jerseyNum":"20"},{"personId":1631210,"name":"Jacob Toppin","nameI":"J. Toppin","firstName":"Jacob","familyName":"Toppin","jerseyNum":"00"},{"personId":1642278,"name":"Tyler Kolek","nameI":"T. Kolek","firstName":"Tyler","familyName":"Kolek","jerseyNum":"13"}],"inactives":[{"personId":1642359,"firstName":"Pacome","familyName":"Dadiet","jerseyNum":"4   "},{"personId":1641755,"firstName":"Kevin","familyName":"McCullar Jr.","jerseyNum":"9   "},{"personId":1629011,"firstName":"Mitchell","familyName":"Robinson","jerseyNum":"23  "},{"personId":1626157,"firstName":"Karl-Anthony","familyName":"Towns","jerseyNum":"32  "}]},"lastFiveMeetings":{"meetings":[{"recencyOrder":1,"gameId":"0022400004","gameTimeUTC":"2024-11-13T00:30:00Z","gameEt":"2024-11-12T19:30:00Z","gameStatus":3,"gameStatusText":"Final","gameClock":"PT00M00.00S","broadcasterVideoLink":"","awayTeam":{"teamId":1610612752,"teamCity":"New York","teamName":"Knicks","teamTricode":"NYK","teamSlug":"knicks","score":111,"wins":5,"losses":5},"homeTeam":{"teamId":1610612755,"teamCity":"Philadelphia","teamName":"76ers","teamTricode":"PHI","teamSlug":"sixers","score":99,"wins":2,"losses":8}},{"recencyOrder":2,"gameId":"0042300116","gameTimeUTC":"2024-05-03T01:00:00Z","gameEt":"2024-05-02T21:00:00Z","gameStatus":3,"gameStatusText":"Final","gameClock":"PT00M00.00S","broadcasterVideoLink":"","awayTeam":{"teamId":1610612752,"teamCity":"New York","teamName":"Knicks","teamTricode":"NYK","teamSlug":"knicks","score":118,"wins":4,"losses":2},"homeTeam":{"teamId":1610612755,"teamCity":"Philadelphia","teamName":"76ers","teamTricode":"PHI","teamSlug":"sixers","score":115,"wins":2,"losses":4}},{"recencyOrder":3,"gameId":"0042300115","gameTimeUTC":"2024-04-30T23:00:00Z","gameEt":"2024-04-30T19:00:00Z","gameStatus":3,"gameStatusText":"Final/OT","gameClock":"PT00M00.00S","broadcasterVideoLink":"","awayTeam":{"teamId":1610612755,"teamCity":"Philadelphia","teamName":"76ers","teamTricode":"PHI","teamSlug":"sixers","score":112,"wins":2,"losses":3},"homeTeam":{"teamId":1610612752,"teamCity":"New York","teamName":"Knicks","teamTricode":"NYK","teamSlug":"knicks","score":106,"wins":3,"losses":2}},{"recencyOrder":4,"gameId":"0042300114","gameTimeUTC":"2024-04-28T17:00:00Z","gameEt":"2024-04-28T13:00:00Z","gameStatus":3,"gameStatusText":"Final","gameClock":"PT00M00.00S","broadcasterVideoLink":"","awayTeam":{"teamId":1610612752,"teamCity":"New York","teamName":"Knicks","teamTricode":"NYK","teamSlug":"knicks","score":97,"wins":3,"losses":1},"homeTeam":{"teamId":1610612755,"teamCity":"Philadelphia","teamName":"76ers","teamTricode":"PHI","teamSlug":"sixers","score":92,"wins":1,"losses":3}},{"recencyOrder":5,"gameId":"0042300113","gameTimeUTC":"2024-04-25T23:30:00Z","gameEt":"2024-04-25T19:30:00Z","gameStatus":3,"gameStatusText":"Final","gameClock":"PT00M00.00S","broadcasterVideoLink":"","awayTeam":{"teamId":1610612752,"teamCity":"New York","teamName":"Knicks","teamTricode":"NYK","teamSlug":"knicks","score":114,"wins":2,"losses":1},"homeTeam":{"teamId":1610612755,"teamCity":"Philadelphia","teamName":"76ers","teamTricode":"PHI","teamSlug":"sixers","score":125,"wins":1,"losses":2}}]},"pregameCharts":{"homeTeam":{"teamId":1610612755,"teamCity":"Philadelphia","teamName":"76ers","teamTricode":"PHI","statistics":{"points":109.6,"reboundsTotal":39.8,"assists":23.2,"steals":9.2,"blocks":4.5,"turnovers":13.6,"fieldGoalsPercentage":0.454,"threePointersPercentage":0.341,"freeThrowsPercentage":0.78,"pointsInThePaint":46.8,"pointsSecondChance":13.1,"pointsFastBreak":15.7,"playerPtsLeaderFirstName":"Kelly","playerPtsLeaderFamilyName":"Oubre Jr.","playerPtsLeaderId":1626162,"playerPtsLeaderPts":15.1,"playerRebLeaderFirstName":"Kelly","playerRebLeaderFamilyName":"Oubre Jr.","playerRebLeaderId":1626162,"playerRebLeaderReb":6.1,"playerAstLeaderFirstName":"Jared","playerAstLeaderFamilyName":"Butler","playerAstLeaderId":1630215,"playerAstLeaderAst":3.7,"playerBlkLeaderFirstName":"Adem","playerBlkLeaderFamilyName":"Bona","playerBlkLeaderId":1641737,"playerBlkLeaderBlk":1.19}},"awayTeam":{"teamId":1610612752,"teamCity":"New York","teamName":"Knicks","teamTricode":"NYK","statistics":{"points":115.8,"reboundsTotal":42.6,"assists":27.5,"steals":8.2,"blocks":4.0,"turnovers":13.3,"fieldGoalsPercentage":0.486,"threePointersPercentage":0.369,"freeThrowsPercentage":0.8,"pointsInThePaint":52.5,"pointsSecondChance":14.3,"pointsFastBreak":15.7,"playerPtsLeaderFirstName":"Jalen","playerPtsLeaderFamilyName":"Brunson","playerPtsLeaderId":1628973,"playerPtsLeaderPts":26.0,"playerRebLeaderFirstName":"Karl-Anthony","playerRebLeaderFamilyName":"Towns","playerRebLeaderId":1626157,"playerRebLeaderReb":12.8,"playerAstLeaderFirstName":"Jalen","playerAstLeaderFamilyName":"Brunson","playerAstLeaderId":1628973,"playerAstLeaderAst":7.3,"playerBlkLeaderFirstName":"OG","playerBlkLeaderFamilyName":"Anunoby","playerBlkLeaderId":1628384,"playerBlkLeaderBlk":0.88}}},"postgameCharts":{"homeTeam":{"teamId":1610612755,"teamCity":"Philadelphia","teamName":"76ers","teamTricode":"PHI","statistics":{"points":119.0,"reboundsTotal":35.0,"assists":27.0,"steals":8.0,"blocks":2.0,"turnovers":12.0,"fieldGoalsPercentage":0.5,"threePointersPercentage":0.371,"freeThrowsPercentage":1.0,"pointsInThePaint":56.0,"pointsSecondChance":18.0,"pointsFastBreak":13.0,"biggestLead":0.0,"leadChanges":0.0,"timesTied":5.0,"biggestScoringRun":6.0,"turnoversTeam":0.0,"turnoversTotal":12.0,"reboundsTeam":4.0,"pointsFromTurnovers":20.0,"benchPoints":21.0,"playerPtsLeaderFirstName":"Tyrese","playerPtsLeaderFamilyName":"Maxey","playerPtsLeaderId":1630178,"playerPtsLeaderPts":33.0,"playerRebLeaderFirstName":"Kelly","playerRebLeaderFamilyName":"Oubre Jr.","playerRebLeaderId":1626162,"playerRebLeaderReb":10.0,"playerAstLeaderFirstName":"Tyrese","playerAstLeaderFamilyName":"Maxey","playerAstLeaderId":1630178,"playerAstLeaderAst":6.0,"playerBlkLeaderFirstName":"Tyrese","playerBlkLeaderFamilyName":"Maxey","playerBlkLeaderId":1630178,"playerBlkLeaderBlk":1.0}},"awayTeam":{"teamId":1610612752,"teamCity":"New York","teamName":"Knicks","teamTricode":"NYK","statistics":{"points":125.0,"reboundsTotal":45.0,"assists":28.0,"steals":10.0,"blocks":3.0,"turnovers":13.0,"fieldGoalsPercentage":0.535,"threePointersPercentage":0.432,"freeThrowsPercentage":0.708,"pointsInThePaint":54.0,"pointsSecondChance":17.0,"pointsFastBreak":18.0,"biggestLead":16.0,"leadChanges":0.0,"timesTied":5.0,"biggestScoringRun":8.0,"turnoversTeam":3.0,"turnoversTotal":16.0,"reboundsTeam":9.0,"pointsFromTurnovers":25.0,"benchPoints":29.0,"playerPtsLeaderFirstName":"Jalen","playerPtsLeaderFamilyName":"Brunson","playerPtsLeaderId":1628973,"playerPtsLeaderPts":38.0,"playerRebLeaderFirstName":"Josh","playerRebLeaderFamilyName":"Hart","playerRebLeaderId":1628404,"playerRebLeaderReb":17.0,"playerAstLeaderFirstName":"Josh","playerAstLeaderFamilyName":"Hart","playerAstLeaderId":1628404,"playerAstLeaderAst":12.0,"playerBlkLeaderFirstName":"Precious","playerBlkLeaderFamilyName":"Achiuwa","playerBlkLeaderId":1630173,"playerBlkLeaderBlk":3.0}}},"videoAvailableFlag":1,"ptAvailable":1,"ptXYZAvailable":0,"whStatus":1,"hustleStatus":1,"historicalStatus":0,"gameSubtype":""}}
+{
+	"meta": {
+		"version": 1,
+		"request": "http://nba.cloud/games/0022400561/boxscoresummary?Format=json",
+		"time": "2025-08-11T11:44:21.4421Z"
+	},
+	"boxScoreSummary": {
+		"gameId": "0022400561",
+		"gameCode": "20250115/NYKPHI",
+		"gameStatus": 3,
+		"gameStatusText": "Final/OT",
+		"period": 5,
+		"gameClock": "PT00M00.00S",
+		"gameTimeUTC": "2025-01-16T00:00:00Z",
+		"gameEt": "2025-01-15T19:00:00Z",
+		"awayTeamId": 1610612752,
+		"homeTeamId": 1610612755,
+		"duration": "2:34",
+		"attendance": 20088,
+		"sellout": 1,
+		"seriesGameNumber": "",
+		"gameLabel": "",
+		"gameSubLabel": "",
+		"seriesText": "",
+		"ifNecessary": false,
+		"isNeutral": false,
+		"arena": {
+			"arenaId": 419,
+			"arenaName": "Wells Fargo Center",
+			"arenaCity": "Philadelphia",
+			"arenaState": "PA",
+			"arenaCountry": "US",
+			"arenaTimezone": "Eastern",
+			"arenaStreetAddress": "",
+			"arenaPostalCode": ""
+		},
+		"officials": [
+			{
+				"personId": 2003,
+				"name": "Pat Fraher",
+				"nameI": "P. Fraher",
+				"firstName": "Pat",
+				"familyName": "Fraher",
+				"jerseyNum": "26  ",
+				"assignment": ""
+			},
+			{
+				"personId": 1626300,
+				"name": "Ray Acosta",
+				"nameI": "R. Acosta",
+				"firstName": "Ray",
+				"familyName": "Acosta",
+				"jerseyNum": "54  ",
+				"assignment": ""
+			},
+			{
+				"personId": 1627526,
+				"name": "Matt Kallio",
+				"nameI": "M. Kallio",
+				"firstName": "Matt",
+				"familyName": "Kallio",
+				"jerseyNum": "53  ",
+				"assignment": ""
+			}
+		],
+		"broadcasters": {
+			"internationalBroadcasters": [
+				{
+					"broadcasterId": 11,
+					"broadcastDisplay": "TSN",
+					"broadcasterDisplay": "TSN",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": 1610612761,
+					"regionId": 2
+				},
+				{
+					"broadcasterId": 1203,
+					"broadcastDisplay": "ESPN_I_Ven",
+					"broadcasterDisplay": "ESPN",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 35
+				},
+				{
+					"broadcasterId": 1220,
+					"broadcastDisplay": "SportTVPor",
+					"broadcasterDisplay": "Sport TV 1",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 28
+				},
+				{
+					"broadcasterId": 1228,
+					"broadcastDisplay": "beIN_MENA",
+					"broadcasterDisplay": "beIN Sports",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 25
+				},
+				{
+					"broadcasterId": 1231,
+					"broadcastDisplay": "ESPN_I_Afr",
+					"broadcasterDisplay": "ESPN",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 24
+				},
+				{
+					"broadcasterId": 1235,
+					"broadcastDisplay": "ESPN_I_Mex",
+					"broadcasterDisplay": "ESPN",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 22
+				},
+				{
+					"broadcasterId": 1273,
+					"broadcastDisplay": "ESPN_I_DR",
+					"broadcasterDisplay": "ESPN",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 12
+				},
+				{
+					"broadcasterId": 1276,
+					"broadcastDisplay": "ESPN_Brazi",
+					"broadcasterDisplay": "ESPN",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 11
+				},
+				{
+					"broadcasterId": 1283,
+					"broadcastDisplay": "ESPN_Aus",
+					"broadcasterDisplay": "ESPN",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 9
+				},
+				{
+					"broadcasterId": 1288,
+					"broadcastDisplay": "ESPN_I_Arg",
+					"broadcasterDisplay": "ESPN",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 6
+				},
+				{
+					"broadcasterId": 1306,
+					"broadcastDisplay": "QQ",
+					"broadcasterDisplay": "Tencent",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 8
+				},
+				{
+					"broadcasterId": 1367,
+					"broadcastDisplay": "ESPN_CAR",
+					"broadcasterDisplay": "ESPN",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 38
+				},
+				{
+					"broadcasterId": 1386,
+					"broadcastDisplay": "ESPN_I_SA",
+					"broadcasterDisplay": "ESPN",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 40
+				},
+				{
+					"broadcasterId": 1410,
+					"broadcastDisplay": "ESPN_I_NZ",
+					"broadcasterDisplay": "ESPN",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 41
+				},
+				{
+					"broadcasterId": 1440,
+					"broadcastDisplay": "beIN_FRA",
+					"broadcasterDisplay": "beIN Sports",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 13
+				},
+				{
+					"broadcasterId": 1683,
+					"broadcastDisplay": "TV2",
+					"broadcasterDisplay": "TV2",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 51
+				},
+				{
+					"broadcasterId": 1000158,
+					"broadcastDisplay": "Arena Sport",
+					"broadcasterDisplay": "Arena Sport",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 36
+				},
+				{
+					"broadcasterId": 1001082,
+					"broadcastDisplay": "TNT Sports 2 UK",
+					"broadcasterDisplay": "TNT Sports 2",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 34
+				}
+			],
+			"internationalRadioBroadcasters": [],
+			"internationalOttBroadcasters": [],
+			"nationalBroadcasters": [
+				{
+					"broadcasterId": 2,
+					"broadcastDisplay": "ESPN",
+					"broadcasterDisplay": "ESPN",
+					"broadcasterVideoLink": "https://www.espn.com/espnplus/player/_/id/c1b055ed-b3d7-44d1-a4a0-aecc329dbb1f?ex_cid=nba",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 1
+				}
+			],
+			"nationalRadioBroadcasters": [
+				{
+					"broadcasterId": 1001098,
+					"broadcastDisplay": "SiriusXM",
+					"broadcasterDisplay": "SiriusXM",
+					"broadcasterVideoLink": "https://www.siriusxm.com/sports/nba",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": -1,
+					"regionId": 1
+				}
+			],
+			"nationalOttBroadcasters": [],
+			"homeTvBroadcasters": [
+				{
+					"broadcasterId": 133,
+					"broadcastDisplay": "NBCSP",
+					"broadcasterDisplay": "NBC Sports Philadelphia",
+					"broadcasterVideoLink": "http://stream.nbcsports.com/rsn/nba-76ers-live-stream",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": 1610612755,
+					"regionId": 1
+				}
+			],
+			"homeRadioBroadcasters": [
+				{
+					"broadcasterId": 1434,
+					"broadcastDisplay": "WPEN",
+					"broadcasterDisplay": "97.5 The Fanatic",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": 1610612755,
+					"regionId": 1
+				}
+			],
+			"homeOttBroadcasters": [],
+			"awayTvBroadcasters": [
+				{
+					"broadcasterId": 100,
+					"broadcastDisplay": "MSG",
+					"broadcasterDisplay": "MSG",
+					"broadcasterVideoLink": "https://msgplus.onelink.me/sNip/BroadcastNBA",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": 1610612752,
+					"regionId": 1
+				}
+			],
+			"awayRadioBroadcasters": [
+				{
+					"broadcasterId": 1001199,
+					"broadcastDisplay": "WHSQ",
+					"broadcasterDisplay": "880 ESPN New York",
+					"broadcasterVideoLink": "",
+					"broadcasterDescription": "",
+					"broadcasterTeamId": 1610612752,
+					"regionId": 1
+				}
+			],
+			"awayOttBroadcasters": []
+		},
+		"homeTeam": {
+			"teamId": 1610612755,
+			"teamName": "76ers",
+			"teamCity": "Philadelphia",
+			"teamTricode": "PHI",
+			"teamSlug": "sixers",
+			"teamWins": 15,
+			"teamLosses": 24,
+			"score": 119,
+			"inBonus": "",
+			"timeoutsRemaining": 0,
+			"seed": 0,
+			"statistics": { "dummyKey": "dummyValue" },
+			"periods": [
+				{ "period": 1, "periodType": "REGULAR", "score": 21 },
+				{ "period": 2, "periodType": "REGULAR", "score": 26 },
+				{ "period": 3, "periodType": "REGULAR", "score": 38 },
+				{ "period": 4, "periodType": "REGULAR", "score": 24 },
+				{ "period": 5, "periodType": "OVERTIME", "score": 10 }
+			],
+			"players": [
+				{
+					"personId": 201569,
+					"name": "Eric Gordon",
+					"nameI": "E. Gordon",
+					"firstName": "Eric",
+					"familyName": "Gordon",
+					"jerseyNum": "23"
+				},
+				{
+					"personId": 202331,
+					"name": "Paul George",
+					"nameI": "P. George",
+					"firstName": "Paul",
+					"familyName": "George",
+					"jerseyNum": "8"
+				},
+				{
+					"personId": 202704,
+					"name": "Reggie Jackson",
+					"nameI": "R. Jackson",
+					"firstName": "Reggie",
+					"familyName": "Jackson",
+					"jerseyNum": "00"
+				},
+				{
+					"personId": 203083,
+					"name": "Andre Drummond",
+					"nameI": "A. Drummond",
+					"firstName": "Andre",
+					"familyName": "Drummond",
+					"jerseyNum": "1"
+				},
+				{
+					"personId": 1626162,
+					"name": "Kelly Oubre Jr.",
+					"nameI": "K. Oubre Jr.",
+					"firstName": "Kelly",
+					"familyName": "Oubre Jr.",
+					"jerseyNum": "9"
+				},
+				{
+					"personId": 1627824,
+					"name": "Guerschon Yabusele",
+					"nameI": "G. Yabusele",
+					"firstName": "Guerschon",
+					"familyName": "Yabusele",
+					"jerseyNum": "28"
+				},
+				{
+					"personId": 1630178,
+					"name": "Tyrese Maxey",
+					"nameI": "T. Maxey",
+					"firstName": "Tyrese",
+					"familyName": "Maxey",
+					"jerseyNum": "0"
+				},
+				{
+					"personId": 1630288,
+					"name": "Jeff Dowtin Jr.",
+					"nameI": "J. Dowtin Jr.",
+					"firstName": "Jeff",
+					"familyName": "Dowtin Jr.",
+					"jerseyNum": "11"
+				},
+				{
+					"personId": 1631250,
+					"name": "Pete Nance",
+					"nameI": "P. Nance",
+					"firstName": "Pete",
+					"familyName": "Nance",
+					"jerseyNum": "22"
+				},
+				{
+					"personId": 1641737,
+					"name": "Adem Bona",
+					"nameI": "A. Bona",
+					"firstName": "Adem",
+					"familyName": "Bona",
+					"jerseyNum": "30"
+				},
+				{
+					"personId": 1641741,
+					"name": "Ricky Council IV",
+					"nameI": "R. Council IV",
+					"firstName": "Ricky",
+					"familyName": "Council IV",
+					"jerseyNum": "14"
+				},
+				{
+					"personId": 1642348,
+					"name": "Justin Edwards",
+					"nameI": "J. Edwards",
+					"firstName": "Justin",
+					"familyName": "Edwards",
+					"jerseyNum": "19"
+				}
+			],
+			"inactives": [
+				{
+					"personId": 200768,
+					"firstName": "Kyle",
+					"familyName": "Lowry",
+					"jerseyNum": "7   "
+				},
+				{
+					"personId": 203954,
+					"firstName": "Joel",
+					"familyName": "Embiid",
+					"jerseyNum": "21  "
+				},
+				{
+					"personId": 1628997,
+					"firstName": "Caleb",
+					"familyName": "Martin",
+					"jerseyNum": "16  "
+				},
+				{
+					"personId": 1630231,
+					"firstName": "KJ",
+					"familyName": "Martin",
+					"jerseyNum": "1   "
+				},
+				{
+					"personId": 1642272,
+					"firstName": "Jared",
+					"familyName": "McCain",
+					"jerseyNum": "20  "
+				}
+			]
+		},
+		"awayTeam": {
+			"teamId": 1610612752,
+			"teamName": "Knicks",
+			"teamCity": "New York",
+			"teamTricode": "NYK",
+			"teamSlug": "knicks",
+			"teamWins": 27,
+			"teamLosses": 15,
+			"score": 125,
+			"inBonus": "",
+			"timeoutsRemaining": 1,
+			"seed": 0,
+			"statistics": { "dummyKey": "dummyValue" },
+			"periods": [
+				{ "period": 1, "periodType": "REGULAR", "score": 30 },
+				{ "period": 2, "periodType": "REGULAR", "score": 30 },
+				{ "period": 3, "periodType": "REGULAR", "score": 25 },
+				{ "period": 4, "periodType": "REGULAR", "score": 24 },
+				{ "period": 5, "periodType": "OVERTIME", "score": 16 }
+			],
+			"players": [
+				{
+					"personId": 1626166,
+					"name": "Cameron Payne",
+					"nameI": "C. Payne",
+					"firstName": "Cameron",
+					"familyName": "Payne",
+					"jerseyNum": "1"
+				},
+				{
+					"personId": 1628384,
+					"name": "OG Anunoby",
+					"nameI": "O. Anunoby",
+					"firstName": "OG",
+					"familyName": "Anunoby",
+					"jerseyNum": "8"
+				},
+				{
+					"personId": 1628404,
+					"name": "Josh Hart",
+					"nameI": "J. Hart",
+					"firstName": "Josh",
+					"familyName": "Hart",
+					"jerseyNum": "3"
+				},
+				{
+					"personId": 1628969,
+					"name": "Mikal Bridges",
+					"nameI": "M. Bridges",
+					"firstName": "Mikal",
+					"familyName": "Bridges",
+					"jerseyNum": "25"
+				},
+				{
+					"personId": 1628973,
+					"name": "Jalen Brunson",
+					"nameI": "J. Brunson",
+					"firstName": "Jalen",
+					"familyName": "Brunson",
+					"jerseyNum": "11"
+				},
+				{
+					"personId": 1629013,
+					"name": "Landry Shamet",
+					"nameI": "L. Shamet",
+					"firstName": "Landry",
+					"familyName": "Shamet",
+					"jerseyNum": "44"
+				},
+				{
+					"personId": 1630173,
+					"name": "Precious Achiuwa",
+					"nameI": "P. Achiuwa",
+					"firstName": "Precious",
+					"familyName": "Achiuwa",
+					"jerseyNum": "5"
+				},
+				{
+					"personId": 1630346,
+					"name": "Matt Ryan",
+					"nameI": "M. Ryan",
+					"firstName": "Matt",
+					"familyName": "Ryan",
+					"jerseyNum": "37"
+				},
+				{
+					"personId": 1630540,
+					"name": "Miles McBride",
+					"nameI": "M. McBride",
+					"firstName": "Miles",
+					"familyName": "McBride",
+					"jerseyNum": "2"
+				},
+				{
+					"personId": 1630574,
+					"name": "Ariel Hukporti",
+					"nameI": "A. Hukporti",
+					"firstName": "Ariel",
+					"familyName": "Hukporti",
+					"jerseyNum": "55"
+				},
+				{
+					"personId": 1630579,
+					"name": "Jericho Sims",
+					"nameI": "J. Sims",
+					"firstName": "Jericho",
+					"familyName": "Sims",
+					"jerseyNum": "20"
+				},
+				{
+					"personId": 1631210,
+					"name": "Jacob Toppin",
+					"nameI": "J. Toppin",
+					"firstName": "Jacob",
+					"familyName": "Toppin",
+					"jerseyNum": "00"
+				},
+				{
+					"personId": 1642278,
+					"name": "Tyler Kolek",
+					"nameI": "T. Kolek",
+					"firstName": "Tyler",
+					"familyName": "Kolek",
+					"jerseyNum": "13"
+				}
+			],
+			"inactives": [
+				{
+					"personId": 1642359,
+					"firstName": "Pacome",
+					"familyName": "Dadiet",
+					"jerseyNum": "4   "
+				},
+				{
+					"personId": 1641755,
+					"firstName": "Kevin",
+					"familyName": "McCullar Jr.",
+					"jerseyNum": "9   "
+				},
+				{
+					"personId": 1629011,
+					"firstName": "Mitchell",
+					"familyName": "Robinson",
+					"jerseyNum": "23  "
+				},
+				{
+					"personId": 1626157,
+					"firstName": "Karl-Anthony",
+					"familyName": "Towns",
+					"jerseyNum": "32  "
+				}
+			]
+		},
+		"lastFiveMeetings": {
+			"meetings": [
+				{
+					"recencyOrder": 1,
+					"gameId": "0022400004",
+					"gameTimeUTC": "2024-11-13T00:30:00Z",
+					"gameEt": "2024-11-12T19:30:00Z",
+					"gameStatus": 3,
+					"gameStatusText": "Final",
+					"gameClock": "PT00M00.00S",
+					"broadcasterVideoLink": "",
+					"awayTeam": {
+						"teamId": 1610612752,
+						"teamCity": "New York",
+						"teamName": "Knicks",
+						"teamTricode": "NYK",
+						"teamSlug": "knicks",
+						"score": 111,
+						"wins": 5,
+						"losses": 5
+					},
+					"homeTeam": {
+						"teamId": 1610612755,
+						"teamCity": "Philadelphia",
+						"teamName": "76ers",
+						"teamTricode": "PHI",
+						"teamSlug": "sixers",
+						"score": 99,
+						"wins": 2,
+						"losses": 8
+					}
+				},
+				{
+					"recencyOrder": 2,
+					"gameId": "0042300116",
+					"gameTimeUTC": "2024-05-03T01:00:00Z",
+					"gameEt": "2024-05-02T21:00:00Z",
+					"gameStatus": 3,
+					"gameStatusText": "Final",
+					"gameClock": "PT00M00.00S",
+					"broadcasterVideoLink": "",
+					"awayTeam": {
+						"teamId": 1610612752,
+						"teamCity": "New York",
+						"teamName": "Knicks",
+						"teamTricode": "NYK",
+						"teamSlug": "knicks",
+						"score": 118,
+						"wins": 4,
+						"losses": 2
+					},
+					"homeTeam": {
+						"teamId": 1610612755,
+						"teamCity": "Philadelphia",
+						"teamName": "76ers",
+						"teamTricode": "PHI",
+						"teamSlug": "sixers",
+						"score": 115,
+						"wins": 2,
+						"losses": 4
+					}
+				},
+				{
+					"recencyOrder": 3,
+					"gameId": "0042300115",
+					"gameTimeUTC": "2024-04-30T23:00:00Z",
+					"gameEt": "2024-04-30T19:00:00Z",
+					"gameStatus": 3,
+					"gameStatusText": "Final/OT",
+					"gameClock": "PT00M00.00S",
+					"broadcasterVideoLink": "",
+					"awayTeam": {
+						"teamId": 1610612755,
+						"teamCity": "Philadelphia",
+						"teamName": "76ers",
+						"teamTricode": "PHI",
+						"teamSlug": "sixers",
+						"score": 112,
+						"wins": 2,
+						"losses": 3
+					},
+					"homeTeam": {
+						"teamId": 1610612752,
+						"teamCity": "New York",
+						"teamName": "Knicks",
+						"teamTricode": "NYK",
+						"teamSlug": "knicks",
+						"score": 106,
+						"wins": 3,
+						"losses": 2
+					}
+				},
+				{
+					"recencyOrder": 4,
+					"gameId": "0042300114",
+					"gameTimeUTC": "2024-04-28T17:00:00Z",
+					"gameEt": "2024-04-28T13:00:00Z",
+					"gameStatus": 3,
+					"gameStatusText": "Final",
+					"gameClock": "PT00M00.00S",
+					"broadcasterVideoLink": "",
+					"awayTeam": {
+						"teamId": 1610612752,
+						"teamCity": "New York",
+						"teamName": "Knicks",
+						"teamTricode": "NYK",
+						"teamSlug": "knicks",
+						"score": 97,
+						"wins": 3,
+						"losses": 1
+					},
+					"homeTeam": {
+						"teamId": 1610612755,
+						"teamCity": "Philadelphia",
+						"teamName": "76ers",
+						"teamTricode": "PHI",
+						"teamSlug": "sixers",
+						"score": 92,
+						"wins": 1,
+						"losses": 3
+					}
+				},
+				{
+					"recencyOrder": 5,
+					"gameId": "0042300113",
+					"gameTimeUTC": "2024-04-25T23:30:00Z",
+					"gameEt": "2024-04-25T19:30:00Z",
+					"gameStatus": 3,
+					"gameStatusText": "Final",
+					"gameClock": "PT00M00.00S",
+					"broadcasterVideoLink": "",
+					"awayTeam": {
+						"teamId": 1610612752,
+						"teamCity": "New York",
+						"teamName": "Knicks",
+						"teamTricode": "NYK",
+						"teamSlug": "knicks",
+						"score": 114,
+						"wins": 2,
+						"losses": 1
+					},
+					"homeTeam": {
+						"teamId": 1610612755,
+						"teamCity": "Philadelphia",
+						"teamName": "76ers",
+						"teamTricode": "PHI",
+						"teamSlug": "sixers",
+						"score": 125,
+						"wins": 1,
+						"losses": 2
+					}
+				}
+			]
+		},
+		"pregameCharts": {
+			"homeTeam": {
+				"teamId": 1610612755,
+				"teamCity": "Philadelphia",
+				"teamName": "76ers",
+				"teamTricode": "PHI",
+				"statistics": {
+					"points": 109.6,
+					"reboundsTotal": 39.8,
+					"assists": 23.2,
+					"steals": 9.2,
+					"blocks": 4.5,
+					"turnovers": 13.6,
+					"fieldGoalsPercentage": 0.454,
+					"threePointersPercentage": 0.341,
+					"freeThrowsPercentage": 0.78,
+					"pointsInThePaint": 46.8,
+					"pointsSecondChance": 13.1,
+					"pointsFastBreak": 15.7,
+					"playerPtsLeaderFirstName": "Kelly",
+					"playerPtsLeaderFamilyName": "Oubre Jr.",
+					"playerPtsLeaderId": 1626162,
+					"playerPtsLeaderPts": 15.1,
+					"playerRebLeaderFirstName": "Kelly",
+					"playerRebLeaderFamilyName": "Oubre Jr.",
+					"playerRebLeaderId": 1626162,
+					"playerRebLeaderReb": 6.1,
+					"playerAstLeaderFirstName": "Jared",
+					"playerAstLeaderFamilyName": "Butler",
+					"playerAstLeaderId": 1630215,
+					"playerAstLeaderAst": 3.7,
+					"playerBlkLeaderFirstName": "Adem",
+					"playerBlkLeaderFamilyName": "Bona",
+					"playerBlkLeaderId": 1641737,
+					"playerBlkLeaderBlk": 1.19
+				}
+			},
+			"awayTeam": {
+				"teamId": 1610612752,
+				"teamCity": "New York",
+				"teamName": "Knicks",
+				"teamTricode": "NYK",
+				"statistics": {
+					"points": 115.8,
+					"reboundsTotal": 42.6,
+					"assists": 27.5,
+					"steals": 8.2,
+					"blocks": 4.0,
+					"turnovers": 13.3,
+					"fieldGoalsPercentage": 0.486,
+					"threePointersPercentage": 0.369,
+					"freeThrowsPercentage": 0.8,
+					"pointsInThePaint": 52.5,
+					"pointsSecondChance": 14.3,
+					"pointsFastBreak": 15.7,
+					"playerPtsLeaderFirstName": "Jalen",
+					"playerPtsLeaderFamilyName": "Brunson",
+					"playerPtsLeaderId": 1628973,
+					"playerPtsLeaderPts": 26.0,
+					"playerRebLeaderFirstName": "Karl-Anthony",
+					"playerRebLeaderFamilyName": "Towns",
+					"playerRebLeaderId": 1626157,
+					"playerRebLeaderReb": 12.8,
+					"playerAstLeaderFirstName": "Jalen",
+					"playerAstLeaderFamilyName": "Brunson",
+					"playerAstLeaderId": 1628973,
+					"playerAstLeaderAst": 7.3,
+					"playerBlkLeaderFirstName": "OG",
+					"playerBlkLeaderFamilyName": "Anunoby",
+					"playerBlkLeaderId": 1628384,
+					"playerBlkLeaderBlk": 0.88
+				}
+			}
+		},
+		"postgameCharts": {
+			"homeTeam": {
+				"teamId": 1610612755,
+				"teamCity": "Philadelphia",
+				"teamName": "76ers",
+				"teamTricode": "PHI",
+				"statistics": {
+					"points": 119.0,
+					"reboundsTotal": 35.0,
+					"assists": 27.0,
+					"steals": 8.0,
+					"blocks": 2.0,
+					"turnovers": 12.0,
+					"fieldGoalsPercentage": 0.5,
+					"threePointersPercentage": 0.371,
+					"freeThrowsPercentage": 1.0,
+					"pointsInThePaint": 56.0,
+					"pointsSecondChance": 18.0,
+					"pointsFastBreak": 13.0,
+					"biggestLead": 0.0,
+					"leadChanges": 0.0,
+					"timesTied": 5.0,
+					"biggestScoringRun": 6.0,
+					"turnoversTeam": 0.0,
+					"turnoversTotal": 12.0,
+					"reboundsTeam": 4.0,
+					"pointsFromTurnovers": 20.0,
+					"benchPoints": 21.0,
+					"playerPtsLeaderFirstName": "Tyrese",
+					"playerPtsLeaderFamilyName": "Maxey",
+					"playerPtsLeaderId": 1630178,
+					"playerPtsLeaderPts": 33.0,
+					"playerRebLeaderFirstName": "Kelly",
+					"playerRebLeaderFamilyName": "Oubre Jr.",
+					"playerRebLeaderId": 1626162,
+					"playerRebLeaderReb": 10.0,
+					"playerAstLeaderFirstName": "Tyrese",
+					"playerAstLeaderFamilyName": "Maxey",
+					"playerAstLeaderId": 1630178,
+					"playerAstLeaderAst": 6.0,
+					"playerBlkLeaderFirstName": "Tyrese",
+					"playerBlkLeaderFamilyName": "Maxey",
+					"playerBlkLeaderId": 1630178,
+					"playerBlkLeaderBlk": 1.0
+				}
+			},
+			"awayTeam": {
+				"teamId": 1610612752,
+				"teamCity": "New York",
+				"teamName": "Knicks",
+				"teamTricode": "NYK",
+				"statistics": {
+					"points": 125.0,
+					"reboundsTotal": 45.0,
+					"assists": 28.0,
+					"steals": 10.0,
+					"blocks": 3.0,
+					"turnovers": 13.0,
+					"fieldGoalsPercentage": 0.535,
+					"threePointersPercentage": 0.432,
+					"freeThrowsPercentage": 0.708,
+					"pointsInThePaint": 54.0,
+					"pointsSecondChance": 17.0,
+					"pointsFastBreak": 18.0,
+					"biggestLead": 16.0,
+					"leadChanges": 0.0,
+					"timesTied": 5.0,
+					"biggestScoringRun": 8.0,
+					"turnoversTeam": 3.0,
+					"turnoversTotal": 16.0,
+					"reboundsTeam": 9.0,
+					"pointsFromTurnovers": 25.0,
+					"benchPoints": 29.0,
+					"playerPtsLeaderFirstName": "Jalen",
+					"playerPtsLeaderFamilyName": "Brunson",
+					"playerPtsLeaderId": 1628973,
+					"playerPtsLeaderPts": 38.0,
+					"playerRebLeaderFirstName": "Josh",
+					"playerRebLeaderFamilyName": "Hart",
+					"playerRebLeaderId": 1628404,
+					"playerRebLeaderReb": 17.0,
+					"playerAstLeaderFirstName": "Josh",
+					"playerAstLeaderFamilyName": "Hart",
+					"playerAstLeaderId": 1628404,
+					"playerAstLeaderAst": 12.0,
+					"playerBlkLeaderFirstName": "Precious",
+					"playerBlkLeaderFamilyName": "Achiuwa",
+					"playerBlkLeaderId": 1630173,
+					"playerBlkLeaderBlk": 3.0
+				}
+			}
+		},
+		"videoAvailableFlag": 1,
+		"ptAvailable": 1,
+		"ptXYZAvailable": 0,
+		"whStatus": 1,
+		"hustleStatus": 1,
+		"historicalStatus": 0,
+		"gameSubtype": ""
+	}
+}

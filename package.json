@@ -1,36 +1,57 @@
 {
-  "name": "nba-api-ts",
-  "version": "0.1.0",
-  "description": "TypeScript NBA API client — wraps stats.nba.com and cdn.nba.com live data",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "bun build ./src/index.ts --outdir ./dist --target node --format esm && bun x tsc --emitDeclarationOnly",
-    "test": "bun test",
-    "test:integration": "NBA_INTEGRATION_TESTS=1 bun test tests/integration",
-    "test:integration:tls": "NBA_INTEGRATION_TESTS=1 NBA_USE_TLS=1 bun test tests/integration"
-  },
-  "keywords": ["nba", "api", "basketball", "stats", "typescript"],
-  "license": "MIT",
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "tlsclientwrapper": "^4.1.2",
-    "typescript": "^5.7.0"
-  },
-  "trustedDependencies": [
-    "koffi"
-  ]
+	"name": "nba-api-ts",
+	"version": "0.1.0",
+	"description": "TypeScript NBA API client — wraps stats.nba.com and cdn.nba.com live data",
+	"type": "module",
+	"sideEffects": false,
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "bun build ./src/index.ts --outdir ./dist --target node --format esm && bun x tsc --emitDeclarationOnly",
+		"prepublishOnly": "bun run build",
+		"lint": "biome check",
+		"lint:fix": "biome check --fix",
+		"typecheck": "tsc --noEmit",
+		"test": "bun test",
+		"test:unit": "bun test tests/unit",
+		"test:integration": "NBA_INTEGRATION_TESTS=1 bun test tests/integration",
+		"test:integration:tls": "NBA_INTEGRATION_TESTS=1 NBA_USE_TLS=1 bun test tests/integration"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/gek0z/nba-api-ts.git"
+	},
+	"bugs": {
+		"url": "https://github.com/gek0z/nba-api-ts/issues"
+	},
+	"homepage": "https://github.com/gek0z/nba-api-ts#readme",
+	"keywords": [
+		"nba",
+		"api",
+		"basketball",
+		"stats",
+		"typescript"
+	],
+	"license": "MIT",
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.2",
+		"@types/bun": "^1.3.9",
+		"tlsclientwrapper": "^4.1.2",
+		"typescript": "^5.7.0"
+	},
+	"trustedDependencies": [
+		"koffi"
+	]
 }

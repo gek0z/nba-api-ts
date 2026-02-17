@@ -1,1 +1,58 @@
-{"resource":"leaderstiles","parameters":{"LeagueID":"00","Season":"2024-25","SeasonType":"Regular Season","GameScope":"Season","PlayerScope":"All Players","PlayerOrTeam":"Team","Stat":"PTS"},"resultSet":[{"name":"LeadersTiles","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","PTS"],"rowSet":[[1,1610612739,"CLE","Cleveland Cavaliers",121.9],[2,1610612763,"MEM","Memphis Grizzlies",121.7],[3,1610612743,"DEN","Denver Nuggets",120.8],[4,1610612760,"OKC","Oklahoma City Thunder",120.5],[5,1610612737,"ATL","Atlanta Hawks",118.2]]},{"name":"AllTimeSeasonHigh","headers":["TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","SEASON_YEAR","PTS"],"rowSet":[[1610612743,"DEN","Nuggets","1981-82",126.475]]},{"name":"LastSeasonHigh","headers":["RANK","TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","PTS"],"rowSet":[[1,1610612754,"IND","Indiana Pacers",123.3],[2,1610612738,"BOS","Boston Celtics",120.6],[3,1610612760,"OKC","Oklahoma City Thunder",120.1],[4,1610612749,"MIL","Milwaukee Bucks",119.0],[5,1610612737,"ATL","Atlanta Hawks",118.3]]},{"name":"LowSeasonHigh","headers":["TEAM_ID","TEAM_ABBREVIATION","TEAM_NAME","SEASON_YEAR","PTS"],"rowSet":[[1610610025,"CHS","Stags","1947-48",75.833]]}]}
+{
+	"resource": "leaderstiles",
+	"parameters": {
+		"LeagueID": "00",
+		"Season": "2024-25",
+		"SeasonType": "Regular Season",
+		"GameScope": "Season",
+		"PlayerScope": "All Players",
+		"PlayerOrTeam": "Team",
+		"Stat": "PTS"
+	},
+	"resultSet": [
+		{
+			"name": "LeadersTiles",
+			"headers": ["RANK", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "PTS"],
+			"rowSet": [
+				[1, 1610612739, "CLE", "Cleveland Cavaliers", 121.9],
+				[2, 1610612763, "MEM", "Memphis Grizzlies", 121.7],
+				[3, 1610612743, "DEN", "Denver Nuggets", 120.8],
+				[4, 1610612760, "OKC", "Oklahoma City Thunder", 120.5],
+				[5, 1610612737, "ATL", "Atlanta Hawks", 118.2]
+			]
+		},
+		{
+			"name": "AllTimeSeasonHigh",
+			"headers": [
+				"TEAM_ID",
+				"TEAM_ABBREVIATION",
+				"TEAM_NAME",
+				"SEASON_YEAR",
+				"PTS"
+			],
+			"rowSet": [[1610612743, "DEN", "Nuggets", "1981-82", 126.475]]
+		},
+		{
+			"name": "LastSeasonHigh",
+			"headers": ["RANK", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "PTS"],
+			"rowSet": [
+				[1, 1610612754, "IND", "Indiana Pacers", 123.3],
+				[2, 1610612738, "BOS", "Boston Celtics", 120.6],
+				[3, 1610612760, "OKC", "Oklahoma City Thunder", 120.1],
+				[4, 1610612749, "MIL", "Milwaukee Bucks", 119.0],
+				[5, 1610612737, "ATL", "Atlanta Hawks", 118.3]
+			]
+		},
+		{
+			"name": "LowSeasonHigh",
+			"headers": [
+				"TEAM_ID",
+				"TEAM_ABBREVIATION",
+				"TEAM_NAME",
+				"SEASON_YEAR",
+				"PTS"
+			],
+			"rowSet": [[1610610025, "CHS", "Stags", "1947-48", 75.833]]
+		}
+	]
+}
