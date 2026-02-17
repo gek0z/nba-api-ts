@@ -1,5 +1,9 @@
 # nba-api-ts
 
+[![npm version](https://img.shields.io/npm/v/nba-api-ts)](https://www.npmjs.com/package/nba-api-ts)
+[![CI](https://github.com/gek0z/nba-api-ts/actions/workflows/integration.yml/badge.svg)](https://github.com/gek0z/nba-api-ts/actions/workflows/integration.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 TypeScript NBA API client. Zero dependencies. Wraps **138 stats endpoints** and **4 live data endpoints** from NBA.com.
 
 ## Install
