@@ -1,6 +1,6 @@
 {
 	"name": "nba-api-ts",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "TypeScript NBA API client — wraps stats.nba.com and cdn.nba.com live data",
 	"type": "module",
 	"sideEffects": false,
