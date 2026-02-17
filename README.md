@@ -61,7 +61,7 @@ const nba = new NBAClient({
 
 ### Stats Endpoints
 
-138 endpoints are available. Some commonly used ones:
+138 endpoints are available ([full list](ENDPOINTS.md)). Some commonly used ones:
 
 | Method | Description |
 |--------|-------------|
@@ -181,6 +181,11 @@ NBA_INTEGRATION_TESTS=1 bun test tests/integration
 # Integration tests with TLS fingerprint impersonation
 NBA_INTEGRATION_TESTS=1 NBA_USE_TLS=1 bun test tests/integration
 ```
+
+## Documentation
+
+- [Full endpoint list](ENDPOINTS.md) — all 138 stats + 4 live endpoints with NBA API paths
+- [API docs](https://nba-api-ts.riccardo.lol) — auto-generated TypeDoc reference
 
 ## License
 
