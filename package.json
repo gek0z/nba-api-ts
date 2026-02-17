@@ -17,7 +17,8 @@
   "scripts": {
     "build": "bun build ./src/index.ts --outdir ./dist --target node --format esm && bun x tsc --emitDeclarationOnly",
     "test": "bun test",
-    "test:integration": "NBA_INTEGRATION_TESTS=1 bun test tests/integration"
+    "test:integration": "NBA_INTEGRATION_TESTS=1 bun test tests/integration",
+    "test:integration:tls": "NBA_INTEGRATION_TESTS=1 NBA_USE_TLS=1 bun test tests/integration"
   },
   "keywords": ["nba", "api", "basketball", "stats", "typescript"],
   "license": "MIT",
@@ -26,6 +27,10 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "tlsclientwrapper": "^4.1.2",
     "typescript": "^5.7.0"
-  }
+  },
+  "trustedDependencies": [
+    "koffi"
+  ]
 }
