@@ -30,7 +30,7 @@ jobs:
       id-token: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: main
           fetch-depth: 2
@@ -115,7 +115,7 @@ jobs:
           git tag "v$VERSION"
           git push && git push --tags
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         if: steps.bump.outputs.type != '' && steps.changes.outputs.has_changes == 'true'
         with:
           node-version: 20
