@@ -1,0 +1,120 @@
+name: Publish
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: "Version bump type"
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: >-
+      (github.event_name == 'workflow_dispatch') ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'push')
+    permissions:
+      contents: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Determine bump type
+        id: bump
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "type=${{ inputs.bump }}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          MERGE_SHA="${{ github.event.workflow_run.head_sha }}"
+          PR_NUMBER=$(gh pr list --state merged --search "$MERGE_SHA" --json number --jq '.[0].number')
+
+          if [ -z "$PR_NUMBER" ]; then
+            echo "No merged PR found, skipping"
+            echo "type=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          TITLE=$(gh pr view "$PR_NUMBER" --json title --jq '.title')
+
+          # BREAKING CHANGE or !: → major
+          # feat: → minor
+          # fix: chore: docs: refactor: etc. → patch
+          if echo "$TITLE" | grep -qiE "^.+!:|BREAKING CHANGE"; then
+            echo "type=major" >> "$GITHUB_OUTPUT"
+          elif echo "$TITLE" | grep -qiE "^feat(\(.+\))?:"; then
+            echo "type=minor" >> "$GITHUB_OUTPUT"
+          elif echo "$TITLE" | grep -qiE "^(fix|chore|docs|refactor|perf|test|ci|build|style)(\(.+\))?:"; then
+            echo "type=patch" >> "$GITHUB_OUTPUT"
+          else
+            echo "PR title doesn't match conventional commit format, skipping"
+            echo "type=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Skip if no bump
+        if: steps.bump.outputs.type == ''
+        run: echo "No conventional commit prefix in PR title, skipping publish"
+
+      - uses: oven-sh/setup-bun@v2
+        if: steps.bump.outputs.type != ''
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        if: steps.bump.outputs.type != ''
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        if: steps.bump.outputs.type != ''
+        run: bun run build
+
+      - name: Bump version
+        if: steps.bump.outputs.type != ''
+        id: version
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          npm version ${{ steps.bump.outputs.type }} --no-git-tag-version
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          git add package.json
+          git commit -m "v$VERSION"
+          git tag "v$VERSION"
+          git push && git push --tags
+
+      - uses: actions/setup-node@v4
+        if: steps.bump.outputs.type != ''
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+
+      - name: Publish to npm
+        if: steps.bump.outputs.type != ''
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create GitHub release
+        if: steps.bump.outputs.type != ''
+        run: gh release create "v${{ steps.version.outputs.version }}" --generate-notes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

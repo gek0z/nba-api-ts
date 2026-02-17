@@ -1,0 +1,37 @@
+name: Label PR
+
+on:
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Add version label from PR title
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          # Remove any existing version labels first
+          for LABEL in patch minor major; do
+            gh pr edit "$PR_NUMBER" --remove-label "$LABEL" --repo "${{ github.repository }}" 2>/dev/null || true
+          done
+
+          if echo "$PR_TITLE" | grep -qiE "^.+!:|BREAKING CHANGE"; then
+            LABEL="major"
+          elif echo "$PR_TITLE" | grep -qiE "^feat(\(.+\))?:"; then
+            LABEL="minor"
+          elif echo "$PR_TITLE" | grep -qiE "^(fix|chore|docs|refactor|perf|test|ci|build|style)(\(.+\))?:"; then
+            LABEL="patch"
+          else
+            echo "No conventional commit prefix found, skipping"
+            exit 0
+          fi
+
+          echo "Adding label: $LABEL"
+          gh pr edit "$PR_NUMBER" --add-label "$LABEL" --repo "${{ github.repository }}"
