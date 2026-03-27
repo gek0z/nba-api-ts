@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/nba-api-ts)](https://www.npmjs.com/package/nba-api-ts)
 [![CI](https://github.com/gek0z/nba-api-ts/actions/workflows/integration.yml/badge.svg)](https://github.com/gek0z/nba-api-ts/actions/workflows/integration.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.x-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](https://www.npmjs.com/package/nba-api-ts)
 [![Docs](https://img.shields.io/badge/docs-nba--api--ts.riccardo.lol-blue)](https://nba-api-ts.riccardo.lol)
 
