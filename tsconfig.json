@@ -15,7 +15,8 @@
 		"isolatedModules": true,
 		"noEmit": false,
 		"emitDeclarationOnly": true,
-		"lib": ["ES2022"]
+		"lib": ["ES2022"],
+		"types": ["bun"]
 	},
 	"include": ["src/**/*.ts"],
 	"exclude": ["node_modules", "dist", "tests", "scripts"]
