@@ -75,7 +75,11 @@ jobs:
         if: steps.bump.outputs.type != ''
         id: changes
         run: |
-          MERGE_SHA="${{ github.event.workflow_run.head_sha || github.sha }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          MERGE_SHA="${{ github.event.workflow_run.head_sha }}"
           CHANGED=$(git diff --name-only "$MERGE_SHA"~1 "$MERGE_SHA" -- src/ package.json tsconfig.json)
           if [ -z "$CHANGED" ]; then
             echo "No source changes detected, skipping publish"
