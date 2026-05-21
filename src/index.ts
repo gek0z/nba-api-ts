@@ -1,3 +1,10 @@
+/**
+ * Zero-dependency TypeScript client for the NBA API — wraps the `stats.nba.com`
+ * stats endpoints and the `cdn.nba.com` live data endpoints.
+ *
+ * @packageDocumentation
+ */
+
 export { NBAClient, type NBAClientOptions } from "./client.js";
 export {
 	NBAApiError,
