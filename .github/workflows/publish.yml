@@ -125,11 +125,14 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org
 
+      # Trusted publishing via OIDC — no NPM_TOKEN needed (uses id-token: write).
+      # Requires npm >= 11.5.1; node 20 ships an older npm, so upgrade first.
+      # Provenance is implied by trusted publishing; the flag is kept for clarity.
       - name: Publish to npm
         if: steps.bump.outputs.type != '' && steps.changes.outputs.has_changes == 'true'
-        run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm install -g npm@latest
+          npm publish --provenance --access public
 
       - name: Create GitHub release
         if: steps.bump.outputs.type != '' && steps.changes.outputs.has_changes == 'true'
