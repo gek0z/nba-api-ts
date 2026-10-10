@@ -11,7 +11,7 @@ export async function scoreboardV3(
 ): Promise<ScoreboardV3Response> {
 	const apiParams: Record<string, string | number | undefined> = {
 		GameDate: params.gameDate,
-		LeagueID: params.leagueID,
+		LeagueID: params.leagueID ?? "00",
 	};
 
 	const raw = await client.get<Record<string, unknown>>(

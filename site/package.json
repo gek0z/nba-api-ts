@@ -1,0 +1,19 @@
+{
+	"name": "nba-api-ts-site",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"generate": "bun scripts/generate-endpoints.ts",
+		"dev": "bun run generate && astro dev",
+		"build": "bun run generate && astro build",
+		"preview": "astro preview"
+	},
+	"dependencies": {
+		"@astrojs/starlight": "0.42.4",
+		"astro": "7.3.5",
+		"sharp": "0.35.4"
+	},
+	"devDependencies": {
+		"typescript": "6.0.3"
+	}
+}

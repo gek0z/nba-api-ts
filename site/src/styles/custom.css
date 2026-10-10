@@ -1,0 +1,50 @@
+/* Basketball orange accent, tuned for contrast in both themes. */
+:root {
+	--sl-color-accent-low: #3d1a06;
+	--sl-color-accent: #e8590c;
+	--sl-color-accent-high: #ffd8bf;
+	--sl-content-width: 52rem;
+}
+
+:root[data-theme="light"] {
+	--sl-color-accent-low: #ffe4d1;
+	--sl-color-accent: #c2410c;
+	--sl-color-accent-high: #5c1d03;
+}
+
+/* Wide tables (params, columns) scroll inside the content column. */
+.sl-markdown-content table {
+	display: block;
+	overflow-x: auto;
+}
+
+.sl-markdown-content details summary {
+	cursor: pointer;
+	color: var(--sl-color-text-accent);
+}
+
+/* Endpoint filter on /endpoints/ */
+#endpoint-filter {
+	width: 100%;
+	padding: 0.6rem 0.8rem;
+	font: inherit;
+	color: var(--sl-color-white);
+	background: var(--sl-color-gray-6);
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.5rem;
+}
+
+#endpoint-filter:focus {
+	outline: 2px solid var(--sl-color-accent);
+	outline-offset: 1px;
+}
+
+#endpoint-count {
+	min-height: 1.5em;
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-3);
+}
+
+.endpoint-table tr[hidden] {
+	display: none;
+}

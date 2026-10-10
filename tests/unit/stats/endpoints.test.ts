@@ -3,7 +3,7 @@
  * Each test loads a real API response fixture and verifies parsing.
  */
 import { afterEach, describe, expect, test } from "bun:test";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { NBAClient } from "../../../src/index.js";
 
@@ -1079,5 +1079,54 @@ describe("Other Endpoints", () => {
 			leagueID: "00",
 		});
 		expect(res).toBeDefined();
+	});
+});
+
+// ── Request parameters ──
+
+function captureUrl(): { url: string } {
+	const captured = { url: "" };
+	globalThis.fetch = async (input: any) => {
+		captured.url = String(input);
+		return new Response("{}", { status: 200 });
+	};
+	return captured;
+}
+
+/** Every endpoint whose params require a gameID, read from the source. */
+function gameEndpoints(): string[] {
+	const src = join(import.meta.dir, "../../../src/stats");
+	return readdirSync(join(src, "types"))
+		.filter((f) =>
+			/^\tgameID: string;$/m.test(readFileSync(join(src, "types", f), "utf-8")),
+		)
+		.map((f) => {
+			const code = readFileSync(join(src, "endpoints", f), "utf-8");
+			return code.match(/export async function (\w+)/)?.[1] ?? f;
+		});
+}
+
+describe("Request parameters", () => {
+	test.each(gameEndpoints())("%s sends GameID", async (method) => {
+		const captured = captureUrl();
+		const nba = createClient();
+		await (nba.stats as any)[method]({ gameID: "0022400061" });
+		expect(new URL(captured.url).searchParams.get("GameID")).toBe("0022400061");
+	});
+
+	test("scoreboardV3 defaults to the NBA", async () => {
+		const captured = captureUrl();
+		const nba = createClient();
+		await nba.stats.scoreboardV3({ gameDate: "2025-03-15" });
+		expect(new URL(captured.url).searchParams.get("LeagueID")).toBe("00");
+	});
+
+	test("playByPlayV3 asks for every period by default", async () => {
+		const captured = captureUrl();
+		const nba = createClient();
+		await nba.stats.playByPlayV3({ gameID: "0022400061" });
+		const params = new URL(captured.url).searchParams;
+		expect(params.get("StartPeriod")).toBe("0");
+		expect(params.get("EndPeriod")).toBe("0");
 	});
 });

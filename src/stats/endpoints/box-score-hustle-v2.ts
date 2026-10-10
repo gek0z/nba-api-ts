@@ -7,9 +7,11 @@ import type {
 
 export async function boxScoreHustleV2(
 	client: FetchClient,
-	_params: BoxScoreHustleV2Params,
+	params: BoxScoreHustleV2Params,
 ): Promise<BoxScoreHustleV2Response> {
-	const apiParams: Record<string, string | number | undefined> = {};
+	const apiParams: Record<string, string | number | undefined> = {
+		GameID: params.gameID,
+	};
 
 	const raw = await client.get<Record<string, unknown>>(
 		"/stats/boxscorehustlev2",

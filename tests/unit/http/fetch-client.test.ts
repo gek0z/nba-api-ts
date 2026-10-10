@@ -47,6 +47,21 @@ describe("FetchClient", () => {
 		expect(client.get("/stats/test")).rejects.toBeInstanceOf(NBAApiError);
 	});
 
+	test("names Akamai when the response is its Access Denied page", async () => {
+		globalThis.fetch = async () =>
+			new Response("<HTML><HEAD><TITLE>Access Denied</TITLE></HEAD></HTML>", {
+				status: 403,
+			});
+
+		const client = new FetchClient("https://cdn.nba.com", {
+			rateLimit: 0,
+			maxRetries: 0,
+		});
+		expect(client.get("/static/test.json")).rejects.toThrow(
+			"blocked by Akamai",
+		);
+	});
+
 	test("parses JSON response", async () => {
 		const data = { resultSets: [{ name: "Test", headers: [], rowSet: [] }] };
 		globalThis.fetch = async () =>
