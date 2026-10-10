@@ -1,0 +1,88 @@
+---
+title: Getting started
+description: Install nba-api-ts, give it a browser-like fetch, and make your first stats and live calls.
+---
+
+import { Steps, Tabs, TabItem } from "@astrojs/starlight/components";
+
+nba-api-ts runs anywhere with `fetch`: Node.js 18+, Bun, Deno. It has no runtime dependencies.
+
+<Steps>
+
+1. Install the client, plus [impit](https://github.com/apify/impit) to make requests look like Chrome.
+
+   <Tabs syncKey="pkg">
+   	<TabItem label="bun">
+   		```sh
+   		bun add nba-api-ts impit
+   		```
+   	</TabItem>
+   	<TabItem label="npm">
+   		```sh
+   		npm install nba-api-ts impit
+   		```
+   	</TabItem>
+   	<TabItem label="pnpm">
+   		```sh
+   		pnpm add nba-api-ts impit
+   		```
+   	</TabItem>
+   </Tabs>
+
+2. Create a client that uses impit for both APIs.
+
+   ```ts title="nba.ts"
+   import { Impit } from "impit";
+   import { type FetchFn, NBAClient } from "nba-api-ts";
+
+   const impit = new Impit({ browser: "chrome" });
+   const browserFetch: FetchFn = (url, init) =>
+   	impit.fetch(url, init) as unknown as Promise<Response>;
+
+   export const nba = new NBAClient({
+   	stats: { fetch: browserFetch },
+   	live: { fetch: browserFetch },
+   });
+   ```
+
+   Both stats.nba.com and cdn.nba.com reject clients that don't look like a browser. [Getting past Akamai](/guides/akamai/) explains why and lists alternatives.
+
+3. Call an endpoint.
+
+   ```ts
+   import { nba } from "./nba";
+
+   // Stats: LeBron James's career regular season totals
+   const career = await nba.stats.playerCareerStats({ playerID: 2544 });
+   console.log(career.careerTotalsRegularSeason[0].pts);
+
+   // Stats: every player's per-game numbers for a season
+   const dash = await nba.stats.leagueDashPlayerStats({ season: "2024-25", perMode: "PerGame" });
+   console.log(dash.leagueDashPlayerStats.length, "players");
+
+   // Live: what's on today
+   const { scoreboard } = await nba.live.scoreboard();
+   for (const game of scoreboard.games) {
+   	console.log(`${game.awayTeam.teamTricode} @ ${game.homeTeam.teamTricode}: ${game.gameStatusText}`);
+   }
+   ```
+
+</Steps>
+
+:::caution[Stats need a residential IP]
+Even with a browser fingerprint, stats.nba.com drops connections from cloud and datacenter IP ranges (AWS, GCP, Azure, GitHub Actions). Run stats calls from a home machine, a home server, or through a residential proxy. Live endpoints don't have this restriction.
+:::
+
+## Finding IDs
+
+Most endpoints take a `playerID`, `teamID` or `gameID`.
+
+- **Players**: `nba.stats.playerIndex({ season: "2024-25" })` or `commonAllPlayers` list every player with their `personId`.
+- **Teams**: team IDs are stable, for example `1610612747` for the Lakers. `nba.stats.leagueStandings({})` returns all 30 with their `teamid`.
+- **Games**: game IDs are 10-character strings like `"0022400061"`. Keep them as strings, the leading zeros matter. Get them from `nba.live.scoreboard()`, `scoreboardV2({ gameDate })` or `leagueGameFinder`.
+
+## Next steps
+
+- [Configuration](/guides/configuration/): timeouts, retries and rate limits.
+- [Responses](/guides/responses/): how NBA tables become typed rows.
+- [All endpoints](/endpoints/): search by name, path or parameter.

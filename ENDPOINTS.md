@@ -147,7 +147,7 @@ All stats endpoints hit `https://stats.nba.com/stats/` and require a residential
 
 ## Live Endpoints (4)
 
-All live endpoints hit `https://cdn.nba.com/static/json/liveData/` and work from any IP without TLS impersonation.
+All live endpoints hit `https://cdn.nba.com/static/json/liveData/` and need TLS impersonation (since June 2026), but work from any IP, including servers and CI.
 
 | Method | NBA API Path | Parameters |
 |--------|-------------|------------|

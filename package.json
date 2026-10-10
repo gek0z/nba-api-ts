@@ -25,7 +25,8 @@
 		"test:unit": "bun test tests/unit",
 		"test:integration": "NBA_INTEGRATION_TESTS=1 bun test tests/integration",
 		"test:integration:tls": "NBA_INTEGRATION_TESTS=1 NBA_USE_TLS=1 bun test tests/integration",
-		"docs": "typedoc"
+		"docs": "bun install --cwd site --frozen-lockfile && bun run --cwd site build",
+		"docs:dev": "bun install --cwd site && bun run --cwd site dev"
 	},
 	"repository": {
 		"type": "git",
@@ -51,7 +52,6 @@
 		"@biomejs/biome": "^2.5.10",
 		"@types/bun": "^1.4.0",
 		"tlsclientwrapper": "^4.3.0",
-		"typedoc": "0.28.20",
 		"typescript": "^7.0.2"
 	},
 	"trustedDependencies": [

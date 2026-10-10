@@ -1,0 +1,49 @@
+---
+title: nba-api-ts
+description: Typed TypeScript client for the NBA stats and live data APIs. 138 stats endpoints, 4 live endpoints, zero dependencies.
+template: splash
+hero:
+  tagline: Every NBA.com stat, typed. 138 stats endpoints and 4 live feeds behind one zero-dependency client, with retries, rate limiting and parsed rows built in.
+  actions:
+    - text: Get started
+      link: /getting-started/
+      icon: right-arrow
+    - text: Browse endpoints
+      link: /endpoints/
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from "@astrojs/starlight/components";
+
+```ts
+import { NBAClient } from "nba-api-ts";
+
+const nba = new NBAClient({ stats: { fetch: browserFetch } });
+
+const { careerTotalsRegularSeason } = await nba.stats.playerCareerStats({ playerID: 2544 });
+console.log(careerTotalsRegularSeason[0].pts); // typed: number
+```
+
+<CardGrid>
+	<Card title="138 stats endpoints" icon="list-format">
+		Players, teams, box scores, play-by-play, shot charts, draft, standings and every league dashboard on stats.nba.com.
+	</Card>
+	<Card title="Live game data" icon="rocket">
+		Today's scoreboard, live box scores, play-by-play and odds from cdn.nba.com.
+	</Card>
+	<Card title="Typed rows, not arrays" icon="seti:typescript">
+		The NBA's `headers` + `rowSet` tables come back as objects with camelCase keys and a type for every column.
+	</Card>
+	<Card title="Built for a hostile API" icon="setting">
+		Retries with backoff, a token-bucket rate limiter, timeouts, and a pluggable `fetch` to get past Akamai.
+	</Card>
+</CardGrid>
+
+## Where to next
+
+<CardGrid>
+	<LinkCard title="Getting started" description="Install, set up a browser-like fetch, make your first call." href="/getting-started/" />
+	<LinkCard title="Getting past Akamai" description="Why plain fetch gets 403s and timeouts, and the two-line fix." href="/guides/akamai/" />
+	<LinkCard title="All endpoints" description="Search all 138 stats endpoints by name, path or parameter." href="/endpoints/" />
+	<LinkCard title="Live data" description="Scoreboards and play-by-play while games are on." href="/guides/live-data/" />
+</CardGrid>
