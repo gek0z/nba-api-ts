@@ -1,0 +1,110 @@
+---
+title: Getting past Akamai
+description: Why NBA.com rejects plain fetch with 403s and timeouts, and how to give nba-api-ts a browser-like fetch.
+---
+
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+
+Both NBA hosts sit behind Akamai bot protection, and it rejects any client whose TLS and HTTP/2 handshake doesn't look like a real browser. Headers don't help: a perfect Chrome `User-Agent` sent from Node's or Bun's `fetch` is still blocked, because the handshake gives it away.
+
+| Host | Used by | Plain `fetch` result |
+|---|---|---|
+| `stats.nba.com` | `nba.stats.*` | Hangs until timeout (`NBATimeoutError`) |
+| `cdn.nba.com` | `nba.live.*` | `403 Access Denied` (`NBAApiError`), since June 2026 |
+
+:::note[Changed in June 2026]
+cdn.nba.com used to accept any client. Since 2026-06-16 it fingerprints TLS like stats.nba.com, so live endpoints need the same fix.
+:::
+
+## The fix: pass a browser-like `fetch`
+
+`NBAClient` accepts a `fetch` for each API. Anything with the standard `(url, init) => Promise<Response>` shape works. The client still handles headers, retries, rate limiting and parsing.
+
+<Tabs>
+	<TabItem label="impit (recommended)">
+		[impit](https://github.com/apify/impit) impersonates Chrome's handshake and ships prebuilt binaries, so there is nothing else to install.
+
+		```ts
+		import { Impit } from "impit";
+		import { type FetchFn, NBAClient } from "nba-api-ts";
+
+		const impit = new Impit({ browser: "chrome" });
+		const browserFetch: FetchFn = (url, init) =>
+			impit.fetch(url, init) as unknown as Promise<Response>;
+
+		const nba = new NBAClient({
+			stats: { fetch: browserFetch },
+			live: { fetch: browserFetch },
+		});
+		```
+
+		The cast is needed because impit returns its own `Response` class. It has everything the client uses (`ok`, `status`, `json()`, `text()`).
+	</TabItem>
+	<TabItem label="tlsclientwrapper">
+		```ts
+		import { NBAClient } from "nba-api-ts";
+		import { ModuleClient, SessionClient } from "tlsclientwrapper";
+
+		const moduleClient = new ModuleClient();
+		await moduleClient.open();
+		const session = new SessionClient(moduleClient, {
+			tlsClientIdentifier: "chrome_131",
+			timeoutSeconds: 30,
+			defaultHeaders: {
+				"User-Agent":
+					"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+				Accept: "application/json, text/plain, */*",
+				Referer: "https://www.nba.com/",
+				Origin: "https://www.nba.com",
+			},
+		});
+
+		const browserFetch = async (url: string) => {
+			const res = await session.get(url);
+			if (res.status === 0) throw new Error(res.body);
+			const headers: Record<string, string> = {};
+			for (const [k, v] of Object.entries(res.headers)) {
+				headers[k] = Array.isArray(v) ? v.join(", ") : String(v);
+			}
+			return new Response(res.body, { status: res.status, headers });
+		};
+
+		const nba = new NBAClient({
+			stats: { fetch: browserFetch },
+			live: { fetch: browserFetch },
+		});
+		```
+	</TabItem>
+	<TabItem label="Anything else">
+		curl-impersonate, a headless browser, or an HTTP proxy that re-originates requests with a browser fingerprint all work. Wrap them in a function that takes `(url, init)` and returns a `Response`.
+	</TabItem>
+</Tabs>
+
+## IP blocking (stats only)
+
+stats.nba.com also drops connections from known cloud and datacenter ranges: AWS, GCP, Azure, most VPS providers, and CI runners like GitHub Actions. From those, requests hang even with a perfect fingerprint.
+
+Run stats calls from a residential IP: your own machine, a home server such as a Raspberry Pi, or through a residential proxy. cdn.nba.com only checks the fingerprint, so live endpoints work from servers once you pass a browser-like `fetch`.
+
+## Recognizing a block
+
+| Symptom | Likely cause |
+|---|---|
+| `NBAApiError` with "blocked by Akamai" in the message | Fingerprint rejected. Pass a browser-like `fetch`. |
+| `NBATimeoutError` on every stats call | Datacenter IP, or plain `fetch` on stats.nba.com. |
+| `NBAApiError` 400 | The request reached the NBA but a parameter is wrong, for example a numeric `gameID` that lost its leading zeros. |
+
+When a request is blocked, `NBAApiError` names Akamai in its message, and `error.responseBody` holds the HTML page Akamai returned.
+
+## Testing your setup
+
+```ts
+try {
+	await nba.live.scoreboard();
+	console.log("cdn.nba.com: ok");
+	await nba.stats.commonPlayerInfo({ playerID: 2544 });
+	console.log("stats.nba.com: ok");
+} catch (error) {
+	console.error(error);
+}
+```

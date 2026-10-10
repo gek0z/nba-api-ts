@@ -14,7 +14,7 @@ export interface TeamDashLineupsParams {
 	seasonType?: string;
 	dateFrom?: string;
 	dateTo?: string;
-	gameID?: number;
+	gameID?: string;
 	gameSegment?: string;
 	leagueID?: string;
 	location?: string;

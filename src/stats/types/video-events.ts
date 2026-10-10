@@ -1,5 +1,5 @@
 export interface VideoEventsParams {
-	gameID: number;
+	gameID: string;
 	gameEventID?: number;
 }
 

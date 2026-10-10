@@ -1,48 +1,56 @@
-export type BoxScoreDefensiveV2Params = {};
-
-export interface PlayerStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
-	personid: number;
-	firstname: string;
-	familyname: string;
-	namei: string;
-	playerslug: string;
-	position: string;
-	comment: string;
-	jerseynum: unknown;
-	matchupminutes: string;
-	partialpossessions: unknown;
-	switcheson: unknown;
-	playerpoints: unknown;
-	defensiverebounds: unknown;
-	matchupassists: string;
-	matchupturnovers: string;
-	steals: unknown;
-	blocks: unknown;
-	matchupfieldgoalsmade: string;
-	matchupfieldgoalsattempted: string;
-	matchupfieldgoalpercentage: string;
-	matchupthreepointersmade: string;
-	matchupthreepointersattempted: string;
-	matchupthreepointerpercentage: string;
+export interface BoxScoreDefensiveV2Params {
+	gameID: string;
 }
 
-export interface TeamStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
+/** Parsed from the `boxScoreDefensive` object of the V3 response. */
+export interface BoxScoreDefensiveV2Response {
+	gameId: string;
+	awayTeamId: number;
+	homeTeamId: number;
+	homeTeam: BoxScoreDefensiveV2Team;
+	awayTeam: BoxScoreDefensiveV2Team;
+}
+
+export interface BoxScoreDefensiveV2Team {
+	teamId: number;
+	teamCity: string;
+	teamName: string;
+	teamTricode: string;
+	teamSlug: string;
+	players: BoxScoreDefensiveV2Player[];
+	statistics: BoxScoreDefensiveV2TeamStatistics;
+}
+
+export interface BoxScoreDefensiveV2TeamStatistics {
 	minutes: unknown;
 }
 
-export interface BoxScoreDefensiveV2Response {
-	playerStats: PlayerStatsRow[];
-	teamStats: TeamStatsRow[];
+export interface BoxScoreDefensiveV2Player {
+	personId: number;
+	firstName: string;
+	familyName: string;
+	nameI: string;
+	playerSlug: string;
+	position: string;
+	comment: string;
+	jerseyNum: string;
+	statistics: BoxScoreDefensiveV2PlayerStatistics;
+}
+
+export interface BoxScoreDefensiveV2PlayerStatistics {
+	matchupMinutes: string;
+	partialPossessions: number;
+	switchesOn: number;
+	playerPoints: number;
+	defensiveRebounds: number;
+	matchupAssists: number;
+	matchupTurnovers: number;
+	steals: number;
+	blocks: number;
+	matchupFieldGoalsMade: number;
+	matchupFieldGoalsAttempted: number;
+	matchupFieldGoalPercentage: number;
+	matchupThreePointersMade: number;
+	matchupThreePointersAttempted: number;
+	matchupThreePointerPercentage: number;
 }

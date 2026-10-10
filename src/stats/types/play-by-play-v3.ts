@@ -1,40 +1,38 @@
 export interface PlayByPlayV3Params {
-	gameID: number;
+	gameID: string;
 	endPeriod?: number;
 	startPeriod?: number;
 }
 
-export interface AvailableVideoRow {
-	videoavailable: unknown;
-}
-
-export interface PlayByPlayRow {
-	gameid: number;
-	actionnumber: unknown;
-	clock: unknown;
-	period: unknown;
-	teamid: number;
-	teamtricode: string;
-	personid: number;
-	playername: string;
-	playernamei: string;
-	xlegacy: unknown;
-	ylegacy: unknown;
-	shotdistance: unknown;
-	shotresult: unknown;
-	isfieldgoal: unknown;
-	scorehome: unknown;
-	scoreaway: unknown;
-	pointstotal: unknown;
-	location: unknown;
-	description: string;
-	actiontype: string;
-	subtype: string;
-	videoavailable: unknown;
-	actionid: number;
-}
-
+/** Parsed from the `game` object of the V3 response. */
 export interface PlayByPlayV3Response {
-	availableVideo: AvailableVideoRow[];
-	playByPlay: PlayByPlayRow[];
+	gameId: string;
+	videoAvailable: number;
+	actions: PlayByPlayV3Action[];
+}
+
+export interface PlayByPlayV3Action {
+	actionNumber: number;
+	clock: string;
+	period: number;
+	teamId: number;
+	teamTricode: string;
+	personId: number;
+	playerName: string;
+	playerNameI: string;
+	xLegacy: number;
+	yLegacy: number;
+	shotDistance: number;
+	shotResult: string;
+	isFieldGoal: number;
+	scoreHome: string;
+	scoreAway: string;
+	pointsTotal: number;
+	location: string;
+	description: string;
+	actionType: string;
+	subType: string;
+	videoAvailable: number;
+	shotValue: number;
+	actionId: number;
 }

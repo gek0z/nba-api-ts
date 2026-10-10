@@ -1,5 +1,5 @@
 export interface BoxScoreFourFactorsV3Params {
-	gameID: number;
+	gameID: string;
 	endPeriod?: number;
 	endRange?: number;
 	rangeType?: number;
@@ -7,51 +7,45 @@ export interface BoxScoreFourFactorsV3Params {
 	startRange?: number;
 }
 
-export interface PlayerStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
-	personid: number;
-	firstname: string;
-	familyname: string;
-	namei: string;
-	playerslug: string;
+/** Parsed from the `boxScoreFourFactors` object of the V3 response. */
+export interface BoxScoreFourFactorsV3Response {
+	gameId: string;
+	awayTeamId: number;
+	homeTeamId: number;
+	homeTeam: BoxScoreFourFactorsV3Team;
+	awayTeam: BoxScoreFourFactorsV3Team;
+}
+
+export interface BoxScoreFourFactorsV3Team {
+	teamId: number;
+	teamCity: string;
+	teamName: string;
+	teamTricode: string;
+	teamSlug: string;
+	players: BoxScoreFourFactorsV3Player[];
+	statistics: BoxScoreFourFactorsV3Statistics;
+}
+
+export interface BoxScoreFourFactorsV3Player {
+	personId: number;
+	firstName: string;
+	familyName: string;
+	nameI: string;
+	playerSlug: string;
 	position: string;
 	comment: string;
-	jerseynum: unknown;
-	minutes: unknown;
-	effectivefieldgoalpercentage: unknown;
-	freethrowattemptrate: unknown;
-	teamturnoverpercentage: unknown;
-	offensivereboundpercentage: unknown;
-	oppeffectivefieldgoalpercentage: unknown;
-	oppfreethrowattemptrate: unknown;
-	oppteamturnoverpercentage: unknown;
-	oppoffensivereboundpercentage: unknown;
+	jerseyNum: string;
+	statistics: BoxScoreFourFactorsV3Statistics;
 }
 
-export interface TeamStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
-	minutes: unknown;
-	effectivefieldgoalpercentage: unknown;
-	freethrowattemptrate: unknown;
-	teamturnoverpercentage: unknown;
-	offensivereboundpercentage: unknown;
-	oppeffectivefieldgoalpercentage: unknown;
-	oppfreethrowattemptrate: unknown;
-	oppteamturnoverpercentage: unknown;
-	oppoffensivereboundpercentage: unknown;
-}
-
-export interface BoxScoreFourFactorsV3Response {
-	playerStats: PlayerStatsRow[];
-	teamStats: TeamStatsRow[];
+export interface BoxScoreFourFactorsV3Statistics {
+	minutes: string;
+	effectiveFieldGoalPercentage: number;
+	freeThrowAttemptRate: number;
+	teamTurnoverPercentage: number;
+	offensiveReboundPercentage: number;
+	oppEffectiveFieldGoalPercentage: number;
+	oppFreeThrowAttemptRate: number;
+	oppTeamTurnoverPercentage: number;
+	oppOffensiveReboundPercentage: number;
 }

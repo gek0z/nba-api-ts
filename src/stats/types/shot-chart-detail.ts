@@ -15,7 +15,7 @@ export interface ShotChartDetailParams {
 	dateTo?: string;
 	endPeriod?: number;
 	endRange?: number;
-	gameID?: number;
+	gameID?: string;
 	gameSegment?: string;
 	location?: string;
 	outcome?: string;

@@ -1,73 +1,81 @@
-export type BoxScorePlayerTrackV3Params = {};
+export interface BoxScorePlayerTrackV3Params {
+	gameID: string;
+}
 
-export interface PlayerStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
-	personid: number;
-	firstname: string;
-	familyname: string;
-	namei: string;
-	playerslug: string;
+/** Parsed from the `boxScorePlayerTrack` object of the V3 response. */
+export interface BoxScorePlayerTrackV3Response {
+	gameId: string;
+	awayTeamId: number;
+	homeTeamId: number;
+	homeTeam: BoxScorePlayerTrackV3Team;
+	awayTeam: BoxScorePlayerTrackV3Team;
+}
+
+export interface BoxScorePlayerTrackV3Team {
+	teamId: number;
+	teamCity: string;
+	teamName: string;
+	teamTricode: string;
+	teamSlug: string;
+	players: BoxScorePlayerTrackV3Player[];
+	statistics: BoxScorePlayerTrackV3TeamStatistics;
+}
+
+export interface BoxScorePlayerTrackV3TeamStatistics {
+	minutes: string;
+	distance: number;
+	reboundChancesOffensive: number;
+	reboundChancesDefensive: number;
+	reboundChancesTotal: number;
+	touches: number;
+	secondaryAssists: number;
+	freeThrowAssists: number;
+	passes: number;
+	assists: number;
+	contestedFieldGoalsMade: number;
+	contestedFieldGoalsAttempted: number;
+	contestedFieldGoalPercentage: number;
+	uncontestedFieldGoalsMade: number;
+	uncontestedFieldGoalsAttempted: number;
+	uncontestedFieldGoalsPercentage: number;
+	fieldGoalPercentage: number;
+	defendedAtRimFieldGoalsMade: number;
+	defendedAtRimFieldGoalsAttempted: number;
+	defendedAtRimFieldGoalPercentage: number;
+}
+
+export interface BoxScorePlayerTrackV3Player {
+	personId: number;
+	firstName: string;
+	familyName: string;
+	nameI: string;
+	playerSlug: string;
 	position: string;
 	comment: string;
-	jerseynum: unknown;
-	minutes: unknown;
-	speed: unknown;
-	distance: unknown;
-	reboundchancesoffensive: unknown;
-	reboundchancesdefensive: unknown;
-	reboundchancestotal: unknown;
-	touches: unknown;
-	secondaryassists: unknown;
-	freethrowassists: unknown;
-	passes: unknown;
-	assists: unknown;
-	contestedfieldgoalsmade: unknown;
-	contestedfieldgoalsattempted: unknown;
-	contestedfieldgoalpercentage: unknown;
-	uncontestedfieldgoalsmade: unknown;
-	uncontestedfieldgoalsattempted: unknown;
-	uncontestedfieldgoalspercentage: unknown;
-	fieldgoalpercentage: unknown;
-	defendedatrimfieldgoalsmade: unknown;
-	defendedatrimfieldgoalsattempted: unknown;
-	defendedatrimfieldgoalpercentage: unknown;
+	jerseyNum: string;
+	statistics: BoxScorePlayerTrackV3PlayerStatistics;
 }
 
-export interface TeamStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
-	minutes: unknown;
-	distance: unknown;
-	reboundchancesoffensive: unknown;
-	reboundchancesdefensive: unknown;
-	reboundchancestotal: unknown;
-	touches: unknown;
-	secondaryassists: unknown;
-	freethrowassists: unknown;
-	passes: unknown;
-	assists: unknown;
-	contestedfieldgoalsmade: unknown;
-	contestedfieldgoalsattempted: unknown;
-	contestedfieldgoalpercentage: unknown;
-	uncontestedfieldgoalsmade: unknown;
-	uncontestedfieldgoalsattempted: unknown;
-	uncontestedfieldgoalspercentage: unknown;
-	fieldgoalpercentage: unknown;
-	defendedatrimfieldgoalsmade: unknown;
-	defendedatrimfieldgoalsattempted: unknown;
-	defendedatrimfieldgoalpercentage: unknown;
-}
-
-export interface BoxScorePlayerTrackV3Response {
-	playerStats: PlayerStatsRow[];
-	teamStats: TeamStatsRow[];
+export interface BoxScorePlayerTrackV3PlayerStatistics {
+	minutes: string;
+	speed: number;
+	distance: number;
+	reboundChancesOffensive: number;
+	reboundChancesDefensive: number;
+	reboundChancesTotal: number;
+	touches: number;
+	secondaryAssists: number;
+	freeThrowAssists: number;
+	passes: number;
+	assists: number;
+	contestedFieldGoalsMade: number;
+	contestedFieldGoalsAttempted: number;
+	contestedFieldGoalPercentage: number;
+	uncontestedFieldGoalsMade: number;
+	uncontestedFieldGoalsAttempted: number;
+	uncontestedFieldGoalsPercentage: number;
+	fieldGoalPercentage: number;
+	defendedAtRimFieldGoalsMade: number;
+	defendedAtRimFieldGoalsAttempted: number;
+	defendedAtRimFieldGoalPercentage: number;
 }

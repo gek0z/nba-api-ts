@@ -1,5 +1,5 @@
 export interface GameRotationParams {
-	gameID: number;
+	gameID: string;
 	leagueID?: string;
 }
 

@@ -15,7 +15,7 @@ export interface VideoDetailsParams {
 	dateTo?: string;
 	endPeriod?: number;
 	endRange?: number;
-	gameID?: number;
+	gameID?: string;
 	gameSegment?: string;
 	leagueID?: string;
 	location?: string;

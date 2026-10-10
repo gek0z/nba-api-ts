@@ -22,7 +22,7 @@ TypeScript NBA API client. Zero dependencies. Wraps **138 stats endpoints** and 
 
 - Node.js >= 18, Bun, or any runtime with `fetch` support
 - Stats endpoints require a residential IP + TLS impersonation (see [Akamai / TLS Fingerprinting](#akamai--tls-fingerprinting))
-- Live endpoints work from anywhere
+- Live endpoints need the same TLS impersonation, but work from any IP
 
 ## Install
 
@@ -50,7 +50,7 @@ const dashboard = await nba.stats.leagueDashPlayerStats({
 });
 console.log(dashboard.leagueDashPlayerStats[0].playerName);
 
-// Live — today's scoreboard (no Akamai, works anywhere)
+// Live — today's scoreboard
 const scoreboard = await nba.live.scoreboard();
 console.log(scoreboard.scoreboard.games.length, 'games today');
 ```
@@ -133,7 +133,7 @@ try {
 ## Documentation
 
 - [Full endpoint list](ENDPOINTS.md) — all 138 stats + 4 live endpoints with NBA API paths
-- [API docs](https://nba-api-ts.riccardo.lol) — auto-generated TypeDoc reference
+- [Docs site](https://nba-api-ts.riccardo.lol) — guides, plus a page per endpoint with parameters, defaults and every result set column
 
 ## Development
 
@@ -156,9 +156,25 @@ PRs welcome. Run `bun run lint` and `bun test` before submitting.
 <details>
 <summary><h2>Akamai / TLS Fingerprinting</h2></summary>
 
-All `stats.nba.com` endpoints are behind Akamai bot protection that blocks requests based on TLS fingerprinting. This means Node.js and Bun's built-in `fetch` will be blocked. Live endpoints (`cdn.nba.com`) work fine from any environment.
+Both `stats.nba.com` and (since June 2026) `cdn.nba.com` are behind Akamai bot protection that blocks requests based on TLS fingerprinting. This means Node.js and Bun's built-in `fetch` will be blocked: stats requests hang, live requests get `403 Access Denied`.
 
-To use stats endpoints from a server, provide a custom `fetch` backed by a library that can impersonate a browser's TLS fingerprint:
+The simplest fix is [impit](https://github.com/apify/impit), which impersonates Chrome:
+
+```typescript
+import { Impit } from 'impit';
+import { type FetchFn, NBAClient } from 'nba-api-ts';
+
+const impit = new Impit({ browser: 'chrome' });
+const browserFetch: FetchFn = (url, init) =>
+  impit.fetch(url, init) as unknown as Promise<Response>;
+
+const nba = new NBAClient({
+  stats: { fetch: browserFetch },
+  live: { fetch: browserFetch },
+});
+```
+
+[Getting past Akamai](https://nba-api-ts.riccardo.lol/guides/akamai/) covers the alternatives. With `tlsclientwrapper`:
 
 ```typescript
 import { NBAClient } from 'nba-api-ts';

@@ -1,54 +1,72 @@
-export type BoxScoreMatchupsV3Params = {};
-
-export interface PlayerStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
-	personidoff: unknown;
-	firstnameoff: string;
-	familynameoff: string;
-	nameioff: string;
-	playerslugoff: string;
-	jerseynumoff: unknown;
-	personiddef: unknown;
-	firstnamedef: string;
-	familynamedef: string;
-	nameidef: string;
-	playerslugdef: string;
-	positiondef: string;
-	commentdef: string;
-	jerseynumdef: unknown;
-	matchupminutes: string;
-	matchupminutessort: string;
-	partialpossessions: unknown;
-	percentagedefendertotaltime: unknown;
-	percentageoffensivetotaltime: unknown;
-	percentagetotaltimebothon: unknown;
-	switcheson: unknown;
-	playerpoints: unknown;
-	teampoints: unknown;
-	matchupassists: string;
-	matchuppotentialassists: string;
-	matchupturnovers: string;
-	matchupblocks: string;
-	matchupfieldgoalsmade: string;
-	matchupfieldgoalsattempted: string;
-	matchupfieldgoalspercentage: string;
-	matchupthreepointersmade: string;
-	matchupthreepointersattempted: string;
-	matchupthreepointerspercentage: string;
-	helpblocks: unknown;
-	helpfieldgoalsmade: unknown;
-	helpfieldgoalsattempted: unknown;
-	helpfieldgoalspercentage: unknown;
-	matchupfreethrowsmade: string;
-	matchupfreethrowsattempted: string;
-	shootingfouls: unknown;
+export interface BoxScoreMatchupsV3Params {
+	gameID: string;
 }
 
+/** Parsed from the `boxScoreMatchups` object of the V3 response. */
 export interface BoxScoreMatchupsV3Response {
-	playerStats: PlayerStatsRow[];
+	gameId: string;
+	awayTeamId: number;
+	homeTeamId: number;
+	homeTeam: BoxScoreMatchupsV3Team;
+	awayTeam: BoxScoreMatchupsV3Team;
+}
+
+export interface BoxScoreMatchupsV3Team {
+	teamId: number;
+	teamCity: string;
+	teamName: string;
+	teamTricode: string;
+	teamSlug: string;
+	players: BoxScoreMatchupsV3Player[];
+}
+
+export interface BoxScoreMatchupsV3Player {
+	personId: number;
+	firstName: string;
+	familyName: string;
+	nameI: string;
+	playerSlug: string;
+	position: string;
+	comment: string;
+	jerseyNum: string;
+	matchups: BoxScoreMatchupsV3PlayerMatchup[];
+}
+
+export interface BoxScoreMatchupsV3PlayerMatchup {
+	personId: number;
+	firstName: string;
+	familyName: string;
+	nameI: string;
+	playerSlug: string;
+	jerseyNum: string;
+	statistics: BoxScoreMatchupsV3PlayerMatchupStatistics;
+}
+
+export interface BoxScoreMatchupsV3PlayerMatchupStatistics {
+	matchupMinutes: string;
+	matchupMinutesSort: number;
+	partialPossessions: number;
+	percentageDefenderTotalTime: number;
+	percentageOffensiveTotalTime: number;
+	percentageTotalTimeBothOn: number;
+	switchesOn: number;
+	playerPoints: number;
+	teamPoints: number;
+	matchupAssists: number;
+	matchupPotentialAssists: number;
+	matchupTurnovers: number;
+	matchupBlocks: number;
+	matchupFieldGoalsMade: number;
+	matchupFieldGoalsAttempted: number;
+	matchupFieldGoalsPercentage: number;
+	matchupThreePointersMade: number;
+	matchupThreePointersAttempted: number;
+	matchupThreePointersPercentage: number;
+	helpBlocks: number;
+	helpFieldGoalsMade: number;
+	helpFieldGoalsAttempted: number;
+	helpFieldGoalsPercentage: number;
+	matchupFreeThrowsMade: number;
+	matchupFreeThrowsAttempted: number;
+	shootingFouls: number;
 }

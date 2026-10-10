@@ -15,14 +15,26 @@ export interface FetchClientOptions {
 	/** Override default headers. */
 	headers?: Record<string, string>;
 	/**
-	 * Custom fetch implementation. Use this to bypass Akamai TLS fingerprinting
-	 * on stats.nba.com by providing a fetch backed by tls-client, curl-impersonate,
-	 * or similar. Defaults to globalThis.fetch.
+	 * Custom fetch implementation. Both stats.nba.com and (since June 2026)
+	 * cdn.nba.com sit behind Akamai, which rejects clients whose TLS handshake
+	 * doesn't look like a browser. Provide a fetch backed by impit,
+	 * curl-impersonate, or similar. Defaults to globalThis.fetch.
+	 *
+	 * @see https://nba-api-ts.riccardo.lol/guides/akamai/
 	 */
 	fetch?: FetchFn;
 }
 
 const RETRYABLE_STATUS_CODES = new Set([408, 429, 500, 502, 503, 504]);
+
+/** Akamai answers blocked clients with an "Access Denied" HTML page; say so. */
+function errorMessage(status: number, url: string, body?: string): string {
+	const message = `HTTP ${status} from ${url}`;
+	if (body?.includes("Access Denied")) {
+		return `${message} (blocked by Akamai, pass a browser-impersonating fetch: https://nba-api-ts.riccardo.lol/guides/akamai/)`;
+	}
+	return message;
+}
 
 export class FetchClient {
 	private readonly timeout: number;
@@ -70,26 +82,17 @@ export class FetchClient {
 				}
 
 				const body = await response.text().catch(() => undefined);
+				const message = errorMessage(response.status, url, body);
 
 				if (
 					RETRYABLE_STATUS_CODES.has(response.status) &&
 					attempt < this.maxRetries
 				) {
-					lastError = new NBAApiError(
-						`HTTP ${response.status} from ${url}`,
-						response.status,
-						url,
-						body,
-					);
+					lastError = new NBAApiError(message, response.status, url, body);
 					continue;
 				}
 
-				throw new NBAApiError(
-					`HTTP ${response.status} from ${url}`,
-					response.status,
-					url,
-					body,
-				);
+				throw new NBAApiError(message, response.status, url, body);
 			} catch (error) {
 				if (error instanceof NBAApiError || error instanceof NBATimeoutError) {
 					if (error instanceof NBATimeoutError && attempt < this.maxRetries) {

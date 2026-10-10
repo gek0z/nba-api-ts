@@ -7,9 +7,11 @@ import type {
 
 export async function boxScoreMatchupsV3(
 	client: FetchClient,
-	_params: BoxScoreMatchupsV3Params,
+	params: BoxScoreMatchupsV3Params,
 ): Promise<BoxScoreMatchupsV3Response> {
-	const apiParams: Record<string, string | number | undefined> = {};
+	const apiParams: Record<string, string | number | undefined> = {
+		GameID: params.gameID,
+	};
 
 	const raw = await client.get<Record<string, unknown>>(
 		"/stats/boxscorematchupsv3",

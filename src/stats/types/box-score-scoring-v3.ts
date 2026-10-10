@@ -1,5 +1,5 @@
 export interface BoxScoreScoringV3Params {
-	gameID: number;
+	gameID: string;
 	endPeriod?: number;
 	endRange?: number;
 	rangeType?: number;
@@ -7,65 +7,52 @@ export interface BoxScoreScoringV3Params {
 	startRange?: number;
 }
 
-export interface PlayerStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
-	personid: number;
-	firstname: string;
-	familyname: string;
-	namei: string;
-	playerslug: string;
+/** Parsed from the `boxScoreScoring` object of the V3 response. */
+export interface BoxScoreScoringV3Response {
+	gameId: string;
+	awayTeamId: number;
+	homeTeamId: number;
+	homeTeam: BoxScoreScoringV3Team;
+	awayTeam: BoxScoreScoringV3Team;
+}
+
+export interface BoxScoreScoringV3Team {
+	teamId: number;
+	teamCity: string;
+	teamName: string;
+	teamTricode: string;
+	teamSlug: string;
+	players: BoxScoreScoringV3Player[];
+	statistics: BoxScoreScoringV3Statistics;
+}
+
+export interface BoxScoreScoringV3Player {
+	personId: number;
+	firstName: string;
+	familyName: string;
+	nameI: string;
+	playerSlug: string;
 	position: string;
 	comment: string;
-	jerseynum: unknown;
-	minutes: unknown;
-	percentagefieldgoalsattempted2pt: unknown;
-	percentagefieldgoalsattempted3pt: unknown;
-	percentagepoints2pt: unknown;
-	percentagepointsmidrange2pt: unknown;
-	percentagepoints3pt: unknown;
-	percentagepointsfastbreak: unknown;
-	percentagepointsfreethrow: unknown;
-	percentagepointsoffturnovers: unknown;
-	percentagepointspaint: unknown;
-	percentageassisted2pt: unknown;
-	percentageunassisted2pt: unknown;
-	percentageassisted3pt: unknown;
-	percentageunassisted3pt: unknown;
-	percentageassistedfgm: unknown;
-	percentageunassistedfgm: unknown;
+	jerseyNum: string;
+	statistics: BoxScoreScoringV3Statistics;
 }
 
-export interface TeamStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
-	minutes: unknown;
-	percentagefieldgoalsattempted2pt: unknown;
-	percentagefieldgoalsattempted3pt: unknown;
-	percentagepoints2pt: unknown;
-	percentagepointsmidrange2pt: unknown;
-	percentagepoints3pt: unknown;
-	percentagepointsfastbreak: unknown;
-	percentagepointsfreethrow: unknown;
-	percentagepointsoffturnovers: unknown;
-	percentagepointspaint: unknown;
-	percentageassisted2pt: unknown;
-	percentageunassisted2pt: unknown;
-	percentageassisted3pt: unknown;
-	percentageunassisted3pt: unknown;
-	percentageassistedfgm: unknown;
-	percentageunassistedfgm: unknown;
-}
-
-export interface BoxScoreScoringV3Response {
-	playerStats: PlayerStatsRow[];
-	teamStats: TeamStatsRow[];
+export interface BoxScoreScoringV3Statistics {
+	minutes: string;
+	percentageFieldGoalsAttempted2pt: number;
+	percentageFieldGoalsAttempted3pt: number;
+	percentagePoints2pt: number;
+	percentagePointsMidrange2pt: number;
+	percentagePoints3pt: number;
+	percentagePointsFastBreak: number;
+	percentagePointsFreeThrow: number;
+	percentagePointsOffTurnovers: number;
+	percentagePointsPaint: number;
+	percentageAssisted2pt: number;
+	percentageUnassisted2pt: number;
+	percentageAssisted3pt: number;
+	percentageUnassisted3pt: number;
+	percentageAssistedFGM: number;
+	percentageUnassistedFGM: number;
 }

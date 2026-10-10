@@ -3,158 +3,121 @@ export interface ScheduleLeagueV2Params {
 	season?: string;
 }
 
-export interface SeasonGamesRow {
-	leagueid: number;
-	seasonyear: string;
-	gamedate: string;
-	gameid: number;
-	gamecode: string;
-	gamestatus: string;
-	gamestatustext: string;
-	gamesequence: unknown;
-	gamedateest: string;
-	gametimeest: unknown;
-	gamedatetimeest: string;
-	gamedateutc: string;
-	gametimeutc: unknown;
-	gamedatetimeutc: string;
-	awayteamtime: unknown;
-	hometeamtime: unknown;
-	day: unknown;
-	monthnum: unknown;
-	weeknumber: unknown;
-	weekname: string;
-	ifnecessary: unknown;
-	seriesgamenumber: unknown;
-	gamelabel: unknown;
-	gamesublabel: unknown;
-	seriestext: unknown;
-	arenaname: string;
-	arenastate: unknown;
-	arenacity: string;
-	postponedstatus: string;
-	branchlink: unknown;
-	gamesubtype: string;
-	isneutral: unknown;
-	hometeamTeamid: number;
-	hometeamTeamname: string;
-	hometeamTeamcity: string;
-	hometeamTeamtricode: string;
-	hometeamTeamslug: string;
-	hometeamWins: unknown;
-	hometeamLosses: unknown;
-	hometeamScore: unknown;
-	hometeamSeed: unknown;
-	awayteamTeamid: number;
-	awayteamTeamname: string;
-	awayteamTeamcity: string;
-	awayteamTeamtricode: string;
-	awayteamTeamslug: string;
-	awayteamWins: unknown;
-	awayteamLosses: unknown;
-	awayteamScore: unknown;
-	awayteamSeed: unknown;
-	pointsleadersPersonid: number;
-	pointsleadersFirstname: string;
-	pointsleadersLastname: string;
-	pointsleadersTeamid: number;
-	pointsleadersTeamcity: string;
-	pointsleadersTeamname: string;
-	pointsleadersTeamtricode: string;
-	pointsleadersPoints: unknown;
-	nationalbroadcastersBroadcasterscope: unknown;
-	nationalbroadcastersBroadcastermedia: unknown;
-	nationalbroadcastersBroadcasterid: number;
-	nationalbroadcastersBroadcasterdisplay: unknown;
-	nationalbroadcastersBroadcasterabbreviation: string;
-	nationalbroadcastersTapedelaycomments: string;
-	nationalbroadcastersBroadcastervideolink: unknown;
-	nationalbroadcastersBroadcasterdescription: string;
-	nationalbroadcastersBroadcasterteamid: number;
-	nationalradiobroadcastersBroadcasterscope: unknown;
-	nationalradiobroadcastersBroadcastermedia: unknown;
-	nationalradiobroadcastersBroadcasterid: number;
-	nationalradiobroadcastersBroadcasterdisplay: unknown;
-	nationalradiobroadcastersBroadcasterabbreviation: string;
-	nationalradiobroadcastersTapedelaycomments: string;
-	nationalradiobroadcastersBroadcastervideolink: unknown;
-	nationalradiobroadcastersBroadcasterdescription: string;
-	nationalradiobroadcastersBroadcasterteamid: number;
-	nationalottbroadcastersBroadcasterscope: unknown;
-	nationalottbroadcastersBroadcastermedia: unknown;
-	nationalottbroadcastersBroadcasterid: number;
-	nationalottbroadcastersBroadcasterdisplay: unknown;
-	nationalottbroadcastersBroadcasterabbreviation: string;
-	nationalottbroadcastersTapedelaycomments: string;
-	nationalottbroadcastersBroadcastervideolink: unknown;
-	nationalottbroadcastersBroadcasterdescription: string;
-	nationalottbroadcastersBroadcasterteamid: number;
-	hometvbroadcastersBroadcasterscope: unknown;
-	hometvbroadcastersBroadcastermedia: unknown;
-	hometvbroadcastersBroadcasterid: number;
-	hometvbroadcastersBroadcasterdisplay: unknown;
-	hometvbroadcastersBroadcasterabbreviation: string;
-	hometvbroadcastersTapedelaycomments: string;
-	hometvbroadcastersBroadcastervideolink: unknown;
-	hometvbroadcastersBroadcasterdescription: string;
-	hometvbroadcastersBroadcasterteamid: number;
-	homeradiobroadcastersBroadcasterscope: unknown;
-	homeradiobroadcastersBroadcastermedia: unknown;
-	homeradiobroadcastersBroadcasterid: number;
-	homeradiobroadcastersBroadcasterdisplay: unknown;
-	homeradiobroadcastersBroadcasterabbreviation: string;
-	homeradiobroadcastersTapedelaycomments: string;
-	homeradiobroadcastersBroadcastervideolink: unknown;
-	homeradiobroadcastersBroadcasterdescription: string;
-	homeradiobroadcastersBroadcasterteamid: number;
-	homeottbroadcastersBroadcasterscope: unknown;
-	homeottbroadcastersBroadcastermedia: unknown;
-	homeottbroadcastersBroadcasterid: number;
-	homeottbroadcastersBroadcasterdisplay: unknown;
-	homeottbroadcastersBroadcasterabbreviation: string;
-	homeottbroadcastersTapedelaycomments: string;
-	homeottbroadcastersBroadcastervideolink: unknown;
-	homeottbroadcastersBroadcasterdescription: string;
-	homeottbroadcastersBroadcasterteamid: number;
-	awaytvbroadcastersBroadcasterscope: unknown;
-	awaytvbroadcastersBroadcastermedia: unknown;
-	awaytvbroadcastersBroadcasterid: number;
-	awaytvbroadcastersBroadcasterdisplay: unknown;
-	awaytvbroadcastersBroadcasterabbreviation: string;
-	awaytvbroadcastersTapedelaycomments: string;
-	awaytvbroadcastersBroadcastervideolink: unknown;
-	awaytvbroadcastersBroadcasterdescription: string;
-	awaytvbroadcastersBroadcasterteamid: number;
-	awayradiobroadcastersBroadcasterscope: unknown;
-	awayradiobroadcastersBroadcastermedia: unknown;
-	awayradiobroadcastersBroadcasterid: number;
-	awayradiobroadcastersBroadcasterdisplay: unknown;
-	awayradiobroadcastersBroadcasterabbreviation: string;
-	awayradiobroadcastersTapedelaycomments: string;
-	awayradiobroadcastersBroadcastervideolink: unknown;
-	awayradiobroadcastersBroadcasterdescription: string;
-	awayradiobroadcastersBroadcasterteamid: number;
-	awayottbroadcastersBroadcasterscope: unknown;
-	awayottbroadcastersBroadcastermedia: unknown;
-	awayottbroadcastersBroadcasterid: number;
-	awayottbroadcastersBroadcasterdisplay: unknown;
-	awayottbroadcastersBroadcasterabbreviation: string;
-	awayottbroadcastersTapedelaycomments: string;
-	awayottbroadcastersBroadcastervideolink: unknown;
-	awayottbroadcastersBroadcasterdescription: string;
-	awayottbroadcastersBroadcasterteamid: number;
-}
-
-export interface SeasonWeeksRow {
-	leagueid: number;
-	seasonyear: string;
-	weeknumber: unknown;
-	weekname: string;
-	startdate: string;
-	enddate: string;
-}
-
+/** Parsed from the `leagueSchedule` object of the V3 response. */
 export interface ScheduleLeagueV2Response {
-	seasonGames: SeasonGamesRow[];
-	seasonWeeks: SeasonWeeksRow[];
+	seasonYear: string;
+	leagueId: string;
+	gameDates: ScheduleLeagueV2GameDate[];
+	weeks: ScheduleLeagueV2Week[];
+}
+
+export interface ScheduleLeagueV2Week {
+	weekNumber: number;
+	weekName: string;
+	startDate: string;
+	endDate: string;
+}
+
+export interface ScheduleLeagueV2GameDate {
+	gameDate: string;
+	games: ScheduleLeagueV2Game[];
+}
+
+export interface ScheduleLeagueV2Game {
+	gameId: string;
+	gameCode: string;
+	gameStatus: number;
+	gameStatusText: string;
+	gameSequence: number;
+	gameDateEst: string;
+	gameTimeEst: string;
+	gameDateTimeEst: string;
+	gameDateUTC: string;
+	gameTimeUTC: string;
+	gameDateTimeUTC: string;
+	awayTeamTime: string;
+	homeTeamTime: string;
+	day: string;
+	monthNum: number;
+	weekNumber: number;
+	weekName: string;
+	ifNecessary: string;
+	seriesGameNumber: string;
+	gameLabel: string;
+	gameSubLabel: string;
+	seriesText: string;
+	arenaName: string;
+	arenaState: string;
+	arenaCity: string;
+	postponedStatus: string;
+	branchLink: string;
+	gameSubtype: string;
+	isNeutral: boolean;
+	broadcasters: ScheduleLeagueV2Broadcasters;
+	homeTeam: ScheduleLeagueV2Team;
+	awayTeam: ScheduleLeagueV2Team;
+	pointsLeaders: ScheduleLeagueV2PointsLeader[];
+}
+
+export interface ScheduleLeagueV2PointsLeader {
+	personId: number;
+	firstName: string;
+	lastName: string;
+	teamId: number;
+	teamCity: string;
+	teamName: string;
+	teamTricode: string;
+	points: number;
+}
+
+export interface ScheduleLeagueV2Team {
+	teamId: number;
+	teamName: string;
+	teamCity: string;
+	teamTricode: string;
+	teamSlug: string;
+	wins: number;
+	losses: number;
+	score: number;
+	seed: number;
+}
+
+export interface ScheduleLeagueV2Broadcasters {
+	nationalBroadcasters: ScheduleLeagueV2NationalBroadcaster[];
+	nationalRadioBroadcasters: ScheduleLeagueV2NationalRadioBroadcaster[];
+	nationalOttBroadcasters: unknown[];
+	homeTvBroadcasters: ScheduleLeagueV2NationalRadioBroadcaster[];
+	homeRadioBroadcasters: ScheduleLeagueV2NationalRadioBroadcaster[];
+	homeOttBroadcasters: unknown[];
+	awayTvBroadcasters: ScheduleLeagueV2NationalRadioBroadcaster[];
+	awayRadioBroadcasters: ScheduleLeagueV2NationalRadioBroadcaster[];
+	awayOttBroadcasters: unknown[];
+}
+
+export interface ScheduleLeagueV2NationalRadioBroadcaster {
+	broadcasterScope: string;
+	broadcasterMedia: string;
+	broadcasterId: number;
+	broadcasterDisplay: string;
+	broadcasterAbbreviation: string;
+	broadcasterDescription: string;
+	tapeDelayComments: string;
+	broadcasterVideoLink: string;
+	broadcasterTeamId: number;
+	broadcasterRanking: unknown;
+	localizationRegion: string;
+}
+
+export interface ScheduleLeagueV2NationalBroadcaster {
+	broadcasterScope: string;
+	broadcasterMedia: string;
+	broadcasterId: number;
+	broadcasterDisplay: string;
+	broadcasterAbbreviation: string;
+	broadcasterDescription: string;
+	tapeDelayComments: string;
+	broadcasterVideoLink: string;
+	broadcasterTeamId: number;
+	broadcasterRanking: number | null;
+	localizationRegion: string;
 }

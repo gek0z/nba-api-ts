@@ -1,5 +1,5 @@
 export interface WinProbabilityPBPParams {
-	gameID: number;
+	gameID: string;
 	runType?: string;
 }
 

@@ -1,5 +1,5 @@
 export interface BoxScoreAdvancedV2Params {
-	gameID: number;
+	gameID: string;
 	endPeriod?: number;
 	endRange?: number;
 	rangeType?: number;

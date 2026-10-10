@@ -8,6 +8,17 @@ updates:
     groups:
       all:
         patterns: ["*"]
+  - package-ecosystem: npm
+    directory: /site
+    schedule:
+      interval: weekly
+    groups:
+      site:
+        patterns: ["*"]
+    ignore:
+      # The endpoint generator needs the TypeScript 6 compiler API
+      - dependency-name: typescript
+        versions: [">=7"]
   - package-ecosystem: github-actions
     directory: /
     schedule:
