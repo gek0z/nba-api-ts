@@ -47,12 +47,19 @@ Newer endpoints (the `…V3` box scores, `boxScoreDefensiveV2`, `boxScoreHustleV
 
 ```ts
 const box = await nba.stats.boxScoreTraditionalV3({ gameID: "0022400061" });
-// { gameId: "0022400061", homeTeam: { teamTricode: "BOS", players: [...] }, awayTeam: { ... } }
+
+box.homeTeam.teamTricode; // "BOS"
+box.homeTeam.players[0].statistics.points; // number
+box.homeTeam.starters.points; // starters' combined line
 ```
 
-:::caution[V3 types are approximate]
-The declared types for V3 endpoints describe flat row arrays that don't match this nested shape. Until they're fixed, log a response and check field names before relying on them.
-:::
+Each V3 endpoint page lists every nested type. To name one in your own code, index into the response type, which is exported from the package root:
+
+```ts
+import type { BoxScoreTraditionalV3Response } from "nba-api-ts";
+
+type Player = BoxScoreTraditionalV3Response["homeTeam"]["players"][number];
+```
 
 ## Parsing responses yourself
 

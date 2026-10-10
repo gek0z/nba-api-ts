@@ -7,80 +7,86 @@ export interface BoxScoreAdvancedV3Params {
 	startRange?: number;
 }
 
-export interface PlayerStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
-	personid: number;
-	firstname: string;
-	familyname: string;
-	namei: string;
-	playerslug: string;
+/** Parsed from the `boxScoreAdvanced` object of the V3 response. */
+export interface BoxScoreAdvancedV3Response {
+	gameId: string;
+	awayTeamId: number;
+	homeTeamId: number;
+	homeTeam: BoxScoreAdvancedV3Team;
+	awayTeam: BoxScoreAdvancedV3Team;
+}
+
+export interface BoxScoreAdvancedV3Team {
+	teamId: number;
+	teamCity: string;
+	teamName: string;
+	teamTricode: string;
+	teamSlug: string;
+	players: BoxScoreAdvancedV3Player[];
+	statistics: BoxScoreAdvancedV3TeamStatistics;
+}
+
+export interface BoxScoreAdvancedV3TeamStatistics {
+	minutes: string;
+	estimatedOffensiveRating: number;
+	offensiveRating: number;
+	estimatedDefensiveRating: number;
+	defensiveRating: number;
+	estimatedNetRating: number;
+	netRating: number;
+	assistPercentage: number;
+	assistToTurnover: number;
+	assistRatio: number;
+	offensiveReboundPercentage: number;
+	defensiveReboundPercentage: number;
+	reboundPercentage: number;
+	estimatedTeamTurnoverPercentage: number;
+	turnoverRatio: number;
+	effectiveFieldGoalPercentage: number;
+	trueShootingPercentage: number;
+	usagePercentage: number;
+	estimatedUsagePercentage: number;
+	estimatedPace: number;
+	pace: number;
+	pacePer40: number;
+	possessions: number;
+	PIE: number;
+}
+
+export interface BoxScoreAdvancedV3Player {
+	personId: number;
+	firstName: string;
+	familyName: string;
+	nameI: string;
+	playerSlug: string;
 	position: string;
 	comment: string;
-	jerseynum: unknown;
-	minutes: unknown;
-	estimatedoffensiverating: unknown;
-	offensiverating: unknown;
-	estimateddefensiverating: unknown;
-	defensiverating: unknown;
-	estimatednetrating: unknown;
-	netrating: unknown;
-	assistpercentage: unknown;
-	assisttoturnover: unknown;
-	assistratio: unknown;
-	offensivereboundpercentage: unknown;
-	defensivereboundpercentage: unknown;
-	reboundpercentage: unknown;
-	turnoverratio: unknown;
-	effectivefieldgoalpercentage: unknown;
-	trueshootingpercentage: unknown;
-	usagepercentage: unknown;
-	estimatedusagepercentage: unknown;
-	estimatedpace: unknown;
-	pace: unknown;
-	paceper40: unknown;
-	possessions: unknown;
-	pie: unknown;
+	jerseyNum: string;
+	statistics: BoxScoreAdvancedV3PlayerStatistics;
 }
 
-export interface TeamStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
-	minutes: unknown;
-	estimatedoffensiverating: unknown;
-	offensiverating: unknown;
-	estimateddefensiverating: unknown;
-	defensiverating: unknown;
-	estimatednetrating: unknown;
-	netrating: unknown;
-	assistpercentage: unknown;
-	assisttoturnover: unknown;
-	assistratio: unknown;
-	offensivereboundpercentage: unknown;
-	defensivereboundpercentage: unknown;
-	reboundpercentage: unknown;
-	estimatedteamturnoverpercentage: unknown;
-	turnoverratio: unknown;
-	effectivefieldgoalpercentage: unknown;
-	trueshootingpercentage: unknown;
-	usagepercentage: unknown;
-	estimatedusagepercentage: unknown;
-	estimatedpace: unknown;
-	pace: unknown;
-	paceper40: unknown;
-	possessions: unknown;
-	pie: unknown;
-}
-
-export interface BoxScoreAdvancedV3Response {
-	playerStats: PlayerStatsRow[];
-	teamStats: TeamStatsRow[];
+export interface BoxScoreAdvancedV3PlayerStatistics {
+	minutes: string;
+	estimatedOffensiveRating: number;
+	offensiveRating: number;
+	estimatedDefensiveRating: number;
+	defensiveRating: number;
+	estimatedNetRating: number;
+	netRating: number;
+	assistPercentage: number;
+	assistToTurnover: number;
+	assistRatio: number;
+	offensiveReboundPercentage: number;
+	defensiveReboundPercentage: number;
+	reboundPercentage: number;
+	turnoverRatio: number;
+	effectiveFieldGoalPercentage: number;
+	trueShootingPercentage: number;
+	usagePercentage: number;
+	estimatedUsagePercentage: number;
+	estimatedPace: number;
+	pace: number;
+	pacePer40: number;
+	possessions: number;
+	PIE: number;
 }

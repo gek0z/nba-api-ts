@@ -7,59 +7,49 @@ export interface BoxScoreMiscV3Params {
 	startRange?: number;
 }
 
-export interface PlayerStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
-	personid: number;
-	firstname: string;
-	familyname: string;
-	namei: string;
-	playerslug: string;
+/** Parsed from the `boxScoreMisc` object of the V3 response. */
+export interface BoxScoreMiscV3Response {
+	gameId: string;
+	awayTeamId: number;
+	homeTeamId: number;
+	homeTeam: BoxScoreMiscV3Team;
+	awayTeam: BoxScoreMiscV3Team;
+}
+
+export interface BoxScoreMiscV3Team {
+	teamId: number;
+	teamCity: string;
+	teamName: string;
+	teamTricode: string;
+	teamSlug: string;
+	players: BoxScoreMiscV3Player[];
+	statistics: BoxScoreMiscV3Statistics;
+}
+
+export interface BoxScoreMiscV3Player {
+	personId: number;
+	firstName: string;
+	familyName: string;
+	nameI: string;
+	playerSlug: string;
 	position: string;
 	comment: string;
-	jerseynum: unknown;
-	minutes: unknown;
-	pointsoffturnovers: unknown;
-	pointssecondchance: unknown;
-	pointsfastbreak: unknown;
-	pointspaint: unknown;
-	opppointsoffturnovers: unknown;
-	opppointssecondchance: unknown;
-	opppointsfastbreak: unknown;
-	opppointspaint: unknown;
-	blocks: unknown;
-	blocksagainst: unknown;
-	foulspersonal: unknown;
-	foulsdrawn: unknown;
+	jerseyNum: string;
+	statistics: BoxScoreMiscV3Statistics;
 }
 
-export interface TeamStatsRow {
-	gameid: number;
-	teamid: number;
-	teamcity: string;
-	teamname: string;
-	teamtricode: string;
-	teamslug: string;
-	minutes: unknown;
-	pointsoffturnovers: unknown;
-	pointssecondchance: unknown;
-	pointsfastbreak: unknown;
-	pointspaint: unknown;
-	opppointsoffturnovers: unknown;
-	opppointssecondchance: unknown;
-	opppointsfastbreak: unknown;
-	opppointspaint: unknown;
-	blocks: unknown;
-	blocksagainst: unknown;
-	foulspersonal: unknown;
-	foulsdrawn: unknown;
-}
-
-export interface BoxScoreMiscV3Response {
-	playerStats: PlayerStatsRow[];
-	teamStats: TeamStatsRow[];
+export interface BoxScoreMiscV3Statistics {
+	minutes: string;
+	pointsOffTurnovers: number;
+	pointsSecondChance: number;
+	pointsFastBreak: number;
+	pointsPaint: number;
+	oppPointsOffTurnovers: number;
+	oppPointsSecondChance: number;
+	oppPointsFastBreak: number;
+	oppPointsPaint: number;
+	blocks: number;
+	blocksAgainst: number;
+	foulsPersonal: number;
+	foulsDrawn: number;
 }

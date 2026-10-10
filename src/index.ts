@@ -25,3 +25,4 @@ export {
 } from "./response/parser.js";
 export { parseStatsV3Response } from "./response/parser-v3.js";
 export { StatsClient } from "./stats/index.js";
+export type * from "./stats/types/index.js";

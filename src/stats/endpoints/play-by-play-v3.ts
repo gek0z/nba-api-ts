@@ -11,8 +11,8 @@ export async function playByPlayV3(
 ): Promise<PlayByPlayV3Response> {
 	const apiParams: Record<string, string | number | undefined> = {
 		GameID: params.gameID,
-		EndPeriod: params.endPeriod,
-		StartPeriod: params.startPeriod,
+		EndPeriod: params.endPeriod ?? 0,
+		StartPeriod: params.startPeriod ?? 0,
 	};
 
 	const raw = await client.get<Record<string, unknown>>(

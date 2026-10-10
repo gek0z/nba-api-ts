@@ -7,9 +7,11 @@ import type {
 
 export async function boxScoreSummaryV3(
 	client: FetchClient,
-	_params: BoxScoreSummaryV3Params,
+	params: BoxScoreSummaryV3Params,
 ): Promise<BoxScoreSummaryV3Response> {
-	const apiParams: Record<string, string | number | undefined> = {};
+	const apiParams: Record<string, string | number | undefined> = {
+		GameID: params.gameID,
+	};
 
 	const raw = await client.get<Record<string, unknown>>(
 		"/stats/boxscoresummaryv3",

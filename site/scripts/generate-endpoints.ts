@@ -51,6 +51,8 @@ interface StatsEndpoint {
 	params: Param[];
 	fixed: { query: string; value: string }[];
 	resultSets: ResultSet[];
+	/** V3 only: every interface in the response, outermost first. */
+	nested: [string, Member[]][];
 	category: string;
 }
 
@@ -206,6 +208,7 @@ function parseStatsEndpoint(file: string): StatsEndpoint {
 		})),
 		fixed,
 		resultSets,
+		nested: format === "v3" ? [...types].filter(([n]) => n !== paramsType) : [],
 		category: categorize(name),
 	};
 }
@@ -414,11 +417,23 @@ function renderStats(e: StatsEndpoint): string {
 	out.push("## Response", "");
 	if (e.format === "v3") {
 		out.push(
-			":::caution[V3 types are approximate]",
-			"V3 endpoints return the NBA's nested JSON as-is (for example `{ gameId, homeTeam: { players: [...] } }`). The declared result sets below come from an older flat model and may not match the runtime shape. Inspect the response before relying on field names.",
-			":::",
+			`The NBA's nested JSON, with the \`meta\` wrapper removed. Every object type in ${code(e.responseType)}, outermost first:`,
 			"",
 		);
+		for (const [name, members] of e.nested) {
+			out.push(
+				`### ${name}`,
+				"",
+				"| Field | Type |",
+				"|---|---|",
+				...members.map(
+					(m) =>
+						`| ${code(m.name)}${m.optional ? " (optional)" : ""} | ${code(m.type)} |`,
+				),
+				"",
+			);
+		}
+		return out.join("\n");
 	}
 	if (e.resultSets.length === 0) {
 		out.push(`Returns ${code(e.responseType)}.`, "");
