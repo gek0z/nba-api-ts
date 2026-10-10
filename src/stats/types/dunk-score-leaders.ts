@@ -4,7 +4,7 @@ export interface DunkScoreLeadersParams {
 	seasonType?: string;
 	playerID?: number;
 	teamID?: number;
-	gameID?: number;
+	gameID?: string;
 }
 
 export type DunkScoreLeadersResponse = {};

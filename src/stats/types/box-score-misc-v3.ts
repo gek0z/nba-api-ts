@@ -1,5 +1,5 @@
 export interface BoxScoreMiscV3Params {
-	gameID: number;
+	gameID: string;
 	endPeriod?: number;
 	endRange?: number;
 	rangeType?: number;

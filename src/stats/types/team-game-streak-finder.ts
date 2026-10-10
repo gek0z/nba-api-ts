@@ -56,7 +56,7 @@ export interface TeamGameStreakFinderParams {
 	eqSTL?: string;
 	eqTD?: string;
 	eqTOV?: string;
-	gameID?: number;
+	gameID?: string;
 	gtAST?: string;
 	gtBLK?: string;
 	gtDD?: string;

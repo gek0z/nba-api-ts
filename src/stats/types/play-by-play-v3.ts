@@ -1,5 +1,5 @@
 export interface PlayByPlayV3Params {
-	gameID: number;
+	gameID: string;
 	endPeriod?: number;
 	startPeriod?: number;
 }

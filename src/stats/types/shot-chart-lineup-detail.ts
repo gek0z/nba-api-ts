@@ -8,7 +8,7 @@ export interface ShotChartLineupDetailParams {
 	contextFilter?: string;
 	dateFrom?: string;
 	dateTo?: string;
-	gameID?: number;
+	gameID?: string;
 	gameSegment?: string;
 	lastNGames?: number;
 	location?: string;
